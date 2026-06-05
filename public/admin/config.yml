@@ -1,0 +1,75 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: site_settings
+    label: Site Settings
+    files:
+      - label: Site
+        name: site
+        file: content/settings/site.yml
+        fields:
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Short Name, name: short_name, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Full Logo, name: logo_full, widget: image }
+          - { label: Symbol Logo, name: logo_symbol, widget: image }
+          - { label: Favicon, name: favicon, widget: image }
+          - { label: Default OG Image, name: default_og_image, widget: image }
+          - { label: Email, name: email, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: Domain, name: domain, widget: string }
+          - { label: Google Form URL, name: google_form_url, widget: string }
+      - label: SEO
+        name: seo
+        file: content/settings/seo.yml
+        fields:
+          - { label: Default Title, name: default_title, widget: string }
+          - { label: Default Description, name: default_description, widget: text }
+          - { label: Canonical Domain, name: canonical_domain, widget: string }
+  - name: navigation
+    label: Navigation
+    file: content/settings/navigation.yml
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Href, name: href, widget: string }
+          - { label: Order, name: order, widget: number }
+          - { label: Visible, name: visible, widget: boolean }
+          - { label: External, name: external, widget: boolean }
+          - { label: Group, name: group, widget: string }
+  - name: homepage
+    label: Homepage Settings
+    file: content/settings/homepage.yml
+    fields:
+      - { label: Hero Eyebrow, name: hero_eyebrow, widget: string }
+      - { label: Hero Title, name: hero_title, widget: string }
+      - { label: Hero Description, name: hero_description, widget: text }
+      - { label: Vision Title, name: vision_title, widget: string }
+      - { label: Vision Description, name: vision_description, widget: text }
+  - name: research_themes
+    label: Research Themes
+    folder: content/research-themes
+    extension: yml
+    create: true
+    fields: &standard
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Featured, name: featured, widget: boolean }
+      - { label: Summary, name: summary, widget: text }
+  - { name: publications, label: Publications, folder: content/publications, extension: yml, create: true, fields: *standard }
+  - { name: projects, label: Projects, folder: content/projects, extension: yml, create: true, fields: *standard }
+  - { name: people, label: People, folder: content/people, extension: yml, create: true, fields: *standard }
+  - { name: community, label: Community Narratives, folder: content/community, extension: yml, create: true, fields: *standard }
+  - { name: gallery, label: Gallery Images, folder: content/gallery, extension: yml, create: true, fields: *standard }
+  - { name: opportunities, label: Opportunities, folder: content/opportunities, extension: yml, create: true, fields: *standard }
+  - { name: pages, label: Long-form Pages, folder: content/pages, extension: md, create: true, fields: [{ label: Title, name: title, widget: string }, { label: Slug, name: slug, widget: string }, { label: Body, name: body, widget: markdown }] }
