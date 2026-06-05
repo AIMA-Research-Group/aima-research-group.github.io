@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AIMA Open Graph placeholder">
+  <rect width="1200" height="630" fill="#101D31"/>
+  <circle cx="990" cy="120" r="220" fill="#587CB7" opacity=".18"/>
+  <rect x="86" y="86" width="1028" height="458" rx="34" fill="#F7F9FC"/>
+  <text x="136" y="250" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="800" fill="#142033">AIMA Research Group</text>
+  <text x="138" y="322" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#274D84">AI VIETNAM RESEARCH LAB</text>
+  <text x="138" y="388" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#526174">TODO: Replace with final default Open Graph image.</text>
+</svg>

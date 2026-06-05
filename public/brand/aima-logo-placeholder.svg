@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-label="AIMA placeholder logo">
+  <rect width="720" height="220" rx="28" fill="#ffffff"/>
+  <circle cx="92" cy="110" r="54" fill="#DCE9F7"/>
+  <path d="M78 142c-16-10-25-27-25-48 0-28 21-52 50-52 23 0 42 15 48 36-21-4-42 4-54 21-10 14-15 29-19 43Z" fill="#587CB7"/>
+  <path d="M114 72c24 14 33 47 18 72-10 17-28 27-48 27 8-20 10-39 2-56 8-20 17-34 28-43Z" fill="#274D84" opacity=".9"/>
+  <text x="176" y="104" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" fill="#142033">AIMA</text>
+  <text x="178" y="146" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#274D84">AI VIETNAM RESEARCH LAB</text>
+  <text x="178" y="178" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#748296">Placeholder brand asset - replace with official SVG/PNG</text>
+</svg>

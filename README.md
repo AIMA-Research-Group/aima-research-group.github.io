@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIMA Research Group Website
 
-## Getting Started
+Production-oriented Next.js website for AIMA, AI VIETNAM RESEARCH LAB.
 
-First, run the development server:
+Visual direction: Scientific Humanist Lab. The site should feel academic, refined, modern, collaborative, and evidence-driven.
+
+## Commands
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run validate-content
+npm run lint
+npm run build
+npm run check
+npm run cms:local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the site at `http://localhost:3000`.
+Open CMS at `http://localhost:3000/admin`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Preview And Production Mode
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Local placeholder mode:
 
-## Learn More
+```bash
+NEXT_PUBLIC_CONTENT_PREVIEW_MODE=true
+```
 
-To learn more about Next.js, take a look at the following resources:
+Production mode:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_CONTENT_PREVIEW_MODE=false
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Preview mode shows explicit `[TODO: ...]` labels. Production mode hides placeholder publications, projects, and people and shows graceful empty states.
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/`: App Router routes, metadata, sitemap, robots.
+- `components/`: layout, UI, visual placeholders, content cards.
+- `content/`: editable YAML and Markdown content.
+- `lib/content/`: content loaders.
+- `lib/validation/`: Zod schemas.
+- `scripts/`: validation scripts.
+- `public/admin/`: Decap CMS preparation.
+- `docs/`: editor, deployment, brand, QA, and architecture docs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Manual Follow-up Tasks
+
+- Add official AIMA logo files: `logo-full.svg`, `logo-wordmark.svg`, `logo-symbol.svg`, `favicon.svg`.
+- Replace placeholder brand assets in `public/brand`.
+- Add final domain and Google Form URL.
+- Add real research vision, themes, publications, projects, people, and gallery photos.
+- Configure production Decap CMS authentication.
+- Deploy to Vercel or another production host.
