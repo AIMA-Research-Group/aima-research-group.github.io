@@ -11,7 +11,6 @@ const groups = [
   ["founder", "Founder"],
   ["leader", "Leaders"],
   ["mentor", "Mentor"],
-  ["core-member", "Core Member"],
   ["collaborator", "Collaborator"],
   ["affiliated-faculty", "Affiliated Faculty"],
 ] as const;
