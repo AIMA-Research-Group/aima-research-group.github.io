@@ -37,7 +37,7 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
     <header className={`fixed inset-x-0 top-0 z-40 transition duration-200 ${scrolled || open ? "border-b border-[var(--border)] bg-[rgba(247,249,252,0.92)] shadow-sm backdrop-blur" : "bg-transparent"}`}>
       <div className="container-page flex min-h-20 items-center justify-between gap-5">
         <Link href="/" className="flex items-center gap-3" aria-label="AIMA home">
-          <Image src={withBasePath(site.logo_full)} alt={`${site.site_name} logo`} width={260} height={84} priority className="hidden h-16 w-auto object-contain sm:block" />
+          <Image src={withBasePath(site.logo_full)} alt={`${site.site_name} banner`} width={320} height={100} priority className="hidden h-16 w-auto max-w-[220px] object-contain md:max-w-[280px] xl:max-w-[320px] sm:block" />
           <Image src={withBasePath(site.logo_symbol)} alt="" width={64} height={64} priority className="h-12 w-12 object-contain sm:hidden" />
         </Link>
         <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Main navigation">
