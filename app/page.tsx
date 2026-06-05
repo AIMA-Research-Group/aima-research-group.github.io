@@ -26,8 +26,8 @@ export default async function HomePage() {
             <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">{content.homepage.hero_eyebrow}</p>
-                <h1 className="mt-5 font-[var(--font-serif)] text-[clamp(2.8rem,7vw,5rem)] font-bold leading-[1.02]">{content.homepage.hero_title}</h1>
-                <p className="mt-6 max-w-2xl text-xl leading-9 text-[var(--text-secondary)]">{content.homepage.hero_description}</p>
+                <h1 className="mt-5 font-[var(--font-serif)] text-[clamp(2.1rem,5vw,3.75rem)] font-bold leading-[1.08]">{content.homepage.hero_title}</h1>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">{content.homepage.hero_description}</p>
                 <div className="mt-8 flex flex-wrap gap-3"><Button href={content.homepage.primary_cta.href}>{content.homepage.primary_cta.label}</Button><Button href={content.homepage.secondary_cta.href} variant="secondary">{content.homepage.secondary_cta.label}</Button></div>
                 <p className="mt-6 text-sm font-bold text-[var(--text-muted)]">Scientific Humanist Lab · rigorous, collaborative, evidence-driven AI research</p>
               </div>
@@ -57,8 +57,8 @@ export default async function HomePage() {
             <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">{content.homepage.vision_label}</p>
               <div>
-                <h2 className="font-[var(--font-serif)] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-tight">{content.homepage.vision_title}</h2>
-                <p className="mt-6 text-xl leading-9 text-[var(--text-secondary)]"><ContentPlaceholder value={content.homepage.vision_description} fallback="AIMA's full research vision will be added shortly." /></p>
+                <h2 className="font-[var(--font-serif)] text-[clamp(1.9rem,4vw,3rem)] font-bold leading-tight">{content.homepage.vision_title}</h2>
+                <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]"><ContentPlaceholder value={content.homepage.vision_description} fallback="AIMA's full research vision will be added shortly." /></p>
                 <div className="mt-10 grid gap-4 md:grid-cols-3">
                   {content.homepage.principles.map((principle) => <article key={principle.title} className="border-t border-[var(--border)] pt-5"><h3 className="text-xl font-black">{principle.title}</h3><p className="mt-3 leading-7 text-[var(--text-secondary)]">{principle.description}</p></article>)}
                 </div>
@@ -118,7 +118,7 @@ export default async function HomePage() {
         <Section>
           <PageContainer>
             <div className="rounded-[28px] bg-[var(--aima-deep-blue)] p-8 text-white md:p-12">
-              <h2 className="font-[var(--font-serif)] text-5xl font-bold">{content.homepage.join_us_title}</h2>
+              <h2 className="font-[var(--font-serif)] text-4xl font-bold">{content.homepage.join_us_title}</h2>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-white/80">{content.homepage.join_us_description}</p>
               <div className="mt-7"><Button href={content.homepage.join_us_cta.href} variant="secondary">{content.homepage.join_us_cta.label}</Button></div>
             </div>
