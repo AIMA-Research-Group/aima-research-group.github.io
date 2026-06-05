@@ -12,6 +12,7 @@ Collections:
 - Publications
 - Projects
 - People
+- Affiliations
 - Community narratives
 - Gallery images
 - Opportunities

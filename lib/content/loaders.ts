@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import YAML from "yaml";
 import {
   communityNarrativeSchema,
+  affiliationSchema,
   galleryImageSchema,
   homepageSchema,
   navigationItemSchema,
@@ -15,6 +16,7 @@ import {
   seoSettingsSchema,
   siteSettingsSchema,
   type CommunityNarrative,
+  type Affiliation,
   type GalleryImage,
   type HomepageSettings,
   type NavigationItem,
@@ -62,11 +64,12 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
   publications: Publication[];
   projects: Project[];
   people: Person[];
+  affiliations: Affiliation[];
   community: CommunityNarrative[];
   gallery: GalleryImage[];
   opportunities: Opportunity[];
 }> {
-  const [site, seo, navigation, homepage, researchThemes, publications, projects, people, community, gallery, opportunities] =
+  const [site, seo, navigation, homepage, researchThemes, publications, projects, people, affiliations, community, gallery, opportunities] =
     await Promise.all([
       readYaml("settings/site.yml", siteSettingsSchema),
       readYaml("settings/seo.yml", seoSettingsSchema),
@@ -78,6 +81,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
       readCollection("publications", publicationSchema),
       readCollection("projects", projectSchema),
       readCollection("people", personSchema),
+      readCollection("affiliations", affiliationSchema),
       readCollection("community", communityNarrativeSchema),
       readCollection("gallery", galleryImageSchema),
       readCollection("opportunities", opportunitySchema),
@@ -94,6 +98,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
     publications: maybePublic(publications),
     projects: maybePublic(projects),
     people: maybePublic(people),
+    affiliations,
     community,
     gallery,
     opportunities,

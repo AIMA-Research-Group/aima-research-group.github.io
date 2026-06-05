@@ -69,6 +69,7 @@ collections:
   - { name: publications, label: Publications, folder: content/publications, extension: yml, create: true, fields: *standard }
   - { name: projects, label: Projects, folder: content/projects, extension: yml, create: true, fields: *standard }
   - { name: people, label: People, folder: content/people, extension: yml, create: true, fields: *standard }
+  - { name: affiliations, label: Affiliations, folder: content/affiliations, extension: yml, create: true, fields: *standard }
   - { name: community, label: Community Narratives, folder: content/community, extension: yml, create: true, fields: *standard }
   - { name: gallery, label: Gallery Images, folder: content/gallery, extension: yml, create: true, fields: *standard }
   - { name: opportunities, label: Opportunities, folder: content/opportunities, extension: yml, create: true, fields: *standard }

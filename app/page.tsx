@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import { PageContainer, Section, SectionHeading } from "@/components/ui/Section";
 import { ScientificHeroCanvas } from "@/components/visual/ScientificPlaceholders";
-import { CommunityNarrativeCard, GalleryGrid, PersonCard, ProjectCard, PublicationCard, ResearchThemeCard } from "@/components/content/Cards";
+import { AffiliationLogoGrid, CommunityNarrativeCard, GalleryGrid, PersonCard, ProjectCard, PublicationCard, ResearchThemeCard } from "@/components/content/Cards";
 import { bySlugs, getAllContent } from "@/lib/content/loaders";
 
 export default async function HomePage() {
@@ -75,6 +75,17 @@ export default async function HomePage() {
             <SectionHeading eyebrow="People" title="People behind the research." description="Founder, mentors, core members, and collaborators will appear here once real profiles are added." />
             <div className="grid gap-6 md:grid-cols-4">{people.map((person) => <PersonCard key={person.slug} person={person} />)}</div>
             <div className="mt-8"><Button href="/people" variant="secondary">Meet the Research Community</Button></div>
+          </PageContainer>
+        </Section>
+
+        <Section className="bg-white">
+          <PageContainer>
+            <SectionHeading
+              eyebrow="Academic network"
+              title="Affiliations across the research community."
+              description="AIMA connects students, mentors, collaborators, and affiliated faculty across universities and medical institutions."
+            />
+            <AffiliationLogoGrid affiliations={content.affiliations.filter((affiliation) => affiliation.featured)} />
           </PageContainer>
         </Section>
 

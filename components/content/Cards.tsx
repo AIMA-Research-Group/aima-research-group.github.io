@@ -10,7 +10,7 @@ import {
   ResearchThemeVisualPlaceholder,
   ScientificFigurePlaceholder,
 } from "@/components/visual/ScientificPlaceholders";
-import type { CommunityNarrative, GalleryImage, Opportunity, Person, Project, Publication, ResearchTheme } from "@/lib/validation/schemas";
+import type { Affiliation, CommunityNarrative, GalleryImage, Opportunity, Person, Project, Publication, ResearchTheme } from "@/lib/validation/schemas";
 import { isPreviewMode } from "@/lib/utils/preview";
 
 export function TagList({ tags }: { tags: string[] }) {
@@ -100,6 +100,50 @@ export function PersonCard({ person }: { person: Person }) {
       <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
       <div className="mt-4"><TagList tags={person.research_interests} /></div>
     </article>
+  );
+}
+
+function affiliationInitials(name: string) {
+  const compact = name
+    .replace(/University|School|Medicine|College|Institute|of|at|the|and/gi, "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 5);
+  return compact || name.slice(0, 3).toUpperCase();
+}
+
+export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliation[] }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {affiliations.map((affiliation) => (
+        <article
+          key={affiliation.slug}
+          className="surface-card flex min-h-36 flex-col justify-between p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+        >
+          {affiliation.logo ? (
+            <Image
+              src={affiliation.logo}
+              alt={`${affiliation.name} logo`}
+              width={240}
+              height={120}
+              className="h-14 w-full object-contain object-left"
+            />
+          ) : (
+            <div className="flex h-14 items-center">
+              <div className="flex h-14 min-w-20 items-center justify-center rounded-2xl bg-[var(--aima-soft-blue)] px-4 text-xl font-black text-[var(--aima-deep-blue)]">
+                {affiliationInitials(affiliation.name)}
+              </div>
+            </div>
+          )}
+          <div className="mt-5">
+            <h3 className="font-black leading-snug">{affiliation.name}</h3>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">{affiliation.location} · {affiliation.relationship}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   );
 }
 

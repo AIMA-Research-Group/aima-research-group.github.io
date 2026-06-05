@@ -39,6 +39,7 @@ async function main() {
   duplicateSlugs("publications", content.publications);
   duplicateSlugs("projects", content.projects);
   duplicateSlugs("people", content.people);
+  duplicateSlugs("affiliations", content.affiliations);
   duplicateSlugs("community", content.community);
   duplicateSlugs("gallery", content.gallery);
   duplicateSlugs("opportunities", content.opportunities);
@@ -85,6 +86,10 @@ async function main() {
   for (const person of content.people) {
     validAsset(`person.${person.slug}.photo`, person.photo);
     person.links.forEach((link) => validUrl(`person.${person.slug}.${link.label}`, link.url));
+  }
+  for (const affiliation of content.affiliations) {
+    validAsset(`affiliation.${affiliation.slug}.logo`, affiliation.logo);
+    if (affiliation.url) validUrl(`affiliation.${affiliation.slug}.url`, affiliation.url);
   }
   for (const narrative of content.community) {
     validAsset(`community.${narrative.slug}.cover_image`, narrative.cover_image);

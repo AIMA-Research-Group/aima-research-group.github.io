@@ -11,6 +11,7 @@
 - Missing active projects.
 - Missing founder, mentor, core member, and collaborator profiles.
 - Missing community photos.
+- Missing official affiliation logos.
 - Missing project framework figures.
 - Missing official SVG logos.
 - Missing final OG image.

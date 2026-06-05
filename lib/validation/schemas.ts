@@ -134,6 +134,18 @@ export const personSchema = z.object({
   placeholder: z.boolean(),
 });
 
+export const affiliationSchema = z.object({
+  name: z.string().min(1),
+  slug: z.string().min(1),
+  order: z.number(),
+  featured: z.boolean(),
+  logo: z.string().optional().default(""),
+  url: z.string().optional().default(""),
+  location: z.string().min(1),
+  relationship: z.string().min(1),
+  placeholder: z.boolean(),
+});
+
 export const communityNarrativeSchema = z.object({
   title: z.string().min(1),
   slug: z.string().min(1),
@@ -183,6 +195,7 @@ export type ResearchTheme = z.infer<typeof researchThemeSchema>;
 export type Publication = z.infer<typeof publicationSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type Person = z.infer<typeof personSchema>;
+export type Affiliation = z.infer<typeof affiliationSchema>;
 export type CommunityNarrative = z.infer<typeof communityNarrativeSchema>;
 export type GalleryImage = z.infer<typeof galleryImageSchema>;
 export type Opportunity = z.infer<typeof opportunitySchema>;

@@ -10,6 +10,8 @@ Update contact details, social links, domain, and Google Form URL in `Site Setti
 
 Add research themes, publications, projects, people, community narratives, gallery images, and opportunities through their CMS collections.
 
+Add collaborating institution logos in the `Affiliations` collection. If a logo file is missing, the website shows a clean text-based logo placeholder from the institution name.
+
 Required fields usually include title, slug, order, featured, and summary. Publications also need year, authors, venue, type, links, and placeholder status. People need group, role, affiliation, biography, interests, and active status.
 
 Preview mode shows TODO labels. Production mode hides placeholder publications, projects, and people.
