@@ -1,7 +1,10 @@
 local_backend: true
 backend:
-  name: git-gateway
+  name: github
+  repo: datct00/aima_homepage
   branch: main
+  base_url: https://REPLACE_WITH_YOUR_DECAP_OAUTH_PROXY_URL
+  auth_endpoint: /auth
 media_folder: public/uploads
 public_folder: /uploads
 collections:
