@@ -181,42 +181,24 @@ export function PersonCard({ person }: { person: Person }) {
   );
 }
 
-function affiliationInitials(name: string) {
-  const compact = name
-    .replace(/University|School|Medicine|College|Institute|of|at|the|and/gi, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((word) => word[0])
-    .join("")
-    .slice(0, 5);
-  return compact || name.slice(0, 3).toUpperCase();
-}
-
 export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliation[] }) {
+  const logos = affiliations.filter((affiliation) => affiliation.logo);
+
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {affiliations.map((affiliation) => (
+      {logos.map((affiliation) => (
         <div
           key={affiliation.slug}
           className="surface-card flex min-h-28 items-center justify-center p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
           title={affiliation.name}
         >
-          {affiliation.logo ? (
-            <Image
-              src={withBasePath(affiliation.logo)}
-              alt={`${affiliation.name} logo`}
-              width={240}
-              height={120}
-              className="h-16 w-full object-contain"
-            />
-          ) : (
-            <div className="flex flex-col items-center justify-center gap-2 text-center">
-              <div className="flex h-14 min-w-20 items-center justify-center rounded-2xl bg-[var(--aima-soft-blue)] px-4 text-xl font-black text-[var(--aima-deep-blue)]">
-                {affiliationInitials(affiliation.name)}
-              </div>
-              <span className="text-xs font-bold text-[var(--text-muted)]">{affiliation.name}</span>
-            </div>
-          )}
+          <Image
+            src={withBasePath(affiliation.logo)}
+            alt={`${affiliation.name} logo`}
+            width={280}
+            height={140}
+            className="h-16 w-full object-contain"
+          />
         </div>
       ))}
     </div>
