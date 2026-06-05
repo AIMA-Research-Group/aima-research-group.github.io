@@ -28,7 +28,17 @@ function ThemeVisual({ type }: { type: ResearchTheme["visual_type"] }) {
 export function ResearchThemeCard({ theme, projectCount, publicationCount }: { theme: ResearchTheme; projectCount: number; publicationCount: number }) {
   return (
     <article className="surface-card group overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      <ThemeVisual type={theme.visual_type} />
+      {theme.cover_image ? (
+        <Image
+          src={withBasePath(theme.cover_image)}
+          alt={`${theme.title} visual summary`}
+          width={900}
+          height={540}
+          className="aspect-[4/3] w-full object-cover"
+        />
+      ) : (
+        <ThemeVisual type={theme.visual_type} />
+      )}
       <div className="p-6">
         <div className="mb-4 flex flex-wrap gap-2"><Badge tone="teal">{theme.status}</Badge></div>
         <h3 className="text-2xl font-black">{theme.title}</h3>
@@ -80,7 +90,17 @@ export function PublicationCard({ publication }: { publication: Publication }) {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="surface-card group overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      <FrameworkDiagramPlaceholder />
+      {project.cover_image ? (
+        <Image
+          src={withBasePath(project.cover_image)}
+          alt={`${project.title} visual summary`}
+          width={900}
+          height={540}
+          className="aspect-[4/3] w-full object-cover"
+        />
+      ) : (
+        <FrameworkDiagramPlaceholder />
+      )}
       <div className="p-6">
         <div className="mb-3 flex gap-2"><Badge>{project.status}</Badge>{project.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder</Badge> : null}</div>
         <h3 className="text-2xl font-black"><ContentPlaceholder value={project.title} fallback="Project details coming soon." /></h3>

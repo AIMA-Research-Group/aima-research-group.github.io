@@ -7,8 +7,8 @@ summary: A white blood cell image classification project studying annotation sca
 problem_statement: Automated WBC recognition supports hematology screening and diagnosis, but deep learning classifiers usually require large annotated blood smear datasets curated by trained experts.
 research_direction: Benchmark CNN and transformer-based classification under reduced labeled-data settings and analyze model behavior across WBC subtypes.
 approach: Use a multi-class WBC image dataset covering neutrophils, lymphocytes, monocytes, eosinophils, and basophils; apply color normalization, resizing, and augmentation; construct labeled subsets across 1%, 5%, 10%, 25%, 50%, and 100% settings; evaluate ResNet, DenseNet, EfficientNet, ViT, and hybrid CNN-ViT models with consistent training protocols; measure accuracy, precision, recall, macro and per-class F1-score, ROC-AUC where applicable, and confusion matrices; analyze per-class performance and misclassification cases before extending to semi-supervised, self-supervised, few-shot, and optional detection or segmentation directions.
-cover_image: ""
-framework_figure: ""
+cover_image: /uploads/generated/projects/few-shot-white-blood-cell-classification.png
+framework_figure: /uploads/generated/projects/few-shot-white-blood-cell-classification.png
 research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis

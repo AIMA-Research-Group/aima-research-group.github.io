@@ -55,7 +55,16 @@ export default async function HomePage() {
         <Section>
           <PageContainer>
             <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">{content.homepage.vision_label}</p>
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">{content.homepage.vision_label}</p>
+                <Image
+                  src={withBasePath("/uploads/generated/vision/our-vision.png")}
+                  alt="AIMA research vision visual"
+                  width={1000}
+                  height={625}
+                  className="mt-6 aspect-[16/10] w-full rounded-[24px] border border-[var(--border)] object-cover shadow-[var(--shadow-soft)]"
+                />
+              </div>
               <div>
                 <h2 className="font-[var(--font-serif)] text-[clamp(1.9rem,4vw,3rem)] font-bold leading-tight">{content.homepage.vision_title}</h2>
                 <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]"><ContentPlaceholder value={content.homepage.vision_description} fallback="AIMA's full research vision will be added shortly." /></p>

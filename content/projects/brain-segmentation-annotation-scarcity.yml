@@ -7,8 +7,8 @@ summary: A study of brain image segmentation performance under limited annotatio
 problem_statement: Accurate brain image segmentation supports diagnosis, treatment planning, and longitudinal analysis, but fully annotated clinical datasets are expensive and time-consuming to obtain.
 research_direction: Establish a performance-annotation trade-off by reducing labeled samples across controlled ratios and benchmarking classical and advanced segmentation architectures.
 approach: Use a fully annotated brain imaging dataset with fixed validation and test splits; train segmentation models across 1%, 5%, 10%, 25%, 50%, and 100% labeled data settings; compare U-Net, U-Net++, DeepLabV3, TransUNet, and nnU-Net; evaluate Dice, IoU, Hausdorff distance, and average surface distance; produce qualitative overlays, failure analysis under extreme label scarcity, and architecture sensitivity comparisons for a conference target followed by a Q2 journal extension using semi-supervised, self-supervised, and few-shot learning.
-cover_image: ""
-framework_figure: ""
+cover_image: /uploads/generated/projects/brain-segmentation-annotation-scarcity.png
+framework_figure: /uploads/generated/projects/brain-segmentation-annotation-scarcity.png
 research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis

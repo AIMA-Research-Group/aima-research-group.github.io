@@ -7,8 +7,8 @@ summary: A benchmark study evaluating the robustness, stability, and failure mod
 problem_statement: SAM, SAM2, MedSAM, and related medical adaptations have shown strong generalization, but their behavior under realistic noisy clinical acquisition conditions remains insufficiently studied.
 research_direction: Systematically test how Gaussian noise, Poisson noise, salt-and-pepper noise, motion blur, intensity inhomogeneity, and low-contrast degradation affect segmentation quality across medical imaging datasets.
 approach: Prepare controlled 2D medical imaging datasets; inject synthetic noise and artifact perturbations at varying severity levels; benchmark SAM-based models with consistent inference settings; evaluate Dice, IoU, boundary metrics, stability, and confidence-related behavior; analyze qualitative failure cases and sensitivity trends for a CVPR workshop target followed by an extended Q1 journal submission.
-cover_image: ""
-framework_figure: ""
+cover_image: /uploads/generated/projects/sam-noisy-medical-radiology.png
+framework_figure: /uploads/generated/projects/sam-noisy-medical-radiology.png
 research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis

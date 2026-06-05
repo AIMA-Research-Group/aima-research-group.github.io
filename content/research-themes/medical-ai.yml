@@ -8,7 +8,7 @@ scientific_questions:
   - How can models remain reliable when clinical data is incomplete, heterogeneous, or shifted?
   - What evaluation protocols better reflect real clinical use?
   - How should uncertainty be communicated to human decision-makers?
-cover_image: ""
+cover_image: /uploads/generated/research/medical-ai.png
 visual_type: medical
 related_project_slugs:
   - sam-noisy-medical-radiology

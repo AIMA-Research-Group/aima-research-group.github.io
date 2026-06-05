@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Button } from "@/components/ui/Button";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { PageContainer, PageHero, Section, SectionHeading } from "@/components/ui/Section";
 import { ProjectCard, PublicationCard } from "@/components/content/Cards";
-import { ResearchThemeVisualPlaceholder } from "@/components/visual/ScientificPlaceholders";
 import { getAllContent } from "@/lib/content/loaders";
+import { withBasePath } from "@/lib/utils/paths";
 
 export async function generateStaticParams() {
   const content = await getAllContent();
@@ -36,7 +37,15 @@ export default async function ResearchThemePage({ params }: { params: Promise<{ 
         <Section className="pt-0">
           <PageContainer>
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-              <ResearchThemeVisualPlaceholder />
+              {theme.cover_image ? (
+                <Image
+                  src={withBasePath(theme.cover_image)}
+                  alt={`${theme.title} visual summary`}
+                  width={1100}
+                  height={700}
+                  className="aspect-[4/3] w-full rounded-[24px] border border-[var(--border)] object-cover shadow-[var(--shadow-soft)]"
+                />
+              ) : null}
               <div>
                 <SectionHeading title="Theme vision" description={theme.vision} />
                 <h2 className="text-2xl font-black">Scientific questions</h2>

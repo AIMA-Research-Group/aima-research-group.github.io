@@ -8,7 +8,7 @@ scientific_questions:
   - Which temporal patterns are stable enough to support prediction?
   - How should models handle censored or irregular follow-up data?
   - What evidence is needed before progression modeling can influence decisions?
-cover_image: ""
+cover_image: /uploads/generated/research/disease-progression-modeling.png
 visual_type: theme
 related_project_slugs: []
 related_publication_slugs: []

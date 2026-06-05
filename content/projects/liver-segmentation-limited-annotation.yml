@@ -7,8 +7,8 @@ summary: A liver and liver tumor CT segmentation benchmark studying how limited 
 problem_statement: High-quality liver and tumor annotations are costly, time-consuming, and dependent on expert radiologists, limiting scalable model development for surgical planning, tumor burden assessment, and treatment response evaluation.
 research_direction: Quantify liver segmentation performance under different labeled-data ratios and benchmark CNN, transformer, and automated segmentation baselines on LiTS-based data settings.
 approach: Use the LiTS dataset with liver and tumor annotations; convert volumes into 2D or 2.5D representations; create controlled training subsets with different annotation ratios; train U-Net, U-Net++, DeepLabV3, TransUNet, and nnU-Net; evaluate Dice, IoU, Hausdorff distance, and average surface distance; analyze qualitative overlays, failure cases, and architecture sensitivity for a conference target followed by a Q2 journal extension with semi-supervised, self-supervised, and few-shot learning.
-cover_image: ""
-framework_figure: ""
+cover_image: /uploads/generated/projects/liver-segmentation-limited-annotation.png
+framework_figure: /uploads/generated/projects/liver-segmentation-limited-annotation.png
 research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis

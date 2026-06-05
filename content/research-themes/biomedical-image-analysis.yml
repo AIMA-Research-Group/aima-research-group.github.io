@@ -8,7 +8,7 @@ scientific_questions:
   - How can image models generalize across acquisition settings?
   - What visual evidence should support a model prediction?
   - How can segmentation and representation learning improve scientific measurement?
-cover_image: ""
+cover_image: /uploads/generated/research/biomedical-image-analysis.png
 visual_type: scientific
 related_project_slugs:
   - sam-noisy-medical-radiology
