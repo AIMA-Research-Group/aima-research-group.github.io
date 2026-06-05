@@ -50,7 +50,7 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
             );
           })}
         </nav>
-        <div className="hidden lg:block">{cta ? <Button href="/research">Explore Our Research</Button> : null}</div>
+        <div className="hidden lg:block">{cta ? <Button href={cta.href}>{cta.label}</Button> : null}</div>
         <button
           className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[var(--border)] bg-white lg:hidden"
           type="button"

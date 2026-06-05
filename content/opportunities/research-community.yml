@@ -1,4 +1,4 @@
-title: "[TODO: Define current AIMA opportunity]"
+title: Join AIMA Research Community
 slug: research-community
 order: 1
 status: open
@@ -13,7 +13,7 @@ learning_outcomes:
   - Formulate stronger research questions.
   - Build research-ready experiments and evaluation plans.
   - Understand the publication journey from idea to submission.
-application_process: "[TODO: Add application process and Google Form instructions]"
+application_process: "If you are interested in joining AIMA, email aima.research.aivn@gmail.com or thanhhun@andrew.cmu.edu with your CV, research interests, relevant links, and a short note about why you want to work with the group."
 google_form_url: "[TODO: Add Join Us Google Form URL]"
 featured: true
-placeholder: true
+placeholder: false

@@ -6,6 +6,8 @@ import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import { withBasePath } from "@/lib/utils/paths";
 
 export function SiteFooter({ site, navigation }: { site: SiteSettings; navigation: NavigationItem[] }) {
+  const contactEmails = site.contact_emails.length ? site.contact_emails : [site.email];
+
   return (
     <footer className="bg-[var(--footer)] py-14 text-white">
       <div className="container-page grid gap-10 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr]">
@@ -22,7 +24,7 @@ export function SiteFooter({ site, navigation }: { site: SiteSettings; navigatio
         <div>
           <h2 className="font-black">Contact</h2>
           <div className="mt-4 grid gap-2 text-sm text-[var(--footer-muted)]">
-            <span>{site.email}</span>
+            {contactEmails.map((email) => <a key={email} href={`mailto:${email}`}>{email}</a>)}
             <span><ContentPlaceholder value={site.location} fallback="Location will be added soon." /></span>
             <Link href="/join-us">Join Us</Link>
           </div>

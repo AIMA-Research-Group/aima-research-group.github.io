@@ -21,6 +21,7 @@ export const siteSettingsSchema = z.object({
   favicon: z.string().min(1),
   default_og_image: z.string().min(1),
   email: z.string().email(),
+  contact_emails: z.array(z.string().email()).optional().default([]),
   location: z.string().min(1),
   domain: z.string().min(1),
   social_links: z.array(linkSchema),

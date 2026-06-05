@@ -8,6 +8,9 @@ logo_symbol: /brand/aima-logo.png
 favicon: /brand/aima-logo.png
 default_og_image: /brand/aima-banner.png
 email: aima.research.aivn@gmail.com
+contact_emails:
+  - aima.research.aivn@gmail.com
+  - thanhhun@andrew.cmu.edu
 location: "[TODO: Add AIMA location]"
 domain: "[TODO: Add production domain]"
 social_links:

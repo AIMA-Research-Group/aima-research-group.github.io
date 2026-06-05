@@ -15,6 +15,7 @@ export default async function JoinUsPage() {
   const preview = isPreviewMode();
   const formUrl = content.site.google_form_url;
   const hasForm = !formUrl.includes("[TODO:");
+  const contactEmails = content.site.contact_emails.length ? content.site.contact_emails : [content.site.email];
   return (
     <>
       <SiteHeader site={content.site} navigation={content.navigation} />
@@ -33,6 +34,9 @@ export default async function JoinUsPage() {
             <div className="surface-card p-8 md:p-10">
               <SectionHeading title="Application process" description={content.opportunities[0]?.application_process || "Application process will be added soon."} />
               {hasForm ? <Button href={formUrl}>Open Google Form</Button> : preview ? <p className="font-bold text-[var(--aima-deep-blue)]"><ContentPlaceholder value={formUrl} /></p> : <Button href="/contact">Contact AIMA</Button>}
+              <div className="mt-6 grid gap-2 text-[var(--text-secondary)]">
+                {contactEmails.map((email) => <a key={email} className="font-bold text-[var(--aima-deep-blue)]" href={`mailto:${email}`}>{email}</a>)}
+              </div>
             </div>
           </PageContainer>
         </Section>
