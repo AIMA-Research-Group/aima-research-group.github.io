@@ -28,15 +28,21 @@
   visible: true
   external: false
   group: main
+- label: Affiliations
+  href: /affiliations
+  order: 6
+  visible: true
+  external: false
+  group: main
 - label: Community
   href: /community
-  order: 6
+  order: 7
   visible: true
   external: false
   group: main
 - label: Join Us
   href: /join-us
-  order: 7
+  order: 8
   visible: true
   external: false
   group: cta

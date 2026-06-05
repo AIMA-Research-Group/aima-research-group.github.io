@@ -6,7 +6,7 @@ import { isPreviewMode } from "../lib/utils/preview";
 const publicRoot = path.join(process.cwd(), "public");
 const errors: string[] = [];
 const warnings: string[] = [];
-const internalRoutes = new Set(["/", "/research", "/publications", "/projects", "/people", "/community", "/join-us", "/contact", "/admin"]);
+const internalRoutes = new Set(["/", "/research", "/publications", "/projects", "/people", "/affiliations", "/community", "/join-us", "/contact", "/admin"]);
 
 function warn(message: string) { warnings.push(message); }
 function fail(message: string) { errors.push(message); }

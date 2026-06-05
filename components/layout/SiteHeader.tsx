@@ -40,7 +40,7 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
           <Image src={withBasePath(site.logo_full)} alt={`${site.site_name} logo`} width={260} height={84} priority className="hidden h-16 w-auto object-contain sm:block" />
           <Image src={withBasePath(site.logo_symbol)} alt="" width={64} height={64} priority className="h-12 w-12 object-contain sm:hidden" />
         </Link>
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Main navigation">
           {main.map((item) => {
             const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
             return (

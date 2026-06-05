@@ -185,22 +185,24 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
   const logos = affiliations.filter((affiliation) => affiliation.logo);
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="rounded-[32px] border-2 border-dashed border-[var(--text-primary)] bg-white px-5 py-7 md:px-8 md:py-9">
+      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-7 md:gap-x-10 md:gap-y-8">
       {logos.map((affiliation) => (
         <div
           key={affiliation.slug}
-          className="surface-card flex min-h-28 items-center justify-center p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+          className="flex h-20 min-w-28 max-w-[220px] flex-[1_1_150px] items-center justify-center md:h-24 md:flex-[1_1_170px]"
           title={affiliation.name}
         >
           <Image
             src={withBasePath(affiliation.logo)}
             alt={`${affiliation.name} logo`}
-            width={280}
-            height={140}
-            className="h-16 w-full object-contain"
+            width={320}
+            height={160}
+            className="max-h-full w-full object-contain"
           />
         </div>
       ))}
+      </div>
     </div>
   );
 }
