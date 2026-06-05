@@ -35,16 +35,16 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
 
   return (
     <header className={`fixed inset-x-0 top-0 z-40 transition duration-200 ${scrolled || open ? "border-b border-[var(--border)] bg-[rgba(247,249,252,0.92)] shadow-sm backdrop-blur" : "bg-transparent"}`}>
-      <div className="container-page flex min-h-20 items-center justify-between gap-5">
+      <div className="container-page flex min-h-[5.5rem] items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-3" aria-label="AIMA home">
-          <Image src={withBasePath(site.logo_full)} alt={`${site.site_name} banner`} width={320} height={100} priority className="hidden h-16 w-auto max-w-[220px] object-contain md:max-w-[280px] xl:max-w-[320px] sm:block" />
-          <Image src={withBasePath(site.logo_symbol)} alt="" width={64} height={64} priority className="h-12 w-12 object-contain sm:hidden" />
+          <Image src={withBasePath(site.logo_full)} alt={`${site.site_name} banner`} width={340} height={106} priority className="hidden h-[4.5rem] w-auto max-w-[240px] object-contain md:max-w-[300px] xl:max-w-[340px] sm:block" />
+          <Image src={withBasePath(site.logo_symbol)} alt="" width={68} height={68} priority className="h-[3.25rem] w-[3.25rem] object-contain sm:hidden" />
         </Link>
-        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Main navigation">
           {main.map((item) => {
             const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
             return (
-              <Link key={item.href} href={item.href} className={`relative py-2 text-sm font-bold text-[var(--text-secondary)] transition hover:text-[var(--aima-deep-blue)] ${active ? "text-[var(--aima-deep-blue)] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[var(--aima-blue)]" : ""}`}>
+              <Link key={item.href} href={item.href} className={`relative py-2 text-[0.95rem] font-bold text-[var(--text-secondary)] transition hover:text-[var(--aima-deep-blue)] ${active ? "text-[var(--aima-deep-blue)] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[var(--aima-blue)]" : ""}`}>
                 {item.label}
               </Link>
             );
@@ -52,7 +52,7 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
         </nav>
         <div className="hidden lg:block">{cta ? <Button href={cta.href}>{cta.label}</Button> : null}</div>
         <button
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[var(--border)] bg-white lg:hidden"
+          className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full border border-[var(--border)] bg-white lg:hidden"
           type="button"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
@@ -62,7 +62,7 @@ export function SiteHeader({ site, navigation }: { site: SiteSettings; navigatio
         </button>
       </div>
       {open ? (
-        <div className="fixed inset-x-0 top-20 h-[calc(100vh-5rem)] bg-[rgba(247,249,252,0.98)] px-6 py-8 lg:hidden">
+        <div className="fixed inset-x-0 top-[5.5rem] h-[calc(100vh-5.5rem)] bg-[rgba(247,249,252,0.98)] px-6 py-8 lg:hidden">
           <nav className="grid gap-3" aria-label="Mobile navigation">
             {navigation.map((item) => (
               <Link key={item.href} href={item.href} className="rounded-2xl border border-[var(--border)] bg-white px-5 py-4 text-lg font-black" onClick={() => setOpen(false)}>
