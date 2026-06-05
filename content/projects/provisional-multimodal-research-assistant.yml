@@ -1,0 +1,23 @@
+title: "[TODO: Replace with a multimodal AIMA project]"
+slug: provisional-multimodal-research-assistant
+order: 2
+featured: true
+status: planned
+summary: Placeholder project for multimodal research assistance and evidence organization.
+problem_statement: "[TODO: Add project problem statement]"
+research_direction: Study how models can connect papers, figures, notes, and datasets without weakening scientific rigor.
+approach: Prototype controlled retrieval, structured summarization, and human-in-the-loop validation.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - multimodal-learning
+  - ai-for-scientific-discovery
+member_slugs:
+  - placeholder-mentor
+  - placeholder-core-member
+links:
+  - label: Project brief
+    url: "[TODO: Add project URL]"
+start_date: 2026-02-01
+end_date: ""
+placeholder: true

@@ -1,0 +1,16 @@
+title: AI for Scientific Discovery
+slug: ai-for-scientific-discovery
+order: 5
+featured: true
+summary: Provisional theme exploring AI as a partner for hypothesis generation, literature reasoning, and experimental insight.
+vision: "[TODO: Add research theme vision] Use AI to help researchers organize evidence, generate testable hypotheses, and accelerate rigorous discovery."
+scientific_questions:
+  - How can AI support hypothesis generation without replacing scientific judgment?
+  - What makes an AI-generated insight testable and useful?
+  - How can literature, data, and domain expertise be connected responsibly?
+cover_image: ""
+visual_type: framework
+related_project_slugs:
+  - provisional-publication-training-pipeline
+related_publication_slugs: []
+status: provisional

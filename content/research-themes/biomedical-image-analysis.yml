@@ -1,0 +1,17 @@
+title: Biomedical Image Analysis
+slug: biomedical-image-analysis
+order: 3
+featured: true
+summary: Provisional theme for image-based modeling, segmentation, visual reasoning, and scientific measurement.
+vision: "[TODO: Add research theme vision] Create robust image analysis methods that help researchers measure, compare, and understand biological structure."
+scientific_questions:
+  - How can image models generalize across acquisition settings?
+  - What visual evidence should support a model prediction?
+  - How can segmentation and representation learning improve scientific measurement?
+cover_image: ""
+visual_type: scientific
+related_project_slugs:
+  - provisional-medical-ai-benchmarking
+related_publication_slugs:
+  - placeholder-biomedical-image-reasoning
+status: provisional

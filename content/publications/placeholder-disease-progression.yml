@@ -1,0 +1,19 @@
+title: "[TODO: Replace with a real disease progression modeling publication]"
+slug: placeholder-disease-progression
+year: 2025
+authors:
+  - AIMA Research Group
+venue: "[TODO: Add venue]"
+publication_type: journal
+abstract: "A placeholder record for future longitudinal modeling work."
+thumbnail: ""
+research_theme_slugs:
+  - disease-progression-modeling
+related_project_slugs: []
+links:
+  - label: Paper
+    url: "[TODO: Add paper URL]"
+featured: false
+order: 4
+status: placeholder
+placeholder: true

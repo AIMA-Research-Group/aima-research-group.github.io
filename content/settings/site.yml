@@ -1,0 +1,21 @@
+site_name: AIMA Research Group
+short_name: AIMA
+subtitle: AI VIETNAM RESEARCH LAB
+tagline: "[TODO: Define AIMA tagline]"
+description: "[TODO: Define AIMA research lab description]"
+logo_full: /brand/aima-logo-placeholder.svg
+logo_symbol: /brand/aima-symbol-placeholder.svg
+favicon: /brand/aima-symbol-placeholder.svg
+default_og_image: /images/default-og-placeholder.svg
+email: contact@aima-research.example
+location: "[TODO: Add AIMA location]"
+domain: "[TODO: Add production domain]"
+social_links:
+  - label: GitHub
+    url: "[TODO: Add GitHub URL]"
+  - label: LinkedIn
+    url: "[TODO: Add LinkedIn URL]"
+  - label: Google Scholar
+    url: "[TODO: Add Google Scholar URL]"
+google_form_url: "[TODO: Add Join Us Google Form URL]"
+preview_mode_note: "Preview mode shows explicit TODO placeholders. Production mode hides placeholder records and shows graceful empty states."

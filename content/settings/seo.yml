@@ -1,0 +1,5 @@
+default_title: AIMA Research Group
+default_description: "AIMA is building a serious, collaborative AI research community."
+canonical_domain: "[TODO: Add production domain]"
+noindex_routes:
+  - /admin

@@ -1,0 +1,22 @@
+title: "[TODO: Replace with a real AIMA publication]"
+slug: placeholder-rigorous-medical-ai
+year: 2026
+authors:
+  - AIMA Research Group
+venue: "[TODO: Add venue]"
+publication_type: conference
+abstract: "A placeholder record representing future work on rigorous medical AI evaluation, robustness, and clinically meaningful model assessment."
+thumbnail: ""
+research_theme_slugs:
+  - medical-ai
+related_project_slugs:
+  - provisional-medical-ai-benchmarking
+links:
+  - label: Paper
+    url: "[TODO: Add paper URL]"
+  - label: Code
+    url: "[TODO: Add code URL]"
+featured: true
+order: 1
+status: placeholder
+placeholder: true

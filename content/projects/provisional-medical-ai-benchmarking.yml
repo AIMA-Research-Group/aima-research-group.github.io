@@ -1,0 +1,23 @@
+title: "[TODO: Replace with an active AIMA project]"
+slug: provisional-medical-ai-benchmarking
+order: 1
+featured: true
+status: active
+summary: Placeholder project exploring rigorous benchmarks for medical AI reliability.
+problem_statement: "[TODO: Add project problem statement]"
+research_direction: Develop evaluation workflows that test robustness, uncertainty, and evidence quality.
+approach: Combine curated tasks, transparent baselines, error analysis, and publication-ready reporting.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - medical-ai
+  - biomedical-image-analysis
+member_slugs:
+  - placeholder-founder
+  - placeholder-core-member
+links:
+  - label: Project brief
+    url: "[TODO: Add project URL]"
+start_date: 2026-01-01
+end_date: ""
+placeholder: true

@@ -1,0 +1,20 @@
+title: "[TODO: Replace with a real biomedical image analysis publication]"
+slug: placeholder-biomedical-image-reasoning
+year: 2025
+authors:
+  - AIMA Research Group
+venue: "[TODO: Add venue]"
+publication_type: workshop
+abstract: "A placeholder record for future work on image-based scientific measurement, visual reasoning, and robust biomedical representations."
+thumbnail: ""
+research_theme_slugs:
+  - biomedical-image-analysis
+related_project_slugs:
+  - provisional-medical-ai-benchmarking
+links:
+  - label: Paper
+    url: "[TODO: Add paper URL]"
+featured: true
+order: 3
+status: placeholder
+placeholder: true

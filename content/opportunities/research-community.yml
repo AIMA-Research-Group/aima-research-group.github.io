@@ -1,0 +1,19 @@
+title: "[TODO: Define current AIMA opportunity]"
+slug: research-community
+order: 1
+status: open
+audience: student
+summary: Join AIMA as a motivated researcher-in-training interested in rigorous AI research.
+description: "AIMA welcomes strong students and collaborators who want to learn how to turn careful questions into publishable research."
+expectations:
+  - Read research papers carefully and discuss them with precision.
+  - Commit to reproducible experiments and honest reporting.
+  - Participate in critique, writing, and project iteration.
+learning_outcomes:
+  - Formulate stronger research questions.
+  - Build research-ready experiments and evaluation plans.
+  - Understand the publication journey from idea to submission.
+application_process: "[TODO: Add application process and Google Form instructions]"
+google_form_url: "[TODO: Add Join Us Google Form URL]"
+featured: true
+placeholder: true

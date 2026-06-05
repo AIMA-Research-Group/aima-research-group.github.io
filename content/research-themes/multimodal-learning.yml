@@ -1,0 +1,17 @@
+title: Multimodal Learning
+slug: multimodal-learning
+order: 2
+featured: true
+summary: Provisional theme focused on learning from text, images, signals, and structured context together.
+vision: "[TODO: Add research theme vision] Develop multimodal methods that connect complementary evidence without obscuring scientific interpretation."
+scientific_questions:
+  - How can representations align across modalities with different noise profiles?
+  - When does language help scientific or medical reasoning, and when does it mislead?
+  - What makes multimodal systems interpretable enough for research use?
+cover_image: ""
+visual_type: framework
+related_project_slugs:
+  - provisional-multimodal-research-assistant
+related_publication_slugs:
+  - placeholder-multimodal-clinical-learning
+status: provisional

@@ -1,0 +1,15 @@
+title: Disease Progression Modeling
+slug: disease-progression-modeling
+order: 4
+featured: true
+summary: Provisional theme studying temporal patterns, risk trajectories, and clinically meaningful progression signals.
+vision: "[TODO: Add research theme vision] Model disease progression in ways that support scientific hypotheses and responsible longitudinal reasoning."
+scientific_questions:
+  - Which temporal patterns are stable enough to support prediction?
+  - How should models handle censored or irregular follow-up data?
+  - What evidence is needed before progression modeling can influence decisions?
+cover_image: ""
+visual_type: theme
+related_project_slugs: []
+related_publication_slugs: []
+status: provisional

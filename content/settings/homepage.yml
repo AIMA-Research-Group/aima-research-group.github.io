@@ -1,0 +1,47 @@
+hero_eyebrow: AIMA Research Group
+hero_title: Advancing meaningful AI research through scientific rigor and collaboration.
+hero_description: AIMA is a research community committed to developing impactful AI methods for complex scientific and real-world problems.
+primary_cta:
+  label: Explore Our Research
+  href: /research
+secondary_cta:
+  label: View Publications
+  href: /publications
+vision_label: OUR VISION
+vision_title: We pursue AI research that is scientifically grounded, methodologically rigorous, and meaningful in practice.
+vision_description: "[TODO: Add AIMA general research vision]"
+principles:
+  - title: Scientific rigor
+    description: We value careful problem framing, reproducible methodology, and evidence-led claims.
+  - title: Meaningful impact
+    description: We prioritize research directions where AI can clarify, support, or accelerate important scientific and human questions.
+  - title: Collaborative research
+    description: We build work through mentorship, critique, shared ownership, and long-term academic collaboration.
+featured_research_theme_slugs:
+  - medical-ai
+  - multimodal-learning
+  - biomedical-image-analysis
+  - disease-progression-modeling
+  - ai-for-scientific-discovery
+featured_publication_slugs:
+  - placeholder-rigorous-medical-ai
+  - placeholder-multimodal-clinical-learning
+  - placeholder-biomedical-image-reasoning
+featured_project_slugs:
+  - provisional-medical-ai-benchmarking
+  - provisional-multimodal-research-assistant
+  - provisional-publication-training-pipeline
+featured_people_slugs:
+  - placeholder-founder
+  - placeholder-mentor
+  - placeholder-core-member
+  - placeholder-collaborator
+featured_gallery_slugs:
+  - placeholder-research-training
+  - placeholder-collaboration-session
+  - placeholder-publication-discussion
+join_us_title: Work with us
+join_us_description: Join a research community that values scientific rigor, collaboration, and meaningful learning.
+join_us_cta:
+  label: Explore Opportunities
+  href: /join-us

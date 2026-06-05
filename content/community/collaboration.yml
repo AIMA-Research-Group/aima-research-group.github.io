@@ -1,0 +1,10 @@
+title: Collaboration
+slug: collaboration
+order: 2
+featured: true
+summary: AIMA is designed for serious collaboration between students, mentors, researchers, and academic partners.
+description: "[TODO: Add AIMA collaboration narrative]"
+cover_image: ""
+gallery_slugs:
+  - placeholder-collaboration-session
+placeholder: true

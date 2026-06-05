@@ -1,0 +1,18 @@
+name: "[TODO: Add founder name]"
+slug: placeholder-founder
+order: 1
+featured: true
+group: founder
+role: Founder
+affiliation: "AIMA, AI VIETNAM RESEARCH LAB"
+short_bio: "Placeholder founder profile for layout testing."
+full_bio: "[TODO: Add founder biography]"
+research_interests:
+  - Research vision
+  - Scientific mentorship
+photo: ""
+links:
+  - label: Google Scholar
+    url: "[TODO: Add profile URL]"
+active: true
+placeholder: true

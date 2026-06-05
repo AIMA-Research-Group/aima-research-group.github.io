@@ -1,0 +1,10 @@
+title: Research training
+slug: research-training
+order: 3
+featured: true
+summary: Training emphasizes reading deeply, asking precise questions, running careful experiments, and writing clearly.
+description: "[TODO: Add AIMA research training narrative]"
+cover_image: ""
+gallery_slugs:
+  - placeholder-research-training
+placeholder: true

@@ -1,0 +1,22 @@
+title: "[TODO: Replace with a research training project]"
+slug: provisional-publication-training-pipeline
+order: 3
+featured: true
+status: active
+summary: Placeholder project documenting AIMA's research training and publication journey.
+problem_statement: "[TODO: Add project problem statement]"
+research_direction: Build a repeatable mentorship pathway from research question to reproducible paper.
+approach: Use reading groups, critique sessions, project milestones, and manuscript iteration.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - ai-for-scientific-discovery
+member_slugs:
+  - placeholder-founder
+  - placeholder-collaborator
+links:
+  - label: Training notes
+    url: "[TODO: Add training notes URL]"
+start_date: 2026-03-01
+end_date: ""
+placeholder: true
