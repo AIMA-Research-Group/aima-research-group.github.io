@@ -9,6 +9,7 @@ declare global {
     CMS?: {
       init: (options: { config: unknown }) => void;
     };
+    AIMA_CMS_INIT_STARTED?: boolean;
     CMS_MANUAL_INIT?: boolean;
   }
 }
@@ -41,6 +42,8 @@ export function AdminCms() {
 
     async function initializeCms() {
       try {
+        if (window.AIMA_CMS_INIT_STARTED) return;
+        window.AIMA_CMS_INIT_STARTED = true;
         window.CMS_MANUAL_INIT = true;
 
         const configUrl = `${withBasePath("/admin/config.yml")}?v=${Date.now()}`;
