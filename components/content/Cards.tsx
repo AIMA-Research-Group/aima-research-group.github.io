@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
@@ -81,7 +82,17 @@ export function ProjectCard({ project }: { project: Project }) {
 export function PersonCard({ person }: { person: Person }) {
   return (
     <article className="surface-card p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      <div className="flex aspect-square items-center justify-center rounded-2xl bg-[var(--surface-muted)] text-5xl font-black text-[var(--aima-deep-blue)]">{person.name.replace("[TODO: Add ", "").slice(0, 1) || "A"}</div>
+      {person.photo ? (
+        <Image
+          src={person.photo}
+          alt={`Portrait of ${person.name}`}
+          width={520}
+          height={520}
+          className="aspect-square w-full rounded-2xl object-cover"
+        />
+      ) : (
+        <div className="flex aspect-square items-center justify-center rounded-2xl bg-[var(--surface-muted)] text-5xl font-black text-[var(--aima-deep-blue)]">{person.name.replace("[TODO: Add ", "").slice(0, 1) || "A"}</div>
+      )}
       <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{person.group}</Badge></div>
       <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
       <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>

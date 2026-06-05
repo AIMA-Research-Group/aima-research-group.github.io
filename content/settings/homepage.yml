@@ -1,4 +1,4 @@
-hero_eyebrow: AIMA Research Group
+hero_eyebrow: AIMA
 hero_title: Advancing meaningful AI research through scientific rigor and collaboration.
 hero_description: AIMA is a research community committed to developing impactful AI methods for complex scientific and real-world problems.
 primary_cta:
@@ -32,9 +32,9 @@ featured_project_slugs:
   - provisional-multimodal-research-assistant
   - provisional-publication-training-pipeline
 featured_people_slugs:
-  - placeholder-founder
+  - thanh-huy-nguyen
+  - lam-ba-thinh
   - placeholder-mentor
-  - placeholder-core-member
   - placeholder-collaborator
 featured_gallery_slugs:
   - placeholder-research-training

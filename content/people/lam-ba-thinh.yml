@@ -1,0 +1,16 @@
+name: Lâm Bá Thịnh
+slug: lam-ba-thinh
+order: 2
+featured: true
+group: core-member
+role: Leader
+affiliation: UNCC USA, PhD Student
+short_bio: AIMA Leader and PhD student at UNCC, USA.
+full_bio: "[TODO: Add full biography for Lâm Bá Thịnh]"
+research_interests:
+  - Medical AI
+  - Biomedical image analysis
+photo: /uploads/members/lbt.jpg
+links: []
+active: true
+placeholder: false

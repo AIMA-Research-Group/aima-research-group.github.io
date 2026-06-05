@@ -12,7 +12,7 @@ framework_figure: ""
 research_theme_slugs:
   - ai-for-scientific-discovery
 member_slugs:
-  - placeholder-founder
+  - thanh-huy-nguyen
   - placeholder-collaborator
 links:
   - label: Training notes

@@ -1,13 +1,13 @@
-site_name: AIMA Research Group
+site_name: Artifical Intelligence in Medical Application
 short_name: AIMA
 subtitle: AI VIETNAM RESEARCH LAB
 tagline: "[TODO: Define AIMA tagline]"
 description: "[TODO: Define AIMA research lab description]"
-logo_full: /brand/aima-logo-placeholder.svg
-logo_symbol: /brand/aima-symbol-placeholder.svg
-favicon: /brand/aima-symbol-placeholder.svg
-default_og_image: /images/default-og-placeholder.svg
-email: contact@aima-research.example
+logo_full: /brand/aima-logo.png
+logo_symbol: /brand/aima-logo.png
+favicon: /brand/aima-logo.png
+default_og_image: /brand/aima-banner.png
+email: aima.research.aivn@gmail.com
 location: "[TODO: Add AIMA location]"
 domain: "[TODO: Add production domain]"
 social_links:
