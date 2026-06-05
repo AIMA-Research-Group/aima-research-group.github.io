@@ -21,14 +21,7 @@ export default async function JoinUsPage() {
       <SiteHeader site={content.site} navigation={content.navigation} />
       <main id="main-content">
         <PageHero eyebrow="Join Us" title="Work with us" description="Join a research community that values scientific rigor, collaboration, and meaningful learning." />
-        <Section className="pt-0">
-          <PageContainer>
-            <div className="grid gap-6 lg:grid-cols-3">
-              {["Why join AIMA", "Who should apply", "What you can learn"].map((title) => <article key={title} className="surface-card p-6"><h2 className="text-2xl font-black">{title}</h2><p className="mt-3 leading-7 text-[var(--text-secondary)]">AIMA is for people who want to learn serious research practice: careful reading, strong questions, reproducible experiments, critique, and clear writing.</p></article>)}
-            </div>
-          </PageContainer>
-        </Section>
-        <Section className="bg-white"><PageContainer><SectionHeading title="Open opportunities" />{content.opportunities.length ? <div className="grid gap-6 md:grid-cols-2">{content.opportunities.map((item) => <OpportunityCard key={item.slug} opportunity={item} />)}</div> : <EmptyState title="New opportunities will be announced here" description="Check back later or use the contact fallback." />}</PageContainer></Section>
+        <Section className="bg-white pt-0"><PageContainer><SectionHeading title="Open opportunities" />{content.opportunities.length ? <div className="grid gap-6 md:grid-cols-2">{content.opportunities.map((item) => <OpportunityCard key={item.slug} opportunity={item} />)}</div> : <EmptyState title="New opportunities will be announced here" description="Check back later or use the contact fallback." />}</PageContainer></Section>
         <Section>
           <PageContainer>
             <div className="surface-card p-8 md:p-10">
