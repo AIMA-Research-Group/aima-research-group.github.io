@@ -83,7 +83,7 @@ export default async function HomePage() {
             <SectionHeading
               eyebrow="Academic network"
               title="Affiliations across the research community."
-              description="AIMA connects students, mentors, collaborators, and affiliated faculty across universities and medical institutions."
+              description="Institutions represented across AIMA's leaders, mentors, collaborators, and affiliated faculty."
             />
             <AffiliationLogoGrid affiliations={content.affiliations.filter((affiliation) => affiliation.featured)} />
           </PageContainer>

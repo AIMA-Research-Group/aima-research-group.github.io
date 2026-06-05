@@ -118,9 +118,10 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {affiliations.map((affiliation) => (
-        <article
+        <div
           key={affiliation.slug}
-          className="surface-card flex min-h-36 flex-col justify-between p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+          className="surface-card flex min-h-28 items-center justify-center p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+          title={affiliation.name}
         >
           {affiliation.logo ? (
             <Image
@@ -128,20 +129,17 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
               alt={`${affiliation.name} logo`}
               width={240}
               height={120}
-              className="h-14 w-full object-contain object-left"
+              className="h-16 w-full object-contain"
             />
           ) : (
-            <div className="flex h-14 items-center">
+            <div className="flex flex-col items-center justify-center gap-2 text-center">
               <div className="flex h-14 min-w-20 items-center justify-center rounded-2xl bg-[var(--aima-soft-blue)] px-4 text-xl font-black text-[var(--aima-deep-blue)]">
                 {affiliationInitials(affiliation.name)}
               </div>
+              <span className="text-xs font-bold text-[var(--text-muted)]">{affiliation.name}</span>
             </div>
           )}
-          <div className="mt-5">
-            <h3 className="font-black leading-snug">{affiliation.name}</h3>
-            <p className="mt-1 text-sm text-[var(--text-muted)]">{affiliation.location} · {affiliation.relationship}</p>
-          </div>
-        </article>
+        </div>
       ))}
     </div>
   );
