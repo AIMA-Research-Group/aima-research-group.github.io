@@ -1,11 +1,12 @@
+import Image from "next/image";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Button } from "@/components/ui/Button";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import { PageContainer, Section, SectionHeading } from "@/components/ui/Section";
-import { ScientificHeroCanvas } from "@/components/visual/ScientificPlaceholders";
 import { AffiliationLogoGrid, CommunityNarrativeCard, GalleryGrid, NewsHighlights, PersonCard, ProjectCard, PublicationCard, ResearchThemeCard } from "@/components/content/Cards";
 import { bySlugs, getAllContent } from "@/lib/content/loaders";
+import { withBasePath } from "@/lib/utils/paths";
 
 export default async function HomePage() {
   const content = await getAllContent();
@@ -30,7 +31,16 @@ export default async function HomePage() {
                 <div className="mt-8 flex flex-wrap gap-3"><Button href={content.homepage.primary_cta.href}>{content.homepage.primary_cta.label}</Button><Button href={content.homepage.secondary_cta.href} variant="secondary">{content.homepage.secondary_cta.label}</Button></div>
                 <p className="mt-6 text-sm font-bold text-[var(--text-muted)]">Scientific Humanist Lab · rigorous, collaborative, evidence-driven AI research</p>
               </div>
-              <ScientificHeroCanvas />
+              <div className="relative overflow-hidden rounded-[28px] border border-[var(--border)] bg-white p-4 shadow-[var(--shadow-soft)]">
+                <Image
+                  src={withBasePath(content.site.default_og_image)}
+                  alt={`${content.site.short_name} research lab banner`}
+                  width={1280}
+                  height={720}
+                  priority
+                  className="aspect-[16/10] w-full rounded-[22px] object-contain"
+                />
+              </div>
             </div>
           </PageContainer>
         </Section>
