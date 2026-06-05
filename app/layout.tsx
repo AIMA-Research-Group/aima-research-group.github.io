@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/content/loaders";
+import { withBasePath } from "@/lib/utils/paths";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [site.default_og_image],
     },
     icons: {
-      icon: site.favicon,
+      icon: withBasePath(site.favicon),
     },
   };
 }

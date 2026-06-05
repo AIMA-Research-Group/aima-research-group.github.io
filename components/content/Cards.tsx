@@ -49,7 +49,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
       <div className="relative h-48 min-w-0 overflow-hidden rounded-2xl md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full">
         {visual ? (
           <Image
-            src={visual}
+            src={withBasePath(visual)}
             alt={`${publication.title} visual summary`}
             fill
             sizes="(min-width: 768px) 220px, 100vw"
@@ -162,7 +162,7 @@ export function PersonCard({ person }: { person: Person }) {
     <article className="surface-card p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
       {person.photo ? (
         <Image
-          src={person.photo}
+          src={withBasePath(person.photo)}
           alt={`Portrait of ${person.name}`}
           width={520}
           height={520}
@@ -203,7 +203,7 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
         >
           {affiliation.logo ? (
             <Image
-              src={affiliation.logo}
+              src={withBasePath(affiliation.logo)}
               alt={`${affiliation.name} logo`}
               width={240}
               height={120}
