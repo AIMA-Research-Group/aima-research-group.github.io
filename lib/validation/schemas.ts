@@ -88,6 +88,8 @@ export const publicationSchema = z.object({
   publication_type: z.enum(["journal", "conference", "preprint", "workshop", "poster", "thesis", "other"]),
   abstract: z.string().min(1),
   thumbnail: z.string().optional().default(""),
+  figure: z.string().optional().default(""),
+  media_type: z.enum(["image", "gif", "none"]).optional().default("none"),
   research_theme_slugs: z.array(z.string()),
   related_project_slugs: z.array(z.string()),
   links: z.array(linkSchema),

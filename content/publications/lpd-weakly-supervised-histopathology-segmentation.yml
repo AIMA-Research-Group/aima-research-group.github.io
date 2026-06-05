@@ -1,0 +1,28 @@
+title: "LPD: Learnable Prototypes with Diversity Regularization for Weakly Supervised Histopathology Segmentation"
+slug: lpd-weakly-supervised-histopathology-segmentation
+year: 2026
+authors:
+  - Khang Le
+  - Anh Mai Vu
+  - Thi Kim Trang Vo
+  - Ha Thach
+  - Ngoc Bui Lam Quang
+  - Thanh-Huy Nguyen
+  - Minh H. N. Le
+  - Zhu Han
+  - Chandra Mohan
+  - Hien Van Nguyen
+venue: ISBI 2026
+publication_type: conference
+abstract: Weakly supervised semantic segmentation (WSSS) in histopathology reduces pixel-level labeling by learning from image-level labels, but it is hindered by inter-class homogeneity, intra-class heterogeneity, and CAM-induced region shrinkage (global pooling-based class activation maps whose activations highlight only the most distinctive areas and miss nearby class regions). Recent works address these challenges by constructing a clustering prototype bank and then refining masks in a separate stage; however, such two-stage pipelines are costly, sensitive to hyperparameters, and decouple prototype discovery from segmentation learning, limiting their effectiveness and efficiency. We propose a cluster-free, one-stage learnable-prototype framework with diversity regularization to enhance morphological intra-class heterogeneity coverage. Our approach achieves state-of-the-art (SOTA) performance on BCSS-WSSS, outperforming prior methods in mIoU and mDice. Qualitative segmentation maps show sharper boundaries and fewer mislabels, and activation heatmaps further reveal that, compared with clustering-based prototypes, our learnable prototypes cover more diverse and complementary regions within each class, providing consistent qualitative evidence for their effectiveness.
+thumbnail: ""
+figure: ""
+media_type: none
+research_theme_slugs:
+  - biomedical-image-analysis
+related_project_slugs: []
+links: []
+featured: true
+order: 3
+status: accepted
+placeholder: false

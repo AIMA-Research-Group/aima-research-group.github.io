@@ -24,9 +24,10 @@ featured_research_theme_slugs:
   - disease-progression-modeling
   - ai-for-scientific-discovery
 featured_publication_slugs:
-  - placeholder-rigorous-medical-ai
-  - placeholder-multimodal-clinical-learning
-  - placeholder-biomedical-image-reasoning
+  - denoised-patch-mixing-sfda
+  - clustered-mmd-semi-supervised-medical-segmentation
+  - lpd-weakly-supervised-histopathology-segmentation
+  - sdt-net-scribble-supervised-medical-segmentation
 featured_project_slugs:
   - provisional-medical-ai-benchmarking
   - provisional-multimodal-research-assistant

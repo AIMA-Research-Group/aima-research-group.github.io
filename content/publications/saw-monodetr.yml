@@ -1,0 +1,25 @@
+title: "Saw-Monodetr: Shape-Aware Adaptive Weighted Transformer for Monocular 3d Object Detection"
+slug: saw-monodetr
+year: 2025
+authors:
+  - Dinh Dai Quan Tran
+  - Thanh-Huy Nguyen
+  - Vinh Quang Dinh
+  - Ren-Hung Hwang
+  - Van-Linh Nguyen
+venue: IEEE ICIP 2025
+publication_type: conference
+abstract: "Monocular 3D object detection offers a cost-effective alternative to LiDAR and stereo cameras by determining 3D positions from a single image. DETR-based methods leverage transformers to integrate visual and depth representations globally, achieving state-of-the-art performance and competitive speeds without manual configurations like non-maximum suppression or anchor generation. However, averaging multiple-depth predictions hinders precise accuracy. This work enhances depth prediction through two innovations: (1) improving depth quality using a Shape-aware Foreground Depth Map (SFDM) and (2) Depth Adaptive Weight (DAW) helps the final depth prediction to benefit flexibly from each component’s contribution. Experiments on the KITTI benchmark demonstrate the proposed model’s state-of-the-art performance. The code is available at https://github.com/useracc687/saw-monodetr."
+thumbnail: ""
+figure: ""
+media_type: none
+research_theme_slugs:
+  - ai-for-scientific-discovery
+related_project_slugs: []
+links:
+  - label: Code
+    url: https://github.com/useracc687/saw-monodetr
+featured: false
+order: 15
+status: accepted
+placeholder: false

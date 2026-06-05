@@ -1,0 +1,36 @@
+title: "OASIS-Net: An Obstetric Adversarial Semi-Supervised Image Segmentation Network for Cervical and Fetal Head Ultrasound Imaging"
+slug: oasis-net-obstetric-ultrasound-segmentation
+year: 2025
+authors:
+  - Minh Huu Nhat Le
+  - Tran Quoc Khanh Le
+  - Thanh-Huy Nguyen
+  - Dang Nguyen
+  - Hien Quang Nguyen
+  - Nhi Huu Hanh Le
+  - Kien Dang Nguyen
+  - Hien Quang Kha
+  - Phat Ky Nguyen
+  - Hoai Huu Le
+  - Han Hong Huynh
+  - Dang-Manh Ho
+  - Thanh-Minh Nguyen
+  - Quan Nguyen
+  - Min Xu
+  - Phat K Huynh
+  - Nguyen Quoc Khanh Le
+venue: "IEEE JBHI (IF: 6.7)"
+publication_type: journal
+abstract: "Accurate obstetric ultrasound segmentation is hampered by speckle noise and scarce annotations. We propose OASIS-Net, a dual-space adversarial semi-supervised framework that trains a single DeepLabV3$+$ backbone by minimizing one unified consistency loss. The loss couples input-space adversaries (iterative FGSM with $K=3$ steps, $\\epsilon =4/255$) and weight-space gradient-aligned perturbations (DGAP, weight scale $=0.5$) whose influence grows with a sigmoid ramp ($T_{\\text{ramp}}=20$, $\\alpha _{\\max }=1.0$). Pseudo-labels are accepted with a confidence threshold of 0.95 and the unlabeled loss weight is 1.0. We evaluate OASIS-Net on two public obstetric benchmarks: FUGC (50 labeled, 450 unlabeled) and PSFH (5,101 frames, 70% unlabeled). Using 20% of labels, the method attains Dice = 96.53% and HD$_{95}$ = 3.86 px on FUGC, and Dice = 97.16% and HD$_{95}$ = 2.34 px on PSFH. Ablation shows that removing either perturbation stream reduces Dice by up to 1.8 percentage points. The trained model runs at 18.96 frames s$^{-1}$ on a single RTX 4060 Ti and produces high-precision masks that enable automated cervical-length and angle-of-progression measurements for objective obstetric screening and intrapartum monitoring. These results demonstrate that jointly enforcing input- and parameter-space adversarial consistency yields a label-efficient, robust solution for obstetric ultrasound segmentation and supports real-time clinical use."
+thumbnail: ""
+figure: ""
+media_type: none
+research_theme_slugs:
+  - medical-ai
+  - biomedical-image-analysis
+related_project_slugs: []
+links: []
+featured: false
+order: 10
+status: accepted
+placeholder: false

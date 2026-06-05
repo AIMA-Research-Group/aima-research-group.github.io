@@ -13,5 +13,10 @@ visual_type: scientific
 related_project_slugs:
   - provisional-medical-ai-benchmarking
 related_publication_slugs:
-  - placeholder-biomedical-image-reasoning
+  - lpd-weakly-supervised-histopathology-segmentation
+  - contrastive-integrated-gradients-wsi
+  - semi-moe-histopathology-segmentation
+  - oasis-net-obstetric-ultrasound-segmentation
+  - fetal-bcp-ultrasound-segmentation
+  - dme-fd-skin-lesion-segmentation
 status: provisional

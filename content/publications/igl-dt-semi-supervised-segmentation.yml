@@ -1,0 +1,23 @@
+title: "IGL-DT: Iterative Global-Local Feature Learning with Dual-Teacher Semantic Segmentation Framework under Limited Annotation Scheme"
+slug: igl-dt-semi-supervised-segmentation
+year: 2025
+authors:
+  - Dinh Dai Quan Tran
+  - Hoang-Thien Nguyen
+  - Thanh-Huy Nguyen
+  - Gia-Van To
+  - Tien-Huy Nguyen
+  - Quan Nguyen
+venue: CVPR 2025 Workshop
+publication_type: workshop
+abstract: Semi-Supervised Semantic Segmentation (SSSS) aims to improve segmentation accuracy by leveraging a small set of labeled images alongside a larger pool of unlabeled data. Recent advances primarily focus on pseudo-labeling, consistency regularization, and co-training strategies. However, existing methods struggle to balance global semantic representation with fine-grained local feature extraction. To address this challenge, we propose a novel tri-branch semi-supervised segmentation framework incorporating a dual-teacher strategy, named IGL-DT. Our approach employs SwinUnet for high-level semantic guidance through Global Context Learning and ResUnet for detailed feature refinement via Local Regional Learning. Additionally, a Discrepancy Learning mechanism mitigates over-reliance on a single teacher, promoting adaptive feature learning. Extensive experiments on benchmark datasets demonstrate that our method outperforms state-of-the-art approaches, achieving superior segmentation performance across various data regimes.
+thumbnail: ""
+figure: ""
+media_type: none
+research_theme_slugs: []
+related_project_slugs: []
+links: []
+featured: false
+order: 16
+status: accepted
+placeholder: false

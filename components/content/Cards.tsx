@@ -42,9 +42,21 @@ export function ResearchThemeCard({ theme, projectCount, publicationCount }: { t
 }
 
 export function PublicationCard({ publication }: { publication: Publication }) {
+  const visual = publication.figure || publication.thumbnail;
   return (
     <article className="surface-card grid gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:grid-cols-[220px_1fr]">
-      <PublicationThumbnailPlaceholder />
+      {visual ? (
+        <Image
+          src={visual}
+          alt={`${publication.title} visual summary`}
+          width={440}
+          height={320}
+          unoptimized={publication.media_type === "gif"}
+          className="aspect-[4/3] w-full rounded-2xl object-cover"
+        />
+      ) : (
+        <PublicationThumbnailPlaceholder />
+      )}
       <div>
         <div className="mb-3 flex flex-wrap gap-2">
           {publication.placeholder && isPreviewMode() ? <Badge>PLACEHOLDER PUBLICATION</Badge> : null}

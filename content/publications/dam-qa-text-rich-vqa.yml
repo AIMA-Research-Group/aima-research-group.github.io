@@ -1,0 +1,29 @@
+title: Describe anything model for visual question answering on text-rich images
+slug: dam-qa-text-rich-vqa
+year: 2025
+authors:
+  - Yen-Linh Vu
+  - Dinh-Thang Duong
+  - Truong-Binh Duong
+  - Anh-Khoi Nguyen
+  - Thanh-Huy Nguyen
+  - Le Thien Phuc Nguyen
+  - Jianhua Xing
+  - Xingjian Li
+  - Tianyang Wang
+  - Ulas Bagci
+  - Min Xu
+venue: ICCV 2025 Workshop - VisionDoc
+publication_type: poster
+abstract: Recent progress has been made in region-aware vision-language modeling, particularly with the emergence of the Describe Anything Model (DAM). DAM is capable of generating detailed descriptions of any specific image areas or objects without the need for additional localized image-text alignment supervision. We hypothesize that such region-level descriptive capability is beneficial for the task of Visual Question Answering (VQA), especially in challenging scenarios involving images with dense text. In such settings, the fine-grained extraction of textual information is crucial to producing correct answers. Motivated by this, we introduce DAM-QA, a framework with a tailored evaluation protocol, developed to investigate and harness the region-aware capabilities from DAM for the text-rich VQA problem that requires reasoning over text-based information within images. DAM-QA incorporates a mechanism that aggregates answers from multiple regional views of image content, enabling more effective identification of evidence that may be tied to text-related elements. Experiments on six VQA benchmarks show that our approach consistently outperforms the baseline DAM, with a notable 7+ point gain on DocVQA. DAM-QA also achieves the best overall performance among region-aware models with fewer parameters, significantly narrowing the gap with strong generalist VLMs. These results highlight the potential of DAM-like models for text-rich and broader VQA tasks when paired with efficient usage and integration strategies. Our code is publicly available at this github
+thumbnail: ""
+figure: ""
+media_type: none
+research_theme_slugs:
+  - multimodal-learning
+related_project_slugs: []
+links: []
+featured: false
+order: 12
+status: accepted
+placeholder: false

@@ -79,6 +79,7 @@ async function main() {
   }
   for (const publication of content.publications) {
     validAsset(`publication.${publication.slug}.thumbnail`, publication.thumbnail);
+    validAsset(`publication.${publication.slug}.figure`, publication.figure);
     publication.research_theme_slugs.forEach((slug) => !themeSlugs.has(slug) && fail(`publication.${publication.slug}: missing theme ${slug}`));
     publication.related_project_slugs.forEach((slug) => !projectSlugs.has(slug) && fail(`publication.${publication.slug}: missing project ${slug}`));
     publication.links.forEach((link) => validUrl(`publication.${publication.slug}.${link.label}`, link.url));
