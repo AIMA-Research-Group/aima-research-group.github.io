@@ -34,27 +34,33 @@ collections:
           - { label: Canonical Domain, name: canonical_domain, widget: string }
   - name: navigation
     label: Navigation
-    file: content/settings/navigation.yml
-    fields:
-      - label: Items
-        name: items
-        widget: list
+    files:
+      - label: Navigation
+        name: navigation
+        file: content/settings/navigation.yml
         fields:
-          - { label: Label, name: label, widget: string }
-          - { label: Href, name: href, widget: string }
-          - { label: Order, name: order, widget: number }
-          - { label: Visible, name: visible, widget: boolean }
-          - { label: External, name: external, widget: boolean }
-          - { label: Group, name: group, widget: string }
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+              - { label: Order, name: order, widget: number }
+              - { label: Visible, name: visible, widget: boolean }
+              - { label: External, name: external, widget: boolean }
+              - { label: Group, name: group, widget: string }
   - name: homepage
     label: Homepage Settings
-    file: content/settings/homepage.yml
-    fields:
-      - { label: Hero Eyebrow, name: hero_eyebrow, widget: string }
-      - { label: Hero Title, name: hero_title, widget: string }
-      - { label: Hero Description, name: hero_description, widget: text }
-      - { label: Vision Title, name: vision_title, widget: string }
-      - { label: Vision Description, name: vision_description, widget: text }
+    files:
+      - label: Homepage Settings
+        name: homepage
+        file: content/settings/homepage.yml
+        fields:
+          - { label: Hero Eyebrow, name: hero_eyebrow, widget: string }
+          - { label: Hero Title, name: hero_title, widget: string }
+          - { label: Hero Description, name: hero_description, widget: text }
+          - { label: Vision Title, name: vision_title, widget: string }
+          - { label: Vision Description, name: vision_description, widget: text }
   - name: research_themes
     label: Research Themes
     folder: content/research-themes
