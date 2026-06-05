@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ExternalLink } from "lucide-react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Badge } from "@/components/ui/Badge";
@@ -7,6 +8,7 @@ import { PageContainer, PageHero, Section, SectionHeading } from "@/components/u
 import { PersonCard, PublicationCard } from "@/components/content/Cards";
 import { FrameworkDiagramPlaceholder } from "@/components/visual/ScientificPlaceholders";
 import { getAllContent } from "@/lib/content/loaders";
+import { withBasePath } from "@/lib/utils/paths";
 
 export async function generateStaticParams() {
   const content = await getAllContent();
@@ -44,6 +46,15 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <div><h2 className="text-2xl font-black">Research direction</h2><p className="mt-3 leading-8 text-[var(--text-secondary)]">{project.research_direction}</p></div>
                 <div><h2 className="text-2xl font-black">Approach</h2><p className="mt-3 leading-8 text-[var(--text-secondary)]">{project.approach}</p></div>
                 <div className="flex flex-wrap gap-2">{themes.map((theme) => <Badge key={theme.slug} tone="teal">{theme.title}</Badge>)}</div>
+                {project.links.length ? (
+                  <div className="flex flex-wrap gap-3">
+                    {project.links.map((link) => (
+                      <a key={link.label} href={withBasePath(link.url)} className="inline-flex items-center gap-2 font-bold text-[var(--aima-deep-blue)]">
+                        {link.label}<ExternalLink className="h-4 w-4" />
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
           </PageContainer>

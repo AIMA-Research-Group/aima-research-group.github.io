@@ -67,6 +67,27 @@ collections:
       - { label: Featured, name: featured, widget: boolean }
       - { label: Summary, name: summary, widget: text }
   - { name: publications, label: Publications, folder: content/publications, extension: yml, create: true, fields: *standard }
+  - name: news
+    label: News
+    folder: content/news
+    extension: yml
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Date, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+      - label: Category
+        name: category
+        widget: select
+        options: [paper, member, conference, talk, award, lab, other]
+      - { label: Summary, name: summary, widget: text }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Link Label, name: link_label, widget: string, required: false }
+      - { label: Link URL, name: link_url, widget: string, required: false }
+      - { label: Order, name: order, widget: number }
+      - { label: Featured, name: featured, widget: boolean, default: true }
+      - { label: Pinned, name: pinned, widget: boolean, default: false }
+      - { label: Placeholder, name: placeholder, widget: boolean, default: false }
   - { name: projects, label: Projects, folder: content/projects, extension: yml, create: true, fields: *standard }
   - { name: people, label: People, folder: content/people, extension: yml, create: true, fields: *standard }
   - { name: affiliations, label: Affiliations, folder: content/affiliations, extension: yml, create: true, fields: *standard }

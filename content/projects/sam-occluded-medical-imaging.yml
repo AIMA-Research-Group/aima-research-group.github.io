@@ -1,0 +1,21 @@
+title: Segment Anything Model under Occluded Medical Imaging Conditions
+slug: sam-occluded-medical-imaging
+order: 2
+featured: true
+status: active
+summary: A robustness benchmark for SAM-based medical segmentation under controlled occlusion scenarios that simulate clinically relevant hidden or obstructed anatomy.
+problem_statement: In real clinical environments, regions of interest can be partially occluded by surgical tools, probes, catheters, markers, implants, or overlapping anatomical structures, but SAM-based failure modes under these conditions are not yet well characterized.
+research_direction: Compare how SAM, SAM2, and medical-domain SAM variants respond to random occlusion, structured occlusion, and realistic tool-based copy-paste occlusion in 2D medical images.
+approach: Select controlled 2D medical imaging datasets; simulate Cutout, CutMix, and surgical-tool occlusions with varying severity; run consistent prompt-guided or automatic segmentation settings; evaluate Dice, IoU, Hausdorff distance, ASSD, occlusion sensitivity curves, and stability metrics; visualize missed anatomy, hallucinated boundaries, robustness heatmaps, and degradation plots for a CVPR workshop target and later Q1 journal extension.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - medical-ai
+  - biomedical-image-analysis
+member_slugs: []
+links:
+  - label: Project brief
+    url: /uploads/projects/AIO25_Project2_OcclusionSAM.pdf
+start_date: 2025-01-01
+end_date: ""
+placeholder: false

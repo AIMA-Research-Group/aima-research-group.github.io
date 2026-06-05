@@ -1,0 +1,21 @@
+title: Semi-Supervised Breast Cancer Ultrasound Classification
+slug: semi-supervised-breast-ultrasound-classification
+order: 5
+featured: true
+status: active
+summary: A breast ultrasound classification project benchmarking CNN and Vision Transformer models under limited annotation availability.
+problem_statement: Breast ultrasound models can help distinguish benign and malignant lesions, but strong classification performance usually depends on large expert-labeled datasets that are expensive and limited in practice.
+research_direction: Study performance degradation across labeled-data ratios and identify robust classification strategies for breast ultrasound images under annotation scarcity.
+approach: Prepare a breast ultrasound dataset with benign and malignant labels; apply standardized normalization, resizing, and augmentation; construct fixed train subsets across 1%, 5%, 10%, 25%, 50%, and 100% labeled data; benchmark ResNet, DenseNet, EfficientNet, ViT, and hybrid CNN-ViT models; evaluate accuracy, precision, recall, F1-score, ROC-AUC, and sensitivity-specificity trade-offs; analyze performance-annotation curves, confusion matrices, and misclassification patterns before extending toward multi-task classification and segmentation with semi-supervised and self-supervised learning.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - medical-ai
+  - biomedical-image-analysis
+member_slugs: []
+links:
+  - label: Project brief
+    url: /uploads/projects/AIO25_Project5_SSLBreastUS.pdf
+start_date: 2025-01-01
+end_date: ""
+placeholder: false

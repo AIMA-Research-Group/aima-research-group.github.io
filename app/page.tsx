@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import { PageContainer, Section, SectionHeading } from "@/components/ui/Section";
 import { ScientificHeroCanvas } from "@/components/visual/ScientificPlaceholders";
-import { AffiliationLogoGrid, CommunityNarrativeCard, GalleryGrid, PersonCard, ProjectCard, PublicationCard, ResearchThemeCard } from "@/components/content/Cards";
+import { AffiliationLogoGrid, CommunityNarrativeCard, GalleryGrid, NewsHighlights, PersonCard, ProjectCard, PublicationCard, ResearchThemeCard } from "@/components/content/Cards";
 import { bySlugs, getAllContent } from "@/lib/content/loaders";
 
 export default async function HomePage() {
@@ -14,6 +14,7 @@ export default async function HomePage() {
   const projects = bySlugs(content.projects, content.homepage.featured_project_slugs);
   const people = bySlugs(content.people, content.homepage.featured_people_slugs);
   const gallery = bySlugs(content.gallery, content.homepage.featured_gallery_slugs);
+  const news = content.news.filter((item) => item.featured).sort((a, b) => Number(b.pinned) - Number(a.pinned) || b.date.localeCompare(a.date) || a.order - b.order);
 
   return (
     <>
@@ -31,6 +32,13 @@ export default async function HomePage() {
               </div>
               <ScientificHeroCanvas />
             </div>
+          </PageContainer>
+        </Section>
+
+        <Section className="pt-0">
+          <PageContainer>
+            <SectionHeading eyebrow="Latest news" title="Updates from the lab." description="Founder updates on new papers, new members, conference plans, invited talks, awards, and lab milestones." />
+            <NewsHighlights news={news} />
           </PageContainer>
         </Section>
 

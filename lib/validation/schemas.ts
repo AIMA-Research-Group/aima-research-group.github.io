@@ -119,6 +119,21 @@ export const projectSchema = z.object({
   placeholder: z.boolean(),
 });
 
+export const newsItemSchema = z.object({
+  title: z.string().min(1),
+  slug: z.string().min(1),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  category: z.enum(["paper", "member", "conference", "talk", "award", "lab", "other"]),
+  summary: z.string().min(1),
+  description: z.string().optional().default(""),
+  link_label: z.string().optional().default(""),
+  link_url: z.string().optional().default(""),
+  order: z.number(),
+  featured: z.boolean(),
+  pinned: z.boolean(),
+  placeholder: z.boolean(),
+});
+
 export const personSchema = z.object({
   name: z.string().min(1),
   slug: z.string().min(1),
@@ -196,6 +211,7 @@ export type HomepageSettings = z.infer<typeof homepageSchema>;
 export type ResearchTheme = z.infer<typeof researchThemeSchema>;
 export type Publication = z.infer<typeof publicationSchema>;
 export type Project = z.infer<typeof projectSchema>;
+export type NewsItem = z.infer<typeof newsItemSchema>;
 export type Person = z.infer<typeof personSchema>;
 export type Affiliation = z.infer<typeof affiliationSchema>;
 export type CommunityNarrative = z.infer<typeof communityNarrativeSchema>;

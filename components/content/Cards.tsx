@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, CalendarDays, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import {
@@ -10,8 +10,9 @@ import {
   ResearchThemeVisualPlaceholder,
   ScientificFigurePlaceholder,
 } from "@/components/visual/ScientificPlaceholders";
-import type { Affiliation, CommunityNarrative, GalleryImage, Opportunity, Person, Project, Publication, ResearchTheme } from "@/lib/validation/schemas";
+import type { Affiliation, CommunityNarrative, GalleryImage, NewsItem, Opportunity, Person, Project, Publication, ResearchTheme } from "@/lib/validation/schemas";
 import { isPreviewMode } from "@/lib/utils/preview";
+import { withBasePath } from "@/lib/utils/paths";
 
 export function TagList({ tags }: { tags: string[] }) {
   return <div className="flex flex-wrap gap-2">{tags.map((tag) => <span key={tag} className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-bold text-[var(--text-secondary)]">{tag}</span>)}</div>;
@@ -45,19 +46,21 @@ export function PublicationCard({ publication }: { publication: Publication }) {
   const visual = publication.figure || publication.thumbnail;
   return (
     <article className="surface-card grid gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:grid-cols-[220px_1fr]">
-      {visual ? (
-        <Image
-          src={visual}
-          alt={`${publication.title} visual summary`}
-          width={440}
-          height={320}
-          unoptimized={publication.media_type === "gif"}
-          className="aspect-[4/3] w-full rounded-2xl object-cover"
-        />
-      ) : (
-        <PublicationThumbnailPlaceholder />
-      )}
-      <div>
+      <div className="relative h-48 min-w-0 overflow-hidden rounded-2xl md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full">
+        {visual ? (
+          <Image
+            src={visual}
+            alt={`${publication.title} visual summary`}
+            fill
+            sizes="(min-width: 768px) 220px, 100vw"
+            unoptimized={publication.media_type === "gif"}
+            className="object-cover"
+          />
+        ) : (
+          <PublicationThumbnailPlaceholder />
+        )}
+      </div>
+      <div className="min-w-0">
         <div className="mb-3 flex flex-wrap gap-2">
           {publication.placeholder && isPreviewMode() ? <Badge>PLACEHOLDER PUBLICATION</Badge> : null}
           <Badge tone="muted">{publication.publication_type}</Badge>
@@ -88,6 +91,69 @@ export function ProjectCard({ project }: { project: Project }) {
         </Link>
       </div>
     </article>
+  );
+}
+
+function NewsCategoryBadge({ category }: { category: NewsItem["category"] }) {
+  const labels: Record<NewsItem["category"], string> = {
+    paper: "New paper",
+    member: "New member",
+    conference: "Conference",
+    talk: "Talk",
+    award: "Award",
+    lab: "Lab update",
+    other: "News",
+  };
+  return <Badge tone={category === "award" ? "teal" : "muted"}>{labels[category]}</Badge>;
+}
+
+function formatNewsDate(date: string) {
+  return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" }).format(new Date(`${date}T00:00:00`));
+}
+
+export function NewsHighlights({ news }: { news: NewsItem[] }) {
+  if (!news.length) return null;
+  const [lead, ...rest] = news.slice(0, 5);
+
+  return (
+    <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
+      <article className="relative overflow-hidden rounded-[24px] border border-[var(--aima-soft-blue)] bg-[var(--aima-deep-blue)] p-7 text-white shadow-[var(--shadow-soft)] md:p-9">
+        <div className="absolute inset-0 subtle-grid opacity-20" />
+        <div className="relative">
+          <div className="mb-5 flex flex-wrap items-center gap-3">
+            <NewsCategoryBadge category={lead.category} />
+            {lead.pinned ? <Badge tone="teal">Pinned</Badge> : null}
+            <span className="inline-flex items-center gap-2 text-sm font-bold text-white/75"><CalendarDays className="h-4 w-4" />{formatNewsDate(lead.date)}</span>
+          </div>
+          <h3 className="max-w-3xl font-[var(--font-serif)] text-3xl font-bold leading-tight md:text-4xl">{lead.title}</h3>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/82">{lead.summary}</p>
+          {lead.description ? <p className="mt-4 max-w-2xl leading-7 text-white/70">{lead.description}</p> : null}
+          {lead.link_url ? (
+            <a href={withBasePath(lead.link_url)} className="mt-6 inline-flex items-center gap-2 font-bold text-white">
+              {lead.link_label || "Read more"}<ExternalLink className="h-4 w-4" />
+            </a>
+          ) : null}
+        </div>
+      </article>
+
+      <div className="grid gap-3">
+        {rest.map((item) => (
+          <article key={item.slug} className="surface-card p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+            <div className="mb-3 flex flex-wrap items-center gap-3">
+              <NewsCategoryBadge category={item.category} />
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[var(--text-muted)]"><CalendarDays className="h-4 w-4" />{formatNewsDate(item.date)}</span>
+            </div>
+            <h3 className="text-lg font-black leading-snug">{item.title}</h3>
+            <p className="mt-2 line-clamp-2 leading-7 text-[var(--text-secondary)]">{item.summary}</p>
+            {item.link_url ? (
+              <a href={withBasePath(item.link_url)} className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
+                {item.link_label || "Read more"}<ExternalLink className="h-3 w-3" />
+              </a>
+            ) : null}
+          </article>
+        ))}
+      </div>
+    </div>
   );
 }
 

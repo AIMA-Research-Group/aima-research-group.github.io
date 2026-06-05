@@ -11,7 +11,12 @@ scientific_questions:
 cover_image: ""
 visual_type: scientific
 related_project_slugs:
-  - provisional-medical-ai-benchmarking
+  - sam-noisy-medical-radiology
+  - sam-occluded-medical-imaging
+  - brain-segmentation-annotation-scarcity
+  - liver-segmentation-limited-annotation
+  - semi-supervised-breast-ultrasound-classification
+  - few-shot-white-blood-cell-classification
 related_publication_slugs:
   - lpd-weakly-supervised-histopathology-segmentation
   - contrastive-integrated-gradients-wsi

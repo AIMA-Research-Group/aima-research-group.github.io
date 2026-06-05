@@ -1,0 +1,21 @@
+title: Segment Anything Model under Noisy Medical Radiology Imaging Conditions
+slug: sam-noisy-medical-radiology
+order: 1
+featured: true
+status: active
+summary: A benchmark study evaluating the robustness, stability, and failure modes of SAM-based models under controlled noise perturbations in 2D medical radiology images.
+problem_statement: SAM, SAM2, MedSAM, and related medical adaptations have shown strong generalization, but their behavior under realistic noisy clinical acquisition conditions remains insufficiently studied.
+research_direction: Systematically test how Gaussian noise, Poisson noise, salt-and-pepper noise, motion blur, intensity inhomogeneity, and low-contrast degradation affect segmentation quality across medical imaging datasets.
+approach: Prepare controlled 2D medical imaging datasets; inject synthetic noise and artifact perturbations at varying severity levels; benchmark SAM-based models with consistent inference settings; evaluate Dice, IoU, boundary metrics, stability, and confidence-related behavior; analyze qualitative failure cases and sensitivity trends for a CVPR workshop target followed by an extended Q1 journal submission.
+cover_image: ""
+framework_figure: ""
+research_theme_slugs:
+  - medical-ai
+  - biomedical-image-analysis
+member_slugs: []
+links:
+  - label: Project brief
+    url: /uploads/projects/AIO25_Project1_NoisySAM.pdf
+start_date: 2025-01-01
+end_date: ""
+placeholder: false

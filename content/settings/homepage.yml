@@ -29,9 +29,12 @@ featured_publication_slugs:
   - lpd-weakly-supervised-histopathology-segmentation
   - sdt-net-scribble-supervised-medical-segmentation
 featured_project_slugs:
-  - provisional-medical-ai-benchmarking
-  - provisional-multimodal-research-assistant
-  - provisional-publication-training-pipeline
+  - sam-noisy-medical-radiology
+  - sam-occluded-medical-imaging
+  - brain-segmentation-annotation-scarcity
+  - liver-segmentation-limited-annotation
+  - semi-supervised-breast-ultrasound-classification
+  - few-shot-white-blood-cell-classification
 featured_people_slugs:
   - thanh-huy-nguyen
   - lam-ba-thinh

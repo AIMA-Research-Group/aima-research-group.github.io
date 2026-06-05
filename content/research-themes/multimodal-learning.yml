@@ -10,8 +10,7 @@ scientific_questions:
   - What makes multimodal systems interpretable enough for research use?
 cover_image: ""
 visual_type: framework
-related_project_slugs:
-  - provisional-multimodal-research-assistant
+related_project_slugs: []
 related_publication_slugs:
   - modality-specific-fusion-brain-tumor-segmentation
   - dam-qa-text-rich-vqa

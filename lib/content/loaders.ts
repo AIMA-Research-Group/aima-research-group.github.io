@@ -8,6 +8,7 @@ import {
   galleryImageSchema,
   homepageSchema,
   navigationItemSchema,
+  newsItemSchema,
   opportunitySchema,
   personSchema,
   projectSchema,
@@ -20,6 +21,7 @@ import {
   type GalleryImage,
   type HomepageSettings,
   type NavigationItem,
+  type NewsItem,
   type Opportunity,
   type Person,
   type Project,
@@ -63,13 +65,14 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
   researchThemes: ResearchTheme[];
   publications: Publication[];
   projects: Project[];
+  news: NewsItem[];
   people: Person[];
   affiliations: Affiliation[];
   community: CommunityNarrative[];
   gallery: GalleryImage[];
   opportunities: Opportunity[];
 }> {
-  const [site, seo, navigation, homepage, researchThemes, publications, projects, people, affiliations, community, gallery, opportunities] =
+  const [site, seo, navigation, homepage, researchThemes, publications, projects, news, people, affiliations, community, gallery, opportunities] =
     await Promise.all([
       readYaml("settings/site.yml", siteSettingsSchema),
       readYaml("settings/seo.yml", seoSettingsSchema),
@@ -80,6 +83,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
       readCollection("research-themes", researchThemeSchema),
       readCollection("publications", publicationSchema),
       readCollection("projects", projectSchema),
+      readCollection("news", newsItemSchema),
       readCollection("people", personSchema),
       readCollection("affiliations", affiliationSchema),
       readCollection("community", communityNarrativeSchema),
@@ -97,6 +101,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
     researchThemes,
     publications: maybePublic(publications),
     projects: maybePublic(projects),
+    news: maybePublic(news),
     people: maybePublic(people),
     affiliations,
     community,
