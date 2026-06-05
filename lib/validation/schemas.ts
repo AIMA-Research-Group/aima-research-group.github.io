@@ -122,7 +122,7 @@ export const personSchema = z.object({
   slug: z.string().min(1),
   order: z.number(),
   featured: z.boolean(),
-  group: z.enum(["founder", "mentor", "core-member", "collaborator"]),
+  group: z.enum(["founder", "leader", "mentor", "core-member", "collaborator", "affiliated-faculty"]),
   role: z.string().min(1),
   affiliation: z.string().min(1),
   short_bio: z.string().min(1),

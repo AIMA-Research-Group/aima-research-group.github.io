@@ -13,7 +13,7 @@ research_theme_slugs:
   - ai-for-scientific-discovery
 member_slugs:
   - thanh-huy-nguyen
-  - placeholder-collaborator
+  - hien-kha
 links:
   - label: Training notes
     url: "[TODO: Add training notes URL]"

@@ -1,12 +1,12 @@
-name: Lâm Bá Thịnh
+name: Thinh B. Lam
 slug: lam-ba-thinh
 order: 2
 featured: true
-group: core-member
+group: leader
 role: Leader
-affiliation: UNCC USA, PhD Student
-short_bio: AIMA Leader and PhD student at UNCC, USA.
-full_bio: "[TODO: Add full biography for Lâm Bá Thịnh]"
+affiliation: PhD Student at UNC Charlotte
+short_bio: AIMA Leader and PhD Student at UNC Charlotte (2023-Now).
+full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
   - Biomedical image analysis
