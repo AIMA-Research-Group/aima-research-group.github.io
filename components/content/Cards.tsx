@@ -102,6 +102,40 @@ function publicationTypeTone(type: Publication["publication_type"]) {
   return tones[type];
 }
 
+function findPublicationLink(publication: Publication, target: "paper" | "code" | "demo") {
+  return publication.links.find((link) => link.label.toLowerCase().includes(target));
+}
+
+function PublicationLinkButtons({ publication }: { publication: Publication }) {
+  const actions = [
+    { label: "Paper", link: findPublicationLink(publication, "paper") },
+    { label: "Code", link: findPublicationLink(publication, "code") },
+    { label: "Demo", link: findPublicationLink(publication, "demo") },
+  ];
+
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {actions.map((action) => action.link ? (
+        <a
+          key={action.label}
+          href={withBasePath(action.link.url)}
+          className="inline-flex h-8 items-center gap-1 rounded-full border border-[var(--aima-deep-blue)] px-3 text-xs font-black text-[var(--aima-deep-blue)] transition hover:-translate-y-0.5 hover:bg-[var(--aima-soft-blue)]"
+        >
+          {action.label}<ExternalLink className="h-3 w-3" />
+        </a>
+      ) : (
+        <span
+          key={action.label}
+          title={`${action.label} link will be added soon`}
+          className="inline-flex h-8 cursor-default items-center rounded-full border border-[var(--border)] bg-[var(--surface-muted)] px-3 text-xs font-black text-[var(--text-muted)]"
+        >
+          {action.label}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export function ResearchThemeCard({ theme, projectCount, publicationCount }: { theme: ResearchTheme; projectCount: number; publicationCount: number }) {
   return (
     <article className="surface-card group overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
@@ -156,9 +190,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
         <p className="mt-2 text-sm font-bold text-[var(--text-secondary)]">{publication.authors.join(", ")}</p>
         <p className="mt-1 text-sm text-[var(--text-muted)]">{publication.venue} · {publication.year}</p>
         <p className="mt-4 line-clamp-3 leading-7 text-[var(--text-secondary)]">{publication.abstract}</p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {publication.links.map((link) => <span key={link.label} className="inline-flex items-center gap-1 text-sm font-bold text-[var(--aima-deep-blue)]">{link.label}<ExternalLink className="h-3 w-3" /></span>)}
-        </div>
+        <PublicationLinkButtons publication={publication} />
       </div>
     </article>
   );
