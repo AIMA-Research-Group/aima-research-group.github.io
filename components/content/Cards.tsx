@@ -89,6 +89,19 @@ function ThemeVisual({ type }: { type: ResearchTheme["visual_type"] }) {
   return <ResearchThemeVisualPlaceholder />;
 }
 
+function publicationTypeTone(type: Publication["publication_type"]) {
+  const tones: Record<Publication["publication_type"], "blue" | "teal" | "muted" | "purple" | "amber" | "rose" | "slate"> = {
+    journal: "teal",
+    conference: "blue",
+    preprint: "slate",
+    workshop: "purple",
+    poster: "amber",
+    thesis: "rose",
+    other: "muted",
+  };
+  return tones[type];
+}
+
 export function ResearchThemeCard({ theme, projectCount, publicationCount }: { theme: ResearchTheme; projectCount: number; publicationCount: number }) {
   return (
     <article className="surface-card group overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
@@ -137,7 +150,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
       <div className="min-w-0">
         <div className="mb-3 flex flex-wrap gap-2">
           {publication.placeholder && isPreviewMode() ? <Badge>PLACEHOLDER PUBLICATION</Badge> : null}
-          <Badge tone="muted">{publication.publication_type}</Badge>
+          <Badge tone={publicationTypeTone(publication.publication_type)}>{publication.publication_type}</Badge>
         </div>
         <h3 className="text-xl font-black"><ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." /></h3>
         <p className="mt-2 text-sm font-bold text-[var(--text-secondary)]">{publication.authors.join(", ")}</p>

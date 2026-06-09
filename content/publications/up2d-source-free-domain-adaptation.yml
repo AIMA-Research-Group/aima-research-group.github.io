@@ -13,7 +13,7 @@ authors:
 venue: "Neurocomputing (IF: 6.5)"
 publication_type: journal
 abstract: "Medical image segmentation models face severe performance drops under domain shifts, especially when data sharing constraints prevent access to source images. We present a novel uncertainty-aware progressive pseudo-label denoising (UP2D) framework for source-free domain adaptation (SFDA), designed to mitigate noisy pseudo-labels and class imbalance during adaptation. UP2D integrates three key components: (i) a Refined Prototype Filtering module that suppresses uninformative regions and constructs reliable class prototypes to denoise pseudo-labels, (ii) an uncertainty-guided EMA (UG-EMA) strategy that selectively updates the teacher model based on spatially weighted boundary uncertainty, and (iii) a quantile-based entropy minimization scheme that focuses learning on ambiguous regions while avoiding overconfidence on easy pixels. This single-stage student–teacher framework progressively improves pseudo-label quality and reduces confirmation bias. Extensive experiments on three challenging retinal fundus benchmarks demonstrate that UP2D achieves state-of-the-art performance across both standard and open-domain settings, outperforming prior UDA and SFDA approaches while maintaining superior boundary precision."
-thumbnail: ""
+thumbnail: "/uploads/publications/up2d-source-free-domain-adaptation.jpg"
 figure: ""
 media_type: none
 research_theme_slugs:

@@ -11,7 +11,7 @@ authors:
 venue: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
 publication_type: conference
 abstract: Fetal ultrasound imaging is critical for examining cervical architecture, but segmentation remains difficult due to hard-to-learn features under a lack of labeled data scenarios. In this paper, we present a unique semi-supervised system for cervical segmentation that efficiently uses both labeled and unlabeled images. Inspired by Bidirectional Copy-Paste (BCP), our proposed method, named Fetal-BCP, uses a Mean Teacher framework and thorough data augmentation approaches to reduce the distribution mismatch between labeled and unlabeled data. Our approach significantly lessens the human annotation effort by balancing trustworthy supervision with inferred annotations through consistency regularization and pseudo-labeling. Our results maintained the top rank on the leaderboard of the Fetal Ultrasound Grand Challenge of ISBI 2025 Challenge, surpassing many state-of-the-art methods on both Dice and HD metrics.
-thumbnail: ""
+thumbnail: "/uploads/publications/fetal-bcp-ultrasound-segmentation.png"
 figure: ""
 media_type: none
 research_theme_slugs:
