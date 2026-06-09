@@ -334,12 +334,12 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
   const logos = affiliations.filter((affiliation) => affiliation.logo);
 
   return (
-    <div className="rounded-[32px] border-2 border-dashed border-[var(--text-primary)] bg-white px-5 py-7 md:px-8 md:py-9">
-      <div className="grid grid-cols-2 place-items-center gap-x-8 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div className="rounded-[32px] border-2 border-dashed border-[var(--text-primary)] bg-white px-5 py-8 md:px-8 md:py-10">
+      <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-10 md:gap-x-16 md:gap-y-12">
       {logos.map((affiliation) => (
         <div
           key={affiliation.slug}
-          className="flex h-24 w-full max-w-[190px] items-center justify-center rounded-xl px-2 py-3 md:h-28"
+          className="flex h-28 min-w-36 max-w-[260px] flex-[1_1_180px] items-center justify-center rounded-xl px-2 py-3 md:h-32 md:flex-[1_1_220px]"
           title={affiliation.name}
         >
           <Image
@@ -347,7 +347,7 @@ export function AffiliationLogoGrid({ affiliations }: { affiliations: Affiliatio
             alt={`${affiliation.name} logo`}
             width={320}
             height={160}
-            className="max-h-16 w-full object-contain md:max-h-20"
+            className="max-h-24 w-full object-contain md:max-h-28"
           />
         </div>
       ))}
