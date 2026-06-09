@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dynamicRoutes = [
     ...content.researchThemes.map((item) => `/research/${item.slug}`),
     ...content.projects.map((item) => `/projects/${item.slug}`),
+    ...content.people.map((item) => `/people/${item.slug}`),
   ];
   return [...staticRoutes, ...dynamicRoutes].map((route) => ({ url: `${base}${route}`, lastModified: new Date() }));
 }

@@ -179,7 +179,7 @@ export function NewsHighlights({ news }: { news: NewsItem[] }) {
 
 export function PersonCard({ person }: { person: Person }) {
   return (
-    <article className="surface-card p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+    <Link href={`/people/${person.slug}`} className="surface-card group block p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
       {person.photo ? (
         <Image
           src={withBasePath(person.photo)}
@@ -197,7 +197,10 @@ export function PersonCard({ person }: { person: Person }) {
       <p className="mt-2 text-sm text-[var(--text-muted)]">{person.affiliation}</p>
       <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
       <div className="mt-4"><TagList tags={person.research_interests} /></div>
-    </article>
+      <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
+        View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+      </span>
+    </Link>
   );
 }
 
