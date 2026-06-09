@@ -59,7 +59,7 @@ Keep:
 ```yml
 backend:
   name: github
-  repo: datct00/aima_homepage
+  repo: aima-research-group/aima-research-group.github.io
   branch: main
   auth_endpoint: /auth
 ```
@@ -69,9 +69,9 @@ backend:
 Open:
 
 ```text
-https://datct00.github.io/aima_homepage/admin/
+https://aima-research-group.github.io/admin/
 ```
 
-Click login, authorize with a GitHub account that has write access to `datct00/aima_homepage`, then save a small content change.
+Click login, authorize with a GitHub account that has write access to `aima-research-group/aima-research-group.github.io`, then save a small content change.
 
 If the login succeeds but saving fails, confirm the GitHub account has write access to the repository.

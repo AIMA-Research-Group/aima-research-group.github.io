@@ -12,7 +12,7 @@ contact_emails:
   - aima.research.aivn@gmail.com
   - thanhhun@andrew.cmu.edu
 location: "[TODO: Add AIMA location]"
-domain: "[TODO: Add production domain]"
+domain: "https://aima-research-group.github.io"
 social_links:
   - label: GitHub
     url: "[TODO: Add GitHub URL]"

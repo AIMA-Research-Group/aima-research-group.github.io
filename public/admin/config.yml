@@ -1,7 +1,7 @@
 local_backend: true
 backend:
   name: github
-  repo: datct00/aima_homepage
+  repo: aima-research-group/aima-research-group.github.io
   branch: main
   base_url: https://REPLACE_WITH_YOUR_DECAP_OAUTH_PROXY_URL
   auth_endpoint: /auth
