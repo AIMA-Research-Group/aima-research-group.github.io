@@ -49,8 +49,22 @@ export function SocialIconLinks({ links, compact = false }: { links: Person["lin
   if (!links.length) return null;
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       {links.map((link) => {
+        const isEmail = link.url.startsWith("mailto:") || link.label.toLowerCase().includes("email");
+        if (isEmail) {
+          const email = link.url.replace(/^mailto:/, "");
+          return (
+            <a
+              key={`${link.label}-${link.url}`}
+              href={link.url}
+              className="rounded-full border border-[var(--border)] bg-white px-3 py-1.5 text-xs font-bold text-[var(--aima-deep-blue)] transition hover:border-[var(--aima-deep-blue)] hover:bg-[var(--surface-muted)]"
+            >
+              {email}
+            </a>
+          );
+        }
+
         const Icon = getSocialIcon(link.label);
         return (
           <a
@@ -245,9 +259,8 @@ export function PersonCard({ person }: { person: Person }) {
         <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{person.group}</Badge></div>
         <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
         <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>
-        <p className="mt-2 text-sm text-[var(--text-muted)]">{person.affiliation}</p>
+        <p className="mt-3 rounded-xl border border-[var(--aima-soft-blue)] bg-[var(--surface-muted)] px-3 py-2 text-sm font-bold leading-5 text-[var(--aima-deep-blue)]">{person.affiliation}</p>
         <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
-        <div className="mt-4"><TagList tags={person.research_interests} /></div>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
           View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
         </span>
