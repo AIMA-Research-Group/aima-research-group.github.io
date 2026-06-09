@@ -133,7 +133,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
   const visual = publication.figure || publication.thumbnail;
   return (
     <article className="surface-card grid gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:grid-cols-[220px_1fr]">
-      <div className="relative h-48 min-w-0 overflow-hidden rounded-2xl md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full">
+      <div className="relative h-48 min-w-0 overflow-hidden rounded-2xl border border-[var(--border)] bg-white md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full">
         {visual ? (
           <Image
             src={withBasePath(visual)}
@@ -141,7 +141,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
             fill
             sizes="(min-width: 768px) 220px, 100vw"
             unoptimized={publication.media_type === "gif"}
-            className="object-cover"
+            className="object-contain p-2"
           />
         ) : (
           <PublicationThumbnailPlaceholder />
