@@ -29,7 +29,9 @@ research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://doi.org/10.1109/JBHI.2025.3631102
 featured: false
 order: 10
 status: accepted

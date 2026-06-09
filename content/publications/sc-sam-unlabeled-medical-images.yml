@@ -19,7 +19,11 @@ media_type: none
 research_theme_slugs:
   - medical-ai
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2601.17934
+  - label: Code
+    url: https://github.com/vnlvi2k3/SC-SAM
 featured: false
 order: 5
 status: accepted

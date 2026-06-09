@@ -15,7 +15,9 @@ media_type: none
 research_theme_slugs:
   - ai-for-scientific-discovery
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://link.springer.com/article/10.1007/s10916-025-02182-3
 featured: false
 order: 18
 status: accepted

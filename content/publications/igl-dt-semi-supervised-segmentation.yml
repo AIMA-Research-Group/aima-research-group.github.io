@@ -16,7 +16,9 @@ figure: ""
 media_type: none
 research_theme_slugs: []
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2504.09797
 featured: false
 order: 16
 status: accepted

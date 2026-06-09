@@ -165,9 +165,14 @@ export function ResearchThemeCard({ theme, projectCount, publicationCount }: { t
 
 export function PublicationCard({ publication }: { publication: Publication }) {
   const visual = publication.figure || publication.thumbnail;
+  const paperLink = findPublicationLink(publication, "paper");
   return (
     <article className="surface-card grid gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:grid-cols-[220px_1fr]">
-      <div className="relative h-48 min-w-0 overflow-hidden rounded-2xl border border-[var(--border)] bg-white md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full">
+      <a
+        href={paperLink ? withBasePath(paperLink.url) : undefined}
+        aria-label={paperLink ? `Open paper: ${publication.title}` : undefined}
+        className={`relative h-48 min-w-0 overflow-hidden rounded-2xl border border-[var(--border)] bg-white md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full ${paperLink ? "cursor-pointer transition hover:border-[var(--aima-deep-blue)]" : "pointer-events-none"}`}
+      >
         {visual ? (
           <Image
             src={withBasePath(visual)}
@@ -180,13 +185,21 @@ export function PublicationCard({ publication }: { publication: Publication }) {
         ) : (
           <PublicationThumbnailPlaceholder />
         )}
-      </div>
+      </a>
       <div className="min-w-0">
         <div className="mb-3 flex flex-wrap gap-2">
           {publication.placeholder && isPreviewMode() ? <Badge>PLACEHOLDER PUBLICATION</Badge> : null}
           <Badge tone={publicationTypeTone(publication.publication_type)}>{publication.publication_type}</Badge>
         </div>
-        <h3 className="text-xl font-black"><ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." /></h3>
+        <h3 className="text-xl font-black">
+          {paperLink ? (
+            <a href={withBasePath(paperLink.url)} className="transition hover:text-[var(--aima-deep-blue)]">
+              <ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." />
+            </a>
+          ) : (
+            <ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." />
+          )}
+        </h3>
         <p className="mt-2 text-sm font-bold text-[var(--text-secondary)]">{publication.authors.join(", ")}</p>
         <p className="mt-1 text-sm text-[var(--text-muted)]">{publication.venue} · {publication.year}</p>
         <p className="mt-4 line-clamp-3 leading-7 text-[var(--text-secondary)]">{publication.abstract}</p>

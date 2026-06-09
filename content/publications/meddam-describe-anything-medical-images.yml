@@ -25,7 +25,9 @@ research_theme_slugs:
   - medical-ai
   - multimodal-learning
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2505.05804
 featured: false
 order: 14
 status: accepted

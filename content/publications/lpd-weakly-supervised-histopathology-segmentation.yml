@@ -21,7 +21,11 @@ media_type: none
 research_theme_slugs:
   - biomedical-image-analysis
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2512.05922
+  - label: Code
+    url: https://github.com/tom1209-netizen/LPD
 featured: true
 order: 3
 status: accepted

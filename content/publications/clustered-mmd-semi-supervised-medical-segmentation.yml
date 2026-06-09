@@ -19,7 +19,9 @@ media_type: none
 research_theme_slugs:
   - medical-ai
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2601.16954
 featured: true
 order: 2
 status: accepted

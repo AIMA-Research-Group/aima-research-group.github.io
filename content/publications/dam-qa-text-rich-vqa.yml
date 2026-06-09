@@ -22,7 +22,11 @@ media_type: none
 research_theme_slugs:
   - multimodal-learning
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2507.12441
+  - label: Code
+    url: https://github.com/Linvyl/DAM-QA
 featured: false
 order: 12
 status: accepted

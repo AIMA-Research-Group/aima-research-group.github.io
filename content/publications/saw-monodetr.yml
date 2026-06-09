@@ -17,6 +17,8 @@ research_theme_slugs:
   - ai-for-scientific-discovery
 related_project_slugs: []
 links:
+  - label: Paper
+    url: https://doi.org/10.1109/ICIP55913.2025.11084392
   - label: Code
     url: https://github.com/useracc687/saw-monodetr
 featured: false

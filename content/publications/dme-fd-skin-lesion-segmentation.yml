@@ -19,6 +19,8 @@ research_theme_slugs:
   - biomedical-image-analysis
 related_project_slugs: []
 links:
+  - label: Paper
+    url: https://openreview.net/forum?id=cBfXsr6xWb
   - label: Code
     url: https://github.com/antares0811/DME-FD
 featured: false

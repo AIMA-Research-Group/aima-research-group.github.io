@@ -21,7 +21,9 @@ media_type: none
 research_theme_slugs:
   - biomedical-image-analysis
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2511.08464
 featured: false
 order: 11
 status: accepted

@@ -18,7 +18,9 @@ research_theme_slugs:
   - medical-ai
   - biomedical-image-analysis
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://doi.org/10.1109/ISBI60581.2025.10980925
 featured: false
 order: 17
 status: accepted

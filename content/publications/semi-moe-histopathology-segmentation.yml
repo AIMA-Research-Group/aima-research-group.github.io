@@ -18,7 +18,11 @@ media_type: none
 research_theme_slugs:
   - biomedical-image-analysis
 related_project_slugs: []
-links: []
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2509.13834
+  - label: Code
+    url: https://github.com/vnlvi2k3/Semi-MoE
 featured: false
 order: 13
 status: accepted
