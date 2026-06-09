@@ -1,12 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Badge } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { PageContainer, PageHero, Section, SectionHeading } from "@/components/ui/Section";
-import { ProjectCard, TagList } from "@/components/content/Cards";
+import { ProjectCard, SocialIconLinks, TagList } from "@/components/content/Cards";
 import { getAllContent } from "@/lib/content/loaders";
 import { withBasePath } from "@/lib/utils/paths";
 
@@ -79,13 +78,7 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
                 {person.links.length ? (
                   <div>
                     <h2 className="text-2xl font-black">Links</h2>
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {person.links.map((link) => (
-                        <a key={link.label} href={withBasePath(link.url)} className="inline-flex items-center gap-2 font-bold text-[var(--aima-deep-blue)]">
-                          {link.label}<ExternalLink className="h-4 w-4" />
-                        </a>
-                      ))}
-                    </div>
+                    <div className="mt-4"><SocialIconLinks links={person.links} /></div>
                   </div>
                 ) : null}
               </div>

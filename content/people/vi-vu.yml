@@ -4,12 +4,14 @@ order: 4
 featured: true
 group: leader
 role: Leader
-affiliation: BS at HCMUT
-short_bio: AIMA Leader and BS student at HCMUT (2024-Now).
+affiliation: Duke University, US, PhD Student
+short_bio: AIMA Leader and PhD student at Duke University.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/vi.jpg
-links: []
+links:
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en"
 active: true
 placeholder: false

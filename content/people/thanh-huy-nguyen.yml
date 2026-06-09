@@ -5,14 +5,38 @@ featured: true
 group: founder
 role: Founder
 affiliation: Northwestern University, PhD student
-short_bio: Founder of AIMA and PhD student at Northwestern University.
-full_bio: Full biography will be added soon.
+short_bio: Research associate at Carnegie Mellon University and AIMA Founder working on AI for healthcare, medical image computing, and learning from imperfect medical data.
+full_bio: >
+  Thanh-Huy Nguyen is a Research Associate in the Computational Biology
+  Department, School of Computer Science, Carnegie Mellon University, advised by
+  Prof. Min Xu. He is also affiliated with the Feinberg School of Medicine,
+  Northwestern University, advised by Prof. Ulas Bagci. His research broadly
+  lies in AI for healthcare at the intersection of machine learning, computer
+  vision, and medical image computing. His work focuses on learning with
+  imperfect and limited annotation, including label scarcity, domain shift,
+  imbalanced subpopulation distributions, unsupervised and representation
+  learning, and uncertainty quantification. He is also interested in medical
+  image segmentation, reconstruction, registration, foundation models in medical
+  imaging, multimodal medical data, and the integration of imaging and clinical
+  data. He welcomes collaboration and encourages Vietnamese undergraduate and
+  master's students, as well as AIO members interested in these topics, to
+  explore open positions in the AIMA group.
 research_interests:
-  - Medical AI
-  - Scientific mentorship
+  - AI for Healthcare
+  - Machine learning
+  - Computer vision
+  - Medical image computing
+  - Learning with imperfect and limited annotation
+  - Medical image segmentation, reconstruction, and registration
+  - Foundation models in medical imaging
+  - Multimodal medical data
 photo: /uploads/members/huy.jpg
 links:
-  - label: LinkedIn
-    url: "https://www.linkedin.com/in/antares0811/"
+  - label: Website
+    url: "https://thanh-huy-nguyen.github.io/"
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=PdKDsqUAAAAJ&hl=en"
+  - label: Email
+    url: "mailto:thanhhun@andrew.cmu.edu"
 active: true
 placeholder: false

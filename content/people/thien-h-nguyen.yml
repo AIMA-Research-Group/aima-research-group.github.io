@@ -4,12 +4,14 @@ order: 3
 featured: true
 group: leader
 role: Leader
-affiliation: BS at PTIT-HCM
-short_bio: AIMA Leader and BS student at PTIT-HCM (2024-Now).
+affiliation: Carnegie Mellon University, US, Research Assistant
+short_bio: AIMA Leader and Research Assistant at Carnegie Mellon University.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/thien.jpg
-links: []
+links:
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=-gdFSLUAAAAJ&hl=vi"
 active: true
 placeholder: false

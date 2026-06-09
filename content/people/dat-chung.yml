@@ -1,15 +1,19 @@
-name: Dat Chung
+name: Dat T. Chung
 slug: dat-chung
 order: 5
 featured: true
 group: leader
 role: Leader
-affiliation: BS at HCMUTE
-short_bio: AIMA Leader and BS student at HCMUTE (2025-Now).
+affiliation: Florida International University, US, PhD Student
+short_bio: AIMA Leader and PhD student at Florida International University.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/dat.jpg
-links: []
+links:
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=99gXcvsAAAAJ&hl=en"
+  - label: Email
+    url: "mailto:dchun015@fiu.edu"
 active: true
 placeholder: false

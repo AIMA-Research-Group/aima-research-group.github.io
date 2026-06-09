@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CalendarDays, ExternalLink } from "lucide-react";
+import type { SVGProps } from "react";
+import { ArrowRight, CalendarDays, ExternalLink, Globe, GraduationCap, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import {
@@ -16,6 +17,55 @@ import { withBasePath } from "@/lib/utils/paths";
 
 export function TagList({ tags }: { tags: string[] }) {
   return <div className="flex flex-wrap gap-2">{tags.map((tag) => <span key={tag} className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-bold text-[var(--text-secondary)]">{tag}</span>)}</div>;
+}
+
+function GitHubIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" {...props}>
+      <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 7c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.95.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.15 10.15 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" {...props}>
+      <path d="M5.34 8.76H2.67V21h2.67V8.76ZM4 3a1.55 1.55 0 1 0 0 3.1A1.55 1.55 0 0 0 4 3Zm17.33 10.57c0-3.28-1.75-4.8-4.08-4.8a3.52 3.52 0 0 0-3.17 1.74h-.04V8.76h-2.56V21h2.67v-6.05c0-1.6.3-3.14 2.28-3.14 1.95 0 1.98 1.82 1.98 3.24V21h2.67v-7.43h.25ZM9.12 8.76H6.45V21h2.67V8.76Z" />
+    </svg>
+  );
+}
+
+function getSocialIcon(label: string) {
+  const normalized = label.toLowerCase();
+  if (normalized.includes("github")) return GitHubIcon;
+  if (normalized.includes("linkedin")) return LinkedInIcon;
+  if (normalized.includes("scholar")) return GraduationCap;
+  if (normalized.includes("email")) return Mail;
+  if (normalized.includes("website")) return Globe;
+  return Globe;
+}
+
+export function SocialIconLinks({ links, compact = false }: { links: Person["links"]; compact?: boolean }) {
+  if (!links.length) return null;
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {links.map((link) => {
+        const Icon = getSocialIcon(link.label);
+        return (
+          <a
+            key={`${link.label}-${link.url}`}
+            href={withBasePath(link.url)}
+            aria-label={link.label}
+            title={link.label}
+            className={`inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white text-[var(--aima-deep-blue)] transition hover:-translate-y-0.5 hover:border-[var(--aima-deep-blue)] hover:bg-[var(--surface-muted)] ${compact ? "h-8 w-8" : "h-10 w-10"}`}
+          >
+            <Icon className={compact ? "h-4 w-4" : "h-5 w-5"} />
+          </a>
+        );
+      })}
+    </div>
+  );
 }
 
 function ThemeVisual({ type }: { type: ResearchTheme["visual_type"] }) {
@@ -179,28 +229,33 @@ export function NewsHighlights({ news }: { news: NewsItem[] }) {
 
 export function PersonCard({ person }: { person: Person }) {
   return (
-    <Link href={`/people/${person.slug}`} className="surface-card group block p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      {person.photo ? (
-        <Image
-          src={withBasePath(person.photo)}
-          alt={`Portrait of ${person.name}`}
-          width={520}
-          height={520}
-          className="aspect-square w-full rounded-2xl object-cover"
-        />
-      ) : (
-        <div className="flex aspect-square items-center justify-center rounded-2xl bg-[var(--surface-muted)] text-5xl font-black text-[var(--aima-deep-blue)]">{person.name.replace("[TODO: Add ", "").slice(0, 1) || "A"}</div>
-      )}
-      <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{person.group}</Badge></div>
-      <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
-      <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>
-      <p className="mt-2 text-sm text-[var(--text-muted)]">{person.affiliation}</p>
-      <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
-      <div className="mt-4"><TagList tags={person.research_interests} /></div>
-      <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
-        View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-      </span>
-    </Link>
+    <article className="surface-card group p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+      <Link href={`/people/${person.slug}`} className="block">
+        {person.photo ? (
+          <Image
+            src={withBasePath(person.photo)}
+            alt={`Portrait of ${person.name}`}
+            width={520}
+            height={520}
+            className="aspect-square w-full rounded-2xl object-cover"
+          />
+        ) : (
+          <div className="flex aspect-square items-center justify-center rounded-2xl bg-[var(--surface-muted)] text-5xl font-black text-[var(--aima-deep-blue)]">{person.name.replace("[TODO: Add ", "").slice(0, 1) || "A"}</div>
+        )}
+        <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{person.group}</Badge></div>
+        <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
+        <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>
+        <p className="mt-2 text-sm text-[var(--text-muted)]">{person.affiliation}</p>
+        <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
+        <div className="mt-4"><TagList tags={person.research_interests} /></div>
+        <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
+          View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+        </span>
+      </Link>
+      <div className="mt-4">
+        <SocialIconLinks links={person.links} compact />
+      </div>
+    </article>
   );
 }
 

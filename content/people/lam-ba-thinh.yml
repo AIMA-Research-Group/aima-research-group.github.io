@@ -4,13 +4,15 @@ order: 2
 featured: true
 group: leader
 role: Leader
-affiliation: PhD Student at UNC Charlotte
-short_bio: AIMA Leader and PhD Student at UNC Charlotte (2023-Now).
+affiliation: University of North Carolina at Charlotte, US, PhD student
+short_bio: AIMA Leader and PhD student at the University of North Carolina at Charlotte.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
   - Biomedical image analysis
 photo: /uploads/members/thinh.jpg
-links: []
+links:
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=CGkPkWgAAAAJ&hl=en"
 active: true
 placeholder: false
