@@ -10,7 +10,9 @@ full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/minxu.jpg
-links: []
+links:
+  - label: Website
+    url: https://xulabs.github.io/
 active: true
 placeholder: false
 affiliation_slugs:

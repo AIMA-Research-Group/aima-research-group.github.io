@@ -10,7 +10,9 @@ full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/phatkhuynh.png
-links: []
+links:
+  - label: Website
+    url: https://www.passiolab.com/
 active: true
 placeholder: false
 affiliation_slugs:

@@ -82,6 +82,10 @@ export function SocialIconLinks({ links, compact = false }: { links: Person["lin
   );
 }
 
+function getWebsiteLink(person: Person) {
+  return person.links.find((link) => link.label.toLowerCase().includes("website"));
+}
+
 function ThemeVisual({ type }: { type: ResearchTheme["visual_type"] }) {
   if (type === "medical") return <MedicalImagePlaceholder />;
   if (type === "framework") return <FrameworkDiagramPlaceholder />;
@@ -310,9 +314,13 @@ export function NewsHighlights({ news }: { news: NewsItem[] }) {
 }
 
 export function PersonCard({ person }: { person: Person }) {
+  const websiteLink = getWebsiteLink(person);
+  const cardHref = person.group === "affiliated-faculty" && websiteLink ? websiteLink.url : `/people/${person.slug}`;
+  const isExternalCard = cardHref.startsWith("http");
+
   return (
     <article className="surface-card group p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      <Link href={`/people/${person.slug}`} className="block">
+      <a href={withBasePath(cardHref)} className="block" target={isExternalCard ? "_blank" : undefined} rel={isExternalCard ? "noreferrer" : undefined}>
         {person.photo ? (
           <Image
             src={withBasePath(person.photo)}
@@ -330,9 +338,10 @@ export function PersonCard({ person }: { person: Person }) {
         <p className="mt-3 rounded-xl border border-[var(--aima-soft-blue)] bg-[var(--surface-muted)] px-3 py-2 text-sm font-bold leading-5 text-[var(--aima-deep-blue)]">{person.affiliation}</p>
         <p className="mt-4 font-medium leading-7 text-[var(--text-primary)]">{person.short_bio}</p>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
-          View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+          {isExternalCard ? "Personal website" : "View profile"}
+          {isExternalCard ? <ExternalLink className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /> : <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />}
         </span>
-      </Link>
+      </a>
       <div className="mt-4">
         <SocialIconLinks links={person.links} compact />
       </div>

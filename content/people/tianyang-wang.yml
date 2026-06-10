@@ -10,7 +10,9 @@ full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
 photo: /uploads/members/tiyanwang.jpg
-links: []
+links:
+  - label: Website
+    url: https://wangt0716.github.io/
 active: true
 placeholder: false
 affiliation_slugs:
