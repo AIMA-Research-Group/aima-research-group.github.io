@@ -63,23 +63,22 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
       <main id="main-content">
         <Section className="pb-12 pt-28">
           <PageContainer>
-            <div className={`grid gap-8 ${affiliationLogo ? "lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center" : ""}`}>
+            <div className={`grid gap-8 ${affiliationLogo ? "lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center" : ""}`}>
               <div className="max-w-4xl">
                 <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">Member profile</p>
                 <h1 className="font-[var(--font-serif)] text-5xl font-bold leading-tight text-[var(--text-primary)] md:text-6xl">{person.name}</h1>
                 <p className="mt-5 max-w-3xl text-lg font-medium leading-8 text-[var(--text-primary)]">{person.short_bio}</p>
               </div>
               {affiliationLogo ? (
-                <div className="flex justify-start lg:justify-end">
-                  <div className="flex h-32 w-full max-w-[260px] items-center justify-center rounded-2xl border border-[var(--border)] bg-white px-6 py-5 shadow-[var(--shadow-soft)]">
-                    <Image
-                      src={withBasePath(affiliationLogo.logo)}
-                      alt={`${affiliationLogo.name} logo`}
-                      width={360}
-                      height={180}
-                      className="max-h-full w-full object-contain"
-                    />
-                  </div>
+                <div className="pointer-events-none flex justify-start opacity-90 lg:justify-end">
+                  <Image
+                    src={withBasePath(affiliationLogo.logo)}
+                    alt={`${affiliationLogo.name} logo`}
+                    width={460}
+                    height={230}
+                    className="max-h-36 w-full max-w-[320px] object-contain md:max-h-44 lg:max-w-[340px]"
+                    priority
+                  />
                 </div>
               ) : null}
             </div>
