@@ -3,7 +3,7 @@ backend:
   name: github
   repo: aima-research-group/aima-research-group.github.io
   branch: main
-  base_url: https://REPLACE_WITH_YOUR_DECAP_OAUTH_PROXY_URL
+  base_url: https://aima-decap-auth.chungtiendat8102000.workers.dev
   auth_endpoint: /auth
 media_folder: public/uploads
 public_folder: /uploads
