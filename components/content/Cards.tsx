@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { SVGProps } from "react";
-import { ArrowRight, CalendarDays, ExternalLink, Globe, GraduationCap, Mail } from "lucide-react";
+import { ArrowRight, CalendarDays, CheckCircle2, Clock3, ExternalLink, Globe, GraduationCap, Mail, Target } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import {
@@ -419,14 +419,68 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
 }
 
 export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
+  const descriptionLines = opportunity.description.split("\n").map((line) => line.trim()).filter(Boolean);
+  const infoRows = descriptionLines.filter((line) => /Application Deadline|Interview Period/i.test(line));
+  const bodyLines = descriptionLines.filter((line) => !/Application Deadline|Interview Period/i.test(line));
+
   return (
-    <article className="surface-card p-6">
-      <div className="flex flex-wrap gap-2"><Badge>{opportunity.status}</Badge><Badge tone="muted">{opportunity.audience}</Badge></div>
-      <h3 className="mt-4 text-2xl font-black"><ContentPlaceholder value={opportunity.title} fallback="Opportunity details coming soon." /></h3>
-      <p className="mt-3 leading-7 text-[var(--text-secondary)]">{opportunity.summary}</p>
-      <div className="mt-4 text-sm text-[var(--text-secondary)] whitespace-pre-line">{opportunity.description}</div>
-      <div className="mt-5 grid gap-3 text-sm text-[var(--text-secondary)]">
-        {opportunity.expectations.map((item) => <p key={item}>• {item}</p>)}
+    <article className="relative overflow-hidden rounded-[28px] border border-[var(--aima-soft-blue)] bg-white p-6 shadow-[var(--shadow-soft)] md:p-8">
+      <div className="absolute inset-x-0 top-0 h-1.5 bg-[var(--aima-blue)]" />
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge tone={opportunity.status === "open" ? "teal" : "muted"}>{opportunity.status}</Badge>
+        <Badge tone="blue">{opportunity.audience}</Badge>
+      </div>
+      <h3 className="mt-5 text-3xl font-black leading-tight text-[var(--text-primary)]">
+        <ContentPlaceholder value={opportunity.title} fallback="Opportunity details coming soon." />
+      </h3>
+      <p className="mt-4 max-w-3xl text-lg font-semibold leading-8 text-[var(--aima-deep-blue)]">{opportunity.summary}</p>
+
+      {infoRows.length ? (
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          {infoRows.map((line) => {
+            const [label, ...rest] = line.replace(/\*\*/g, "").split(":");
+            return (
+              <div key={line} className="rounded-2xl border border-[var(--aima-soft-blue)] bg-[var(--surface-muted)] p-4">
+                <div className="flex items-center gap-2 text-sm font-black uppercase text-[var(--aima-deep-blue)]">
+                  <Clock3 className="h-4 w-4" />
+                  {label}
+                </div>
+                <p className="mt-2 text-base font-black text-[var(--text-primary)]">{rest.join(":").trim()}</p>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+
+      {bodyLines.length ? (
+        <div className="mt-6 grid gap-3">
+          {bodyLines.map((line) => <p key={line} className="leading-7 text-[var(--text-primary)]">{line.replace(/\*\*/g, "")}</p>)}
+        </div>
+      ) : null}
+
+      <div className="mt-7 grid gap-5 lg:grid-cols-2">
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] p-5">
+          <h4 className="flex items-center gap-2 text-sm font-black uppercase text-[var(--aima-deep-blue)]"><Target className="h-4 w-4" /> Expectations</h4>
+          <div className="mt-4 grid gap-3">
+            {opportunity.expectations.map((item) => (
+              <p key={item} className="flex gap-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--scientific-teal)]" />
+                {item}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] p-5">
+          <h4 className="flex items-center gap-2 text-sm font-black uppercase text-[var(--aima-deep-blue)]"><GraduationCap className="h-4 w-4" /> Learning outcomes</h4>
+          <div className="mt-4 grid gap-3">
+            {opportunity.learning_outcomes.map((item) => (
+              <p key={item} className="flex gap-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--scientific-teal)]" />
+                {item}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
     </article>
   );
