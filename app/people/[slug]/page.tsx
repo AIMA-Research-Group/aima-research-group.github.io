@@ -4,10 +4,32 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Badge } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { PageContainer, PageHero, Section, SectionHeading } from "@/components/ui/Section";
+import { PageContainer, Section, SectionHeading } from "@/components/ui/Section";
 import { ProjectCard, SocialIconLinks, TagList } from "@/components/content/Cards";
 import { getAllContent } from "@/lib/content/loaders";
 import { withBasePath } from "@/lib/utils/paths";
+import type { Affiliation } from "@/lib/validation/schemas";
+
+function normalizeAffiliation(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function findAffiliationLogo(personAffiliation: string, affiliations: Affiliation[]) {
+  const normalizedPersonAffiliation = normalizeAffiliation(personAffiliation);
+  const aliases: Record<string, string[]> = {
+    hcmut: ["ho chi minh university of science"],
+    ptit: ["posts and telecommunications institute of technology"],
+    "unc-charlotte": ["university of north carolina at charlotte"],
+    "university-of-wisconsin-madison": ["university of wisconsin madison"],
+  };
+
+  return affiliations.find((affiliation) => {
+    if (!affiliation.logo) return false;
+    const normalizedName = normalizeAffiliation(affiliation.name);
+    const normalizedAliases = (aliases[affiliation.slug] || []).map(normalizeAffiliation);
+    return [normalizedName, ...normalizedAliases].some((name) => normalizedPersonAffiliation.includes(name));
+  });
+}
 
 export async function generateStaticParams() {
   const content = await getAllContent();
@@ -33,12 +55,36 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
   if (!person) notFound();
 
   const projects = content.projects.filter((project) => project.member_slugs.includes(person.slug));
+  const affiliationLogo = findAffiliationLogo(person.affiliation, content.affiliations);
 
   return (
     <>
       <SiteHeader site={content.site} navigation={content.navigation} />
       <main id="main-content">
-        <PageHero eyebrow="Member profile" title={person.name} description={person.short_bio} />
+        <Section className="pb-12 pt-28">
+          <PageContainer>
+            <div className={`grid gap-8 ${affiliationLogo ? "lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center" : ""}`}>
+              <div className="max-w-4xl">
+                <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">Member profile</p>
+                <h1 className="font-[var(--font-serif)] text-5xl font-bold leading-tight text-[var(--text-primary)] md:text-6xl">{person.name}</h1>
+                <p className="mt-5 max-w-3xl text-lg font-medium leading-8 text-[var(--text-primary)]">{person.short_bio}</p>
+              </div>
+              {affiliationLogo ? (
+                <div className="flex justify-start lg:justify-end">
+                  <div className="flex h-32 w-full max-w-[260px] items-center justify-center rounded-2xl border border-[var(--border)] bg-white px-6 py-5 shadow-[var(--shadow-soft)]">
+                    <Image
+                      src={withBasePath(affiliationLogo.logo)}
+                      alt={`${affiliationLogo.name} logo`}
+                      width={360}
+                      height={180}
+                      className="max-h-full w-full object-contain"
+                    />
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </PageContainer>
+        </Section>
         <Section className="pt-0">
           <PageContainer>
             <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
@@ -65,11 +111,11 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
                 </div>
                 <div>
                   <h2 className="text-2xl font-black">{person.role}</h2>
-                  <p className="mt-2 text-[var(--text-secondary)]">{person.affiliation}</p>
+                  <p className="mt-3 inline-flex rounded-xl border border-[var(--aima-soft-blue)] bg-white px-4 py-2 text-sm font-black leading-5 text-[var(--aima-deep-blue)] shadow-sm">{person.affiliation}</p>
                 </div>
                 <div>
                   <h2 className="text-2xl font-black">Biography</h2>
-                  <p className="mt-3 leading-8 text-[var(--text-secondary)]">{person.full_bio}</p>
+                  <p className="mt-3 font-medium leading-8 text-[var(--text-primary)]">{person.full_bio}</p>
                 </div>
                 <div>
                   <h2 className="text-2xl font-black">Research interests</h2>

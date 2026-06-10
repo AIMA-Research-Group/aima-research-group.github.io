@@ -328,7 +328,7 @@ export function PersonCard({ person }: { person: Person }) {
         <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
         <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>
         <p className="mt-3 rounded-xl border border-[var(--aima-soft-blue)] bg-[var(--surface-muted)] px-3 py-2 text-sm font-bold leading-5 text-[var(--aima-deep-blue)]">{person.affiliation}</p>
-        <p className="mt-4 leading-7 text-[var(--text-secondary)]">{person.short_bio}</p>
+        <p className="mt-4 font-medium leading-7 text-[var(--text-primary)]">{person.short_bio}</p>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[var(--aima-deep-blue)]">
           View profile <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
         </span>
