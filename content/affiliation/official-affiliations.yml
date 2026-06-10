@@ -1,42 +1,28 @@
-- slug: northwestern-university
+- slug: nu
   order: 1
-- slug: unc-charlotte
+- slug: harvard
   order: 2
-- slug: ptit-hcm
+- slug: yale
   order: 3
-- slug: hcmut
+- slug: duke
   order: 4
-- slug: hcmute
+- slug: cmu
   order: 5
-- slug: university-of-houston
+- slug: houston
   order: 6
-- slug: yale-school-of-medicine
+- slug: ntu 
   order: 7
-- slug: taipei-medical-university
+- slug: pu
   order: 8
-- slug: university-of-wisconsin-madison
+- slug: uab
   order: 9
-- slug: mayo-clinic
+- slug: tmu
   order: 10
-- slug: carnegie-mellon-university
+- slug: wisconsin-madison
   order: 11
-- slug: north-carolina-at-university
-  order: 12
-- slug: university-alabama-birmingham
-  order: 13
-- slug: duke-university
-  order: 14
 - slug: universite-bourgogne-europe
-  order: 15
-- slug: harvard-university
-  order: 16
-- slug: national-cheng-kung-university
-  order: 17
-- slug: national-taiwan-university
-  order: 18
-- slug: purdue-university
-  order: 19
-- slug: florida-international-university
-  order: 20
-- slug: university-of-north-carolina-at-chapel-hill
-  order: 21
+  order: 12
+- slug: ncku
+  order: 13
+
+  
