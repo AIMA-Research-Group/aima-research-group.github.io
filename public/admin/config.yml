@@ -4,7 +4,7 @@ backend:
   repo: aima-research-group/aima-research-group.github.io
   branch: main
   base_url: https://aima-decap-auth.chungtiendat8102000.workers.dev
-  auth_endpoint: /auth
+  auth_endpoint: /auth?provider=github
 media_folder: public/uploads
 public_folder: /uploads
 collections:
@@ -158,7 +158,43 @@ collections:
       - { label: Pinned, name: pinned, widget: boolean, default: false }
       - { label: Placeholder, name: placeholder, widget: boolean, default: false }
   - { name: projects, label: Projects, folder: content/projects, extension: yml, create: true, fields: *standard }
-  - { name: people, label: People, folder: content/people, extension: yml, create: true, fields: *standard }
+  - name: people
+    label: People
+    folder: content/people
+    extension: yml
+    create: true
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Featured, name: featured, widget: boolean }
+      - label: Group
+        name: group
+        widget: select
+        options: [founder, leader, mentor, core-member, collaborator, affiliated-faculty]
+      - { label: Role, name: role, widget: string }
+      - { label: Affiliation, name: affiliation, widget: string }
+      - label: Affiliation Slugs
+        name: affiliation_slugs
+        widget: list
+        required: false
+        field: { label: Slug, name: slug, widget: string }
+      - { label: Short Bio, name: short_bio, widget: text }
+      - { label: Full Bio, name: full_bio, widget: text }
+      - label: Research Interests
+        name: research_interests
+        widget: list
+        field: { label: Interest, name: interest, widget: string }
+      - { label: Photo, name: photo, widget: image, required: false }
+      - label: Links
+        name: links
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: URL, name: url, widget: string }
+      - { label: Active, name: active, widget: boolean }
+      - { label: Placeholder, name: placeholder, widget: boolean }
   - { name: community, label: Community Narratives, folder: content/community, extension: yml, create: true, fields: *standard }
   - { name: gallery, label: Gallery Images, folder: content/gallery, extension: yml, create: true, fields: *standard }
   - { name: opportunities, label: Opportunities, folder: content/opportunities, extension: yml, create: true, fields: *standard }
