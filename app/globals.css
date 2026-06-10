@@ -45,11 +45,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 img,
 svg {
   max-width: 100%;

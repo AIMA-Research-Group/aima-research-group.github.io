@@ -97,7 +97,7 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
                 </div>
                 <div>
                   <h2 className="text-2xl font-black">Biography</h2>
-                  <p className="mt-3 font-medium leading-8 text-[var(--text-primary)]">{person.full_bio}</p>
+                  <p className="mt-3 text-justify font-medium leading-8 text-[var(--text-primary)] [text-justify:inter-word]">{person.full_bio}</p>
                 </div>
                 <div>
                   <h2 className="text-2xl font-black">Research interests</h2>
