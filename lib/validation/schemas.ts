@@ -88,6 +88,7 @@ export const publicationSchema = z.object({
   venue: z.string().min(1),
   publication_type: z.enum(["journal", "conference", "preprint", "workshop", "poster", "thesis", "other"]),
   abstract: z.string().optional().default(""),
+  impact_factor: z.string().optional().default(""),
   badges: z.array(z.enum(["Oral", "Highlight", "Best Paper Award"])).optional().default([]),
   thumbnail: z.string().optional().default(""),
   figure: z.string().optional().default(""),

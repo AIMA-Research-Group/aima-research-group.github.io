@@ -203,6 +203,7 @@ authors:
   - Second Author
 venue: Full Conference or Journal Name (SHORT), 2026
 publication_type: conference
+impact_factor: ""
 badges:
   - Oral
 thumbnail: /uploads/publications/example.png
@@ -251,6 +252,7 @@ authors: list of strings
 venue: string
 publication_type: journal | conference | preprint | workshop | poster | thesis | other
 abstract: optional text, currently not displayed
+impact_factor: string, only for journal papers, for example "7.6"
 badges: Oral | Highlight | Best Paper Award
 thumbnail: image path or ""
 figure: image path or ""

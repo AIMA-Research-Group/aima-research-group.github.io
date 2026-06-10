@@ -113,6 +113,7 @@ collections:
         name: publication_type
         widget: select
         options: [journal, conference, preprint, workshop, poster, thesis, other]
+      - { label: Impact Factor, name: impact_factor, widget: string, required: false }
       - label: Badges
         name: badges
         widget: select
