@@ -9,7 +9,7 @@ export function PublicationsBrowser({ publications, themes }: { publications: Pu
   return (
     <FilterControls
       items={publications}
-      searchFields={(item) => [item.title, item.venue, item.authors.join(" "), item.abstract]}
+      searchFields={(item) => [item.title, item.venue, item.authors.join(" ")]}
       filters={[
         { label: "Year", values: Array.from(new Set(publications.map((item) => String(item.year)))).sort().reverse(), getValue: (item) => String(item.year) },
         { label: "Theme", values: themes.map((item) => item.slug), getValue: (item) => item.research_theme_slugs[0] || "" },

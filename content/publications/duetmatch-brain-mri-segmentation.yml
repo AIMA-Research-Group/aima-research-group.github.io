@@ -11,9 +11,9 @@ authors:
   - Xingjian Li
   - Ulas Bagci
   - Min Xu
-venue: "Computerized Medical Imaging and Graphics (IF: 4.9)"
+venue: "Computerized Medical Imaging and Graphics, 2025"
 publication_type: journal
-abstract: The limited availability of annotated data in medical imaging makes semi-supervised learning increasingly appealing for its ability to learn from imperfect supervision. Recently, teacher-student frameworks have gained popularity for their training benefits and robust performance. However, jointly optimizing the entire network can hinder convergence and stability, especially in challenging scenarios. To address this for medical image segmentation, we propose DuetMatch, a novel dual-branch semi-supervised framework with asynchronous optimization, where each branch optimizes either the encoder or decoder while keeping the other frozen. To improve consistency under noisy conditions, we introduce Decoupled Dropout Perturbation, enforcing regularization across branches. We also design Pairwise CutMix Cross-Guidance to enhance model diversity by exchanging pseudo-labels through augmented input pairs. To mitigate confirmation bias from noisy pseudo-labels, we propose Consistency Matching, refining labels using stable predictions from frozen teacher models. Extensive experiments on benchmark brain MRI segmentation datasets, including ISLES2022 and BraTS, show that DuetMatch consistently outperforms state-of-the-art methods, demonstrating its effectiveness and robustness across diverse semi-supervised segmentation scenarios.
+badges: []
 thumbnail: "/uploads/publications/duetmatch-brain-mri-segmentation.png"
 figure: ""
 media_type: none

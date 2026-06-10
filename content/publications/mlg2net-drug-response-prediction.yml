@@ -6,9 +6,9 @@ authors:
   - Thanh-Huy Nguyen
   - Tuan Tung Nguyen
   - Nguyen Quoc Khanh Le
-venue: "Journal of Medical Systems (IF: 5.7)"
+venue: "Journal of Medical Systems, 2025"
 publication_type: journal
-abstract: "Drug response prediction (DRP) is a central task in the era of precision medicine. Over the past decade, the emergence of deep learning (DL) has greatly contributed to addressing DRP challenges. Notably, the prediction of DRP for cancer cell lines benefits significantly from data availability for model development. However, an effective predictive model is still challenging due to issues with data quality, high-dimensional data, and multi-omics data integration. In this study, we introduce MLG2Net, a deep-learning model inspired by graph neural networks designed to predict DRP in lung cancer cell lines based on pharmacogenomics data. Our model comprises two key components: drug SMILES described by local and global graph networks and cell line genomics are illustrated as a map. Our results show that MLG2Net outperforms three reference graph networks. MLG2Net performance reached a Pearson coefficient correlation of 0.8616 and a root mean square error (RMSE) of 2.94e-6 in predicting drug responses for Lung Adenocarcinoma (LUAD) cell lines. Subsequent testing on the Lung Squamous Cell Carcinoma (LUSC) dataset reveals lower performance: 0.7999, RMSE: 4.08e-6), attributed to the dataset's smaller size influencing model capacity. Moreover, we assessed the model's architecture by isolating its components, with results indicating that the global network is particularly effective in this task. In conclusion, MLG2Net exhibited promising applications in DRP for cancer cell lines, with potential advancements by incorporating larger datasets."
+badges: []
 thumbnail: "/uploads/publications/mlg2net-drug-response-prediction.png"
 figure: ""
 media_type: none

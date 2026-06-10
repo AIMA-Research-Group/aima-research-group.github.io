@@ -136,6 +136,16 @@ function PublicationLinkButtons({ publication }: { publication: Publication }) {
   );
 }
 
+function PublicationBadge({ badge }: { badge: Publication["badges"][number] }) {
+  const styles: Record<Publication["badges"][number], string> = {
+    Oral: "bg-[#0ea85d] text-white shadow-[0_6px_18px_rgba(14,168,93,0.22)]",
+    Highlight: "bg-[#fff0b8] text-[#8a5a00] ring-1 ring-[#f3cc56]",
+    "Best Paper Award": "bg-[#ffe1ec] text-[#a30f4f] ring-1 ring-[#f4a6c4]",
+  };
+
+  return <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-black ${styles[badge]}`}>{badge}</span>;
+}
+
 export function ResearchThemeCard({ theme, projectCount, publicationCount }: { theme: ResearchTheme; projectCount: number; publicationCount: number }) {
   return (
     <article className="surface-card group overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
@@ -167,11 +177,11 @@ export function PublicationCard({ publication }: { publication: Publication }) {
   const visual = publication.figure || publication.thumbnail;
   const paperLink = findPublicationLink(publication, "paper");
   return (
-    <article className="surface-card grid gap-5 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:grid-cols-[220px_1fr]">
+    <article className="border-t border-[var(--border)] bg-white py-5 transition duration-300 hover:bg-[var(--surface-muted)] md:grid md:grid-cols-[170px_1fr] md:gap-5">
       <a
         href={paperLink ? withBasePath(paperLink.url) : undefined}
         aria-label={paperLink ? `Open paper: ${publication.title}` : undefined}
-        className={`relative h-48 min-w-0 overflow-hidden rounded-2xl border border-[var(--border)] bg-white md:h-[165px] [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full ${paperLink ? "cursor-pointer transition hover:border-[var(--aima-deep-blue)]" : "pointer-events-none"}`}
+        className={`relative mb-4 block h-36 min-w-0 overflow-hidden rounded-lg bg-white md:mb-0 md:h-28 [&>*]:h-full [&>*]:min-h-0 [&>*]:w-full ${paperLink ? "cursor-pointer" : "pointer-events-none"}`}
       >
         {visual ? (
           <Image
@@ -180,18 +190,19 @@ export function PublicationCard({ publication }: { publication: Publication }) {
             fill
             sizes="(min-width: 768px) 220px, 100vw"
             unoptimized={publication.media_type === "gif"}
-            className="object-contain p-2"
+            className="object-contain"
           />
         ) : (
           <PublicationThumbnailPlaceholder />
         )}
       </a>
       <div className="min-w-0">
-        <div className="mb-3 flex flex-wrap gap-2">
+        <div className="mb-2 flex flex-wrap items-center gap-2">
           {publication.placeholder && isPreviewMode() ? <Badge>PLACEHOLDER PUBLICATION</Badge> : null}
           <Badge tone={publicationTypeTone(publication.publication_type)}>{publication.publication_type}</Badge>
+          {publication.badges.map((badge) => <PublicationBadge key={badge} badge={badge} />)}
         </div>
-        <h3 className="text-xl font-black">
+        <h3 className="text-xl font-semibold leading-snug text-black">
           {paperLink ? (
             <a href={withBasePath(paperLink.url)} className="transition hover:text-[var(--aima-deep-blue)]">
               <ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." />
@@ -200,9 +211,8 @@ export function PublicationCard({ publication }: { publication: Publication }) {
             <ContentPlaceholder value={publication.title} fallback="Selected publication will be added shortly." />
           )}
         </h3>
-        <p className="mt-2 text-sm font-bold text-[var(--text-secondary)]">{publication.authors.join(", ")}</p>
-        <p className="mt-1 text-sm text-[var(--text-muted)]">{publication.venue} · {publication.year}</p>
-        <p className="mt-4 line-clamp-3 leading-7 text-[var(--text-secondary)]">{publication.abstract}</p>
+        <p className="mt-1 text-sm font-medium leading-6 text-black">{publication.authors.join(", ")}</p>
+        <p className="mt-0.5 text-sm italic leading-6 text-black">{publication.venue}</p>
         <PublicationLinkButtons publication={publication} />
       </div>
     </article>

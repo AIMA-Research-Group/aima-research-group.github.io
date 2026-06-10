@@ -75,7 +75,43 @@ collections:
       - { label: Order, name: order, widget: number }
       - { label: Featured, name: featured, widget: boolean }
       - { label: Summary, name: summary, widget: text }
-  - { name: publications, label: Publications, folder: content/publications, extension: yml, create: true, fields: *standard }
+  - name: publications
+    label: Publications
+    folder: content/publications
+    extension: yml
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Year, name: year, widget: number }
+      - { label: Authors, name: authors, widget: list, field: { label: Author, name: author, widget: string } }
+      - { label: Venue, name: venue, widget: string }
+      - label: Publication Type
+        name: publication_type
+        widget: select
+        options: [journal, conference, preprint, workshop, poster, thesis, other]
+      - label: Badges
+        name: badges
+        widget: select
+        multiple: true
+        required: false
+        options: [Oral, Highlight, Best Paper Award]
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false }
+      - { label: Figure, name: figure, widget: image, required: false }
+      - { label: Media Type, name: media_type, widget: select, options: [image, gif, none], default: none }
+      - { label: Research Theme Slugs, name: research_theme_slugs, widget: list, required: false, field: { label: Slug, name: slug, widget: string } }
+      - { label: Related Project Slugs, name: related_project_slugs, widget: list, required: false, field: { label: Slug, name: slug, widget: string } }
+      - label: Links
+        name: links
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: URL, name: url, widget: string }
+      - { label: Featured, name: featured, widget: boolean, default: false }
+      - { label: Order, name: order, widget: number }
+      - { label: Status, name: status, widget: string }
+      - { label: Placeholder, name: placeholder, widget: boolean, default: false }
   - name: news
     label: News
     folder: content/news

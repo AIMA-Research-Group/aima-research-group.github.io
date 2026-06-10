@@ -11,9 +11,9 @@ authors:
   - Tianyang Wang
   - Xingjian Li
   - Min Xu
-venue: "Pattern Recognition (IF: 7.6)"
+venue: "Pattern Recognition, 2026"
 publication_type: journal
-abstract: Teacher-student frameworks have emerged as a leading approach in semi-supervised medical image segmentation, demonstrating strong performance across various tasks. However, the learning effects are still limited by the strong correlation and unreliable knowledge transfer process between teacher and student networks. To overcome this limitation, we introduce a novel switching Dual-Student architecture that strategically selects the most reliable student at each iteration to enhance dual-student collaboration and prevent error reinforcement. We also introduce a strategy of Loss-Aware Exponential Moving Average to dynamically ensure that the teacher absorbs meaningful information from students, improving the quality of pseudo-labels. Our plug-and-play framework is extensively evaluated on 3D medical image segmentation datasets, where it outperforms state-of-the-art semi-supervised methods, demonstrating its effectiveness in improving segmentation accuracy under limited supervision.
+badges: []
 thumbnail: "/uploads/publications/adaptive-knowledge-transferring-dual-student.png"
 figure: ""
 media_type: none

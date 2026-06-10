@@ -8,9 +8,9 @@ authors:
   - Nguyen Lan Vi Vu
   - Vinh Quang Dinh
   - Fabrice MERIAUDEAU
-venue: MIDL 2025
+venue: "Medical Imaging with Deep Learning (MIDL), 2025"
 publication_type: conference
-abstract: Skin Lesion Segmentation with supportive Deep Learning has become essential in skin lesion analysis and skin cancer diagnosis. However, in the practical scenario of clinical implementation, there is a limitation in human-annotated labels for training data, which leads to poor performance in supervised training models. In this paper, we propose Dual Mask Ensemble (DME) based on a dual-branch co-training network, which aims to enforce two models to exploit information from different views. Specifically, we introduce a novel feature discrepancy loss trained with a cross-pseudo supervision strategy, which enhances model representation by encouraging the sub-networks to learn from distinct features, thereby mitigating feature collapse. Additionally, Dual Mask Ensemble training enables the sub-models to extract more meaningful information from unlabeled data by combining mask predictions. Experimental results demonstrate the effectiveness of our approach, achieving state-of-the-art performance across several metrics (Dice and Jaccard) on the ISIC2018 and HAM10000 datasets. Our code is available at https://github.com/antares0811/DME-FD.
+badges: []
 thumbnail: "/uploads/publications/dme-fd-skin-lesion-segmentation.png"
 figure: ""
 media_type: none
