@@ -88,7 +88,11 @@
   logo: /uploads/affiliations/FIU.png
   url: ""
   location: USA
-
+- name: University of Pittsburgh
+  slug: pu
+  logo: /uploads/affiliations/pu.png
+  url: ""
+  location: USA
 - name: University of North Carolina at Chapel Hill
   slug: unc-chapelhill
   logo: /uploads/affiliations/unc_chapelhill.png
