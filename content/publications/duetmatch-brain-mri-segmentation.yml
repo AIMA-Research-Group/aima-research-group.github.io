@@ -1,21 +1,12 @@
 title: "DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization"
 slug: duetmatch-brain-mri-segmentation
 year: 2025
-authors:
-  - Thanh-Huy Nguyen
-  - Hoang-Thien Nguyen
-  - Vi Vu
-  - Ba-Thinh Lam
-  - Phat Huynh
-  - Tianyang Wang
-  - Xingjian Li
-  - Ulas Bagci
-  - Min Xu
-venue: "Computerized Medical Imaging and Graphics, 2025"
+authors: Thanh-Huy Nguyen, Hoang-Thien Nguyen, Vi Vu, Ba-Thinh Lam, Phat Huynh, Tianyang Wang, Xingjian Li, Ulas Bagci, Min Xu
+venue: Computerized Medical Imaging and Graphics
 publication_type: journal
 impact_factor: "4.9"
 badges: []
-thumbnail: "/uploads/publications/duetmatch-brain-mri-segmentation.png"
+thumbnail: /uploads/publications/duetmatch-brain-mri-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -25,6 +16,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2510.16146
 featured: false
-order: 9
 status: accepted
 placeholder: false

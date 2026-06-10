@@ -100,6 +100,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
     ]);
 
   const maybePublic = <T extends { placeholder?: boolean }>(items: T[]) => options.includePlaceholders ? items : publicRecords(items);
+  const sortedPublications = maybePublic(publications).sort((a, b) => b.year - a.year || a.order - b.order || a.title.localeCompare(b.title));
 
   return {
     site,
@@ -107,7 +108,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
     navigation: navigation.filter((item) => item.visible).sort((a, b) => a.order - b.order),
     homepage,
     researchThemes,
-    publications: maybePublic(publications),
+    publications: sortedPublications,
     projects: maybePublic(projects),
     news: maybePublic(news),
     people: maybePublic(people),
@@ -119,7 +120,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
   };
 }
 
-export function bySlugs<T extends { slug: string; featured?: boolean; order: number }>(items: T[], slugs: string[]) {
+export function bySlugs<T extends { slug: string; featured?: boolean; order?: number }>(items: T[], slugs: string[]) {
   const mapped = slugs.map((slug) => items.find((item) => item.slug === slug)).filter(Boolean) as T[];
-  return mapped.length ? mapped : items.filter((item) => item.featured).sort((a, b) => a.order - b.order);
+  return mapped.length ? mapped : items.filter((item) => item.featured).sort((a, b) => (a.order || 0) - (b.order || 0));
 }

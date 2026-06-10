@@ -1,21 +1,12 @@
 title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
 slug: adaptive-knowledge-transferring-dual-student
 year: 2026
-authors:
-  - Hoang-Thien Nguyen
-  - Thanh-Huy Nguyen
-  - Ba-Thinh Lam
-  - Vi Vu
-  - Bach X. Nguyen
-  - Jianhua Xing
-  - Tianyang Wang
-  - Xingjian Li
-  - Min Xu
-venue: "Pattern Recognition, 2026"
+authors: Hoang-Thien Nguyen, Thanh-Huy Nguyen, Ba-Thinh Lam, Vi Vu, Bach X. Nguyen, Jianhua Xing, Tianyang Wang, Xingjian Li, Min Xu
+venue: Pattern Recognition
 publication_type: journal
 impact_factor: "7.6"
 badges: []
-thumbnail: "/uploads/publications/adaptive-knowledge-transferring-dual-student.png"
+thumbnail: /uploads/publications/adaptive-knowledge-transferring-dual-student.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -25,6 +16,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2510.24366
 featured: false
-order: 6
 status: accepted
 placeholder: false

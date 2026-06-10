@@ -107,7 +107,7 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Year, name: year, widget: number }
-      - { label: Authors, name: authors, widget: list, field: { label: Author, name: author, widget: string } }
+      - { label: Authors, name: authors, widget: string, hint: "Use one line, separated by commas." }
       - { label: Venue, name: venue, widget: string }
       - label: Publication Type
         name: publication_type
@@ -133,7 +133,7 @@ collections:
           - { label: Label, name: label, widget: string }
           - { label: URL, name: url, widget: string }
       - { label: Featured, name: featured, widget: boolean, default: false }
-      - { label: Order, name: order, widget: number }
+      - { label: Order, name: order, widget: number, required: false }
       - { label: Status, name: status, widget: string }
       - { label: Placeholder, name: placeholder, widget: boolean, default: false }
   - name: news

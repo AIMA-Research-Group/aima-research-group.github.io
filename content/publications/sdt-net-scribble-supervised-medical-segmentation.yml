@@ -1,20 +1,12 @@
 title: Scribble-Supervised Medical Image Segmentation with Dynamic Teacher Switching and Hierarchical Consistency
 slug: sdt-net-scribble-supervised-medical-segmentation
 year: 2026
-authors:
-  - Thanh-Huy Nguyen
-  - Hoang-Loc Cao
-  - Dat T. Chung
-  - Mai-Anh Vu
-  - Thanh-Minh Nguyen
-  - Minh Le
-  - Phat K. Huynh
-  - Ulas Bagci
-venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2026"
+authors: Thanh-Huy Nguyen, Hoang-Loc Cao, Dat T. Chung, Mai-Anh Vu, Thanh-Minh Nguyen, Minh Le, Phat K. Huynh, Ulas Bagci
+venue: IEEE International Symposium on Biomedical Imaging (ISBI)
 publication_type: conference
 badges:
   - Oral
-thumbnail: "/uploads/publications/sdt-net-scribble-supervised-medical-segmentation.png"
+thumbnail: /uploads/publications/sdt-net-scribble-supervised-medical-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -24,6 +16,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2601.14563
 featured: true
-order: 4
 status: accepted
 placeholder: false

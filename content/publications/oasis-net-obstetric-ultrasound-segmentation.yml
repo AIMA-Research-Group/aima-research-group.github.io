@@ -1,29 +1,12 @@
 title: "OASIS-Net: An Obstetric Adversarial Semi-Supervised Image Segmentation Network for Cervical and Fetal Head Ultrasound Imaging"
 slug: oasis-net-obstetric-ultrasound-segmentation
 year: 2025
-authors:
-  - Minh Huu Nhat Le
-  - Tran Quoc Khanh Le
-  - Thanh-Huy Nguyen
-  - Dang Nguyen
-  - Hien Quang Nguyen
-  - Nhi Huu Hanh Le
-  - Kien Dang Nguyen
-  - Hien Quang Kha
-  - Phat Ky Nguyen
-  - Hoai Huu Le
-  - Han Hong Huynh
-  - Dang-Manh Ho
-  - Thanh-Minh Nguyen
-  - Quan Nguyen
-  - Min Xu
-  - Phat K Huynh
-  - Nguyen Quoc Khanh Le
-venue: "IEEE Journal of Biomedical and Health Informatics (JBHI), 2025"
+authors: Minh Huu Nhat Le, Tran Quoc Khanh Le, Thanh-Huy Nguyen, Dang Nguyen, Hien Quang Nguyen, Nhi Huu Hanh Le, Kien Dang Nguyen, Hien Quang Kha, Phat Ky Nguyen, Hoai Huu Le, Han Hong Huynh, Dang-Manh Ho, Thanh-Minh Nguyen, Quan Nguyen, Min Xu, Phat K Huynh, Nguyen Quoc Khanh Le
+venue: IEEE Journal of Biomedical and Health Informatics (JBHI)
 publication_type: journal
 impact_factor: "6.8"
 badges: []
-thumbnail: "/uploads/publications/oasis-net-obstetric-ultrasound-segmentation.png"
+thumbnail: /uploads/publications/oasis-net-obstetric-ultrasound-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -34,6 +17,5 @@ links:
   - label: Paper
     url: https://doi.org/10.1109/JBHI.2025.3631102
 featured: false
-order: 10
 status: accepted
 placeholder: false

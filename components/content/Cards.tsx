@@ -229,7 +229,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
         </h3>
         <p className="mt-1 text-sm font-medium leading-6 text-black">{publication.authors.join(", ")}</p>
         <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-base font-bold leading-6 text-[var(--text-primary)]">
-          <span>{publication.venue}</span>
+          <span>{publication.venue}, {publication.year}</span>
           {publication.publication_type === "journal" && publication.impact_factor ? (
             <span className="inline-flex rounded-full bg-[var(--aima-soft-blue)] px-2.5 py-1 text-xs font-black text-[var(--aima-deep-blue)]">
               IF {publication.impact_factor}

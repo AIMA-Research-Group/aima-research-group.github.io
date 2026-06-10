@@ -1,21 +1,11 @@
 title: "Contrastive Integrated Gradients: A Feature Attribution-Based Method for Explaining Whole Slide Image Classification"
 slug: contrastive-integrated-gradients-wsi
 year: 2026
-authors:
-  - Anh Mai Vu
-  - Tuan L. Vo
-  - Ngoc Lam Quang Bui
-  - Nam Nguyen Le Binh
-  - Akash Awasthi
-  - Huy Quoc Vo
-  - Thanh-Huy Nguyen
-  - Zhu Han
-  - Chandra Mohan
-  - Hien Van Nguyen
-venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2026"
+authors: Anh Mai Vu, Tuan L. Vo, Ngoc Lam Quang Bui, Nam Nguyen Le Binh, Akash Awasthi, Huy Quoc Vo, Thanh-Huy Nguyen, Zhu Han, Chandra Mohan, Hien Van Nguyen
+venue: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/contrastive-integrated-gradients-wsi.png"
+thumbnail: /uploads/publications/contrastive-integrated-gradients-wsi.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -25,6 +15,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2511.08464
 featured: false
-order: 11
 status: accepted
 placeholder: false

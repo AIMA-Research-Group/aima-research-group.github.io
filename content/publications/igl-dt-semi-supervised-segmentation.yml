@@ -1,17 +1,11 @@
 title: "IGL-DT: Iterative Global-Local Feature Learning with Dual-Teacher Semantic Segmentation Framework under Limited Annotation Scheme"
 slug: igl-dt-semi-supervised-segmentation
 year: 2025
-authors:
-  - Dinh Dai Quan Tran
-  - Hoang-Thien Nguyen
-  - Thanh-Huy Nguyen
-  - Gia-Van To
-  - Tien-Huy Nguyen
-  - Quan Nguyen
-venue: "Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025"
+authors: Dinh Dai Quan Tran, Hoang-Thien Nguyen, Thanh-Huy Nguyen, Gia-Van To, Tien-Huy Nguyen, Quan Nguyen
+venue: Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
 publication_type: workshop
 badges: []
-thumbnail: "/uploads/publications/igl-dt-semi-supervised-segmentation.png"
+thumbnail: /uploads/publications/igl-dt-semi-supervised-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs: []
@@ -20,6 +14,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2504.09797
 featured: false
-order: 16
 status: accepted
 placeholder: false

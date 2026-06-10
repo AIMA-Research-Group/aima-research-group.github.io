@@ -198,10 +198,8 @@ Common fields:
 title: Paper title
 slug: paper-slug
 year: 2026
-authors:
-  - First Author
-  - Second Author
-venue: Full Conference or Journal Name (SHORT), 2026
+authors: First Author, Second Author
+venue: Full Conference or Journal Name (SHORT)
 publication_type: conference
 impact_factor: ""
 badges:
@@ -217,7 +215,6 @@ links:
   - label: Demo
     url: https://...
 featured: true
-order: 1
 status: published
 placeholder: false
 ```
@@ -248,8 +245,8 @@ Valid Publication fields:
 title: string
 slug: slug
 year: number
-authors: list of strings
-venue: string
+authors: string, one line separated by commas
+venue: string, venue name only; year is read from the year field
 publication_type: journal | conference | preprint | workshop | poster | thesis | other
 abstract: optional text, currently not displayed
 impact_factor: string, only for journal papers, for example "7.6"
@@ -261,7 +258,7 @@ research_theme_slugs: list of research theme slugs
 related_project_slugs: list of project slugs
 links: list of { label, url }
 featured: boolean
-order: number
+order: optional number, usually not needed
 status: string
 placeholder: boolean
 ```

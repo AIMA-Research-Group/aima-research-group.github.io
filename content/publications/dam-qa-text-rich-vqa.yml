@@ -1,22 +1,11 @@
 title: Describe anything model for visual question answering on text-rich images
 slug: dam-qa-text-rich-vqa
 year: 2025
-authors:
-  - Yen-Linh Vu
-  - Dinh-Thang Duong
-  - Truong-Binh Duong
-  - Anh-Khoi Nguyen
-  - Thanh-Huy Nguyen
-  - Le Thien Phuc Nguyen
-  - Jianhua Xing
-  - Xingjian Li
-  - Tianyang Wang
-  - Ulas Bagci
-  - Min Xu
-venue: "VisionDocs Workshop at the International Conference on Computer Vision (ICCV), 2025"
+authors: Yen-Linh Vu, Dinh-Thang Duong, Truong-Binh Duong, Anh-Khoi Nguyen, Thanh-Huy Nguyen, Le Thien Phuc Nguyen, Jianhua Xing, Xingjian Li, Tianyang Wang, Ulas Bagci, Min Xu
+venue: VisionDocs Workshop at the International Conference on Computer Vision (ICCV)
 publication_type: poster
 badges: []
-thumbnail: "/uploads/publications/dam-qa-text-rich-vqa.png"
+thumbnail: /uploads/publications/dam-qa-text-rich-vqa.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -28,6 +17,5 @@ links:
   - label: Code
     url: https://github.com/Linvyl/DAM-QA
 featured: false
-order: 12
 status: accepted
 placeholder: false

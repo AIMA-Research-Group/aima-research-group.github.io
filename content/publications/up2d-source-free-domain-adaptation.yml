@@ -1,20 +1,12 @@
 title: "UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation"
 slug: up2d-source-free-domain-adaptation
 year: 2025
-authors:
-  - Thanh-Huy Nguyen
-  - Quang-Khai Bui-Tran
-  - Manh D. Ho
-  - Thinh B. Lam b
-  - Vi Vu
-  - Hoang-Thien Nguyen
-  - Phat Huynh
-  - Ulas Bagci
-venue: "Neurocomputing, 2025"
+authors: Thanh-Huy Nguyen, Quang-Khai Bui-Tran, Manh D. Ho, Thinh B. Lam b, Vi Vu, Hoang-Thien Nguyen, Phat Huynh, Ulas Bagci
+venue: Neurocomputing
 publication_type: journal
 impact_factor: "6.5"
 badges: []
-thumbnail: "/uploads/publications/up2d-source-free-domain-adaptation.jpg"
+thumbnail: /uploads/publications/up2d-source-free-domain-adaptation.jpg
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -24,6 +16,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2510.26826
 featured: false
-order: 7
 status: accepted
 placeholder: false

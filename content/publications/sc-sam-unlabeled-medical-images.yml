@@ -1,19 +1,11 @@
 title: "From Specialist to Generalist: Unlocking SAM's Learning Potential on Unlabeled Medical Images"
 slug: sc-sam-unlabeled-medical-images
 year: 2026
-authors:
-  - Vi Vu
-  - Thanh-Huy Nguyen
-  - Tien-Thinh Nguyen
-  - Ba-Thinh Lam
-  - Hoang-Thien Nguyen
-  - Tianyang Wang
-  - Xingjian Li
-  - Min Xu
-venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2026"
+authors: Vi Vu, Thanh-Huy Nguyen, Tien-Thinh Nguyen, Ba-Thinh Lam, Hoang-Thien Nguyen, Tianyang Wang, Xingjian Li, Min Xu
+venue: IEEE International Symposium on Biomedical Imaging (ISBI)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/sc-sam-unlabeled-medical-images.png"
+thumbnail: /uploads/publications/sc-sam-unlabeled-medical-images.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -25,6 +17,5 @@ links:
   - label: Code
     url: https://github.com/vnlvi2k3/SC-SAM
 featured: false
-order: 5
 status: accepted
 placeholder: false

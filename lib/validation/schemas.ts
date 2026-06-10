@@ -84,7 +84,10 @@ export const publicationSchema = z.object({
   title: z.string().min(1),
   slug: z.string().min(1),
   year: z.number(),
-  authors: z.array(z.string()).min(1),
+  authors: z.union([
+    z.array(z.string()).min(1),
+    z.string().min(1).transform((value) => value.split(",").map((author) => author.trim()).filter(Boolean)),
+  ]),
   venue: z.string().min(1),
   publication_type: z.enum(["journal", "conference", "preprint", "workshop", "poster", "thesis", "other"]),
   abstract: z.string().optional().default(""),
@@ -97,7 +100,7 @@ export const publicationSchema = z.object({
   related_project_slugs: z.array(z.string()),
   links: z.array(linkSchema),
   featured: z.boolean(),
-  order: z.number(),
+  order: z.number().optional().default(0),
   status: z.string().min(1),
   placeholder: z.boolean(),
 });

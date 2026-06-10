@@ -1,16 +1,12 @@
 title: "MLG2Net: Molecular global graph network for drug response prediction in lung cancer cell lines"
 slug: mlg2net-drug-response-prediction
 year: 2025
-authors:
-  - Thi-Oanh Tran
-  - Thanh-Huy Nguyen
-  - Tuan Tung Nguyen
-  - Nguyen Quoc Khanh Le
-venue: "Journal of Medical Systems, 2025"
+authors: Thi-Oanh Tran, Thanh-Huy Nguyen, Tuan Tung Nguyen, Nguyen Quoc Khanh Le
+venue: Journal of Medical Systems
 publication_type: journal
 impact_factor: "5.7"
 badges: []
-thumbnail: "/uploads/publications/mlg2net-drug-response-prediction.png"
+thumbnail: /uploads/publications/mlg2net-drug-response-prediction.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -20,6 +16,5 @@ links:
   - label: Paper
     url: https://link.springer.com/article/10.1007/s10916-025-02182-3
 featured: false
-order: 18
 status: accepted
 placeholder: false

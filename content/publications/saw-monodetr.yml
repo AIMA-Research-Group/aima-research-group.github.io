@@ -1,16 +1,11 @@
 title: "Saw-Monodetr: Shape-Aware Adaptive Weighted Transformer for Monocular 3d Object Detection"
 slug: saw-monodetr
 year: 2025
-authors:
-  - Dinh Dai Quan Tran
-  - Thanh-Huy Nguyen
-  - Vinh Quang Dinh
-  - Ren-Hung Hwang
-  - Van-Linh Nguyen
-venue: "IEEE International Conference on Image Processing (ICIP), 2025"
+authors: Dinh Dai Quan Tran, Thanh-Huy Nguyen, Vinh Quang Dinh, Ren-Hung Hwang, Van-Linh Nguyen
+venue: IEEE International Conference on Image Processing (ICIP)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/saw-monodetr.jpg"
+thumbnail: /uploads/publications/saw-monodetr.jpg
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -22,6 +17,5 @@ links:
   - label: Code
     url: https://github.com/useracc687/saw-monodetr
 featured: false
-order: 15
 status: accepted
 placeholder: false

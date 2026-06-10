@@ -1,19 +1,11 @@
 title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
 slug: modality-specific-fusion-brain-tumor-segmentation
 year: 2026
-authors:
-  - Tien-Dat Chung
-  - Ba-Thinh Lam
-  - Thanh-Huy Nguyen
-  - Thien Nguyen
-  - Nguyen Lan Vi Vu
-  - Hoang-Loc Cao
-  - Phat Kim Huynh
-  - Min Xu
-venue: "AI for Medicine and Healthcare Bridge Program at the AAAI Conference on Artificial Intelligence (AAAI), 2026"
+authors: Tien-Dat Chung, Ba-Thinh Lam, Thanh-Huy Nguyen, Thien Nguyen, Nguyen Lan Vi Vu, Hoang-Loc Cao, Phat Kim Huynh, Min Xu
+venue: AI for Medicine and Healthcare Bridge Program at the AAAI Conference on Artificial Intelligence (AAAI)
 publication_type: poster
 badges: []
-thumbnail: "/uploads/publications/modality-specific-fusion-brain-tumor-segmentation.png"
+thumbnail: /uploads/publications/modality-specific-fusion-brain-tumor-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -24,6 +16,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2512.09801
 featured: false
-order: 8
 status: accepted
 placeholder: false

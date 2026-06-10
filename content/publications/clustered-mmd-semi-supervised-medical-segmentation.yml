@@ -1,19 +1,11 @@
 title: Domain-invariant Mixed-domain Semi-supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
 slug: clustered-mmd-semi-supervised-medical-segmentation
 year: 2026
-authors:
-  - Ba-Thinh Lam
-  - Thanh-Huy Nguyen
-  - Hoang-Thien Nguyen
-  - Quang-Khai Bui-Tran
-  - Nguyen Lan Vi Vu
-  - Phat K. Huynh
-  - Ulas Bagci
-  - Min Xu
-venue: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026"
+authors: Ba-Thinh Lam, Thanh-Huy Nguyen, Hoang-Thien Nguyen, Quang-Khai Bui-Tran, Nguyen Lan Vi Vu, Phat K. Huynh, Ulas Bagci, Min Xu
+venue: IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/clustered-mmd-semi-supervised-medical-segmentation.png"
+thumbnail: /uploads/publications/clustered-mmd-semi-supervised-medical-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -23,6 +15,5 @@ links:
   - label: Paper
     url: https://arxiv.org/abs/2601.16954
 featured: true
-order: 2
 status: accepted
 placeholder: false

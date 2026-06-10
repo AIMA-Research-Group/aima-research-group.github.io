@@ -1,21 +1,11 @@
 title: "LPD: Learnable Prototypes with Diversity Regularization for Weakly Supervised Histopathology Segmentation"
 slug: lpd-weakly-supervised-histopathology-segmentation
 year: 2026
-authors:
-  - Khang Le
-  - Anh Mai Vu
-  - Thi Kim Trang Vo
-  - Ha Thach
-  - Ngoc Bui Lam Quang
-  - Thanh-Huy Nguyen
-  - Minh H. N. Le
-  - Zhu Han
-  - Chandra Mohan
-  - Hien Van Nguyen
-venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2026"
+authors: Khang Le, Anh Mai Vu, Thi Kim Trang Vo, Ha Thach, Ngoc Bui Lam Quang, Thanh-Huy Nguyen, Minh H. N. Le, Zhu Han, Chandra Mohan, Hien Van Nguyen
+venue: IEEE International Symposium on Biomedical Imaging (ISBI)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/lpd-weakly-supervised-histopathology-segmentation.png"
+thumbnail: /uploads/publications/lpd-weakly-supervised-histopathology-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -27,6 +17,5 @@ links:
   - label: Code
     url: https://github.com/tom1209-netizen/LPD
 featured: true
-order: 3
 status: accepted
 placeholder: false

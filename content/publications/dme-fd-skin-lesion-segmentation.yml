@@ -1,17 +1,11 @@
 title: Semi-Supervised Skin Lesion Segmentation under Dual Mask Ensemble with Feature Discrepancy Co-Training
 slug: dme-fd-skin-lesion-segmentation
 year: 2025
-authors:
-  - Thanh-Huy Nguyen
-  - Thien Nguyen
-  - Xuan Bach Nguyen
-  - Nguyen Lan Vi Vu
-  - Vinh Quang Dinh
-  - Fabrice MERIAUDEAU
-venue: "Medical Imaging with Deep Learning (MIDL), 2025"
+authors: Thanh-Huy Nguyen, Thien Nguyen, Xuan Bach Nguyen, Nguyen Lan Vi Vu, Vinh Quang Dinh, Fabrice MERIAUDEAU
+venue: Medical Imaging with Deep Learning (MIDL)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/dme-fd-skin-lesion-segmentation.png"
+thumbnail: /uploads/publications/dme-fd-skin-lesion-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -24,6 +18,5 @@ links:
   - label: Code
     url: https://github.com/antares0811/DME-FD
 featured: false
-order: 19
 status: accepted
 placeholder: false

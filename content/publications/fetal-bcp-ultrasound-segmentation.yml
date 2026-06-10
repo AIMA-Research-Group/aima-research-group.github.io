@@ -1,17 +1,11 @@
 title: "Fetal-BCP: Addressing Empirical Distribution Gap in Semi-Supervised Fetal Ultrasound Segmentation"
 slug: fetal-bcp-ultrasound-segmentation
 year: 2025
-authors:
-  - Ha-Hieu Pham
-  - Le Tran Quoc Khanh
-  - Hoang-Thien Nguyen
-  - Nguyen Lan Vi Vu
-  - Quang-Vinh Dinh
-  - Thanh-Huy Nguyen
-venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2025"
+authors: Ha-Hieu Pham, Le Tran Quoc Khanh, Hoang-Thien Nguyen, Nguyen Lan Vi Vu, Quang-Vinh Dinh, Thanh-Huy Nguyen
+venue: IEEE International Symposium on Biomedical Imaging (ISBI)
 publication_type: conference
 badges: []
-thumbnail: "/uploads/publications/fetal-bcp-ultrasound-segmentation.png"
+thumbnail: /uploads/publications/fetal-bcp-ultrasound-segmentation.png
 figure: ""
 media_type: none
 research_theme_slugs:
@@ -22,6 +16,5 @@ links:
   - label: Paper
     url: https://doi.org/10.1109/ISBI60581.2025.10980925
 featured: false
-order: 17
 status: accepted
 placeholder: false
