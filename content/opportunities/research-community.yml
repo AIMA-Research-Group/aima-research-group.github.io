@@ -4,7 +4,7 @@ order: 1
 status: open
 audience: student
 summary: Join AIMA as a motivated researcher-in-training interested in rigorous AI research.
-description: "AIMA welcomes strong students and collaborators who want to learn how to turn careful questions into publishable research."
+description: "If you are a Vietnamese undergraduate or master's student, or an AIO member, and are interested in working on my research topics under my mentorship, you may want to check out the open positions in the AIMA group."
 expectations:
   - Read research papers carefully and discuss them with precision.
   - Commit to reproducible experiments and honest reporting.
@@ -13,7 +13,16 @@ learning_outcomes:
   - Formulate stronger research questions.
   - Build research-ready experiments and evaluation plans.
   - Understand the publication journey from idea to submission.
-application_process: "If you are interested in joining AIMA, email aima.research.aivn@gmail.com or thanhhun@andrew.cmu.edu with your CV, research interests, relevant links, and a short note about why you want to work with the group."
-google_form_url: "[TODO: Add Join Us Google Form URL]"
+application_process: |
+  **Openings**
+
+  For AIO 2025 students only, please fill the form here to register for participating in AIO 2025 AIMA Research Mentorship Program.
+
+  **Application Deadline:** January 28th, 2026 (hard deadline)
+
+  **Interview Period:** from January 29th to February 1st
+
+  About project information, please find projects' description below.
+google_form_url: "[TODO: Add AIO 2025 Registration Form URL]"
 featured: true
 placeholder: false
