@@ -12,7 +12,8 @@ authors:
   - Min Xu
 venue: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026"
 publication_type: conference
-badges: []
+badges:
+  - Highlight
 thumbnail: "/uploads/publications/clustered-mmd-semi-supervised-medical-segmentation.png"
 figure: ""
 media_type: none

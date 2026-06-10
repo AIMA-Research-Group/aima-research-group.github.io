@@ -12,7 +12,8 @@ authors:
   - Min Xu
 venue: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026"
 publication_type: conference
-badges: []
+badges:
+  - Oral
 thumbnail: "/uploads/publications/denoised-patch-mixing-sfda.png"
 figure: ""
 media_type: none
