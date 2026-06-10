@@ -2,8 +2,8 @@ name: Khai Bui
 slug: khai-bui
 order: 17
 featured: false
-group: collaborator
-role: Collaborator
+group: core-member
+role: Core Member
 affiliation: PhD Student - Duke University, USA
 short_bio: Researcher focused on reliable, trustworthy, and clinically deployable AI systems for healthcare.
 full_bio: |

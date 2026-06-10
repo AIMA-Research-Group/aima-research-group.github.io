@@ -86,6 +86,18 @@ function getWebsiteLink(person: Person) {
   return person.links.find((link) => link.label.toLowerCase().includes("website"));
 }
 
+function personGroupLabel(group: Person["group"]) {
+  const labels: Record<Person["group"], string> = {
+    founder: "Founder",
+    leader: "Leader",
+    mentor: "Mentor",
+    "core-member": "Core Member",
+    collaborator: "Collaborator",
+    "affiliated-faculty": "Affiliated Faculty",
+  };
+  return labels[group];
+}
+
 function ThemeVisual({ type }: { type: ResearchTheme["visual_type"] }) {
   if (type === "medical") return <MedicalImagePlaceholder />;
   if (type === "framework") return <FrameworkDiagramPlaceholder />;
@@ -332,7 +344,7 @@ export function PersonCard({ person }: { person: Person }) {
         ) : (
           <div className="flex aspect-square items-center justify-center rounded-2xl bg-[var(--surface-muted)] text-5xl font-black text-[var(--aima-deep-blue)]">{person.name.replace("[TODO: Add ", "").slice(0, 1) || "A"}</div>
         )}
-        <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{person.group}</Badge></div>
+        <div className="mt-5 flex flex-wrap gap-2">{person.placeholder && isPreviewMode() ? <Badge tone="muted">Placeholder profile</Badge> : null}<Badge>{personGroupLabel(person.group)}</Badge></div>
         <h3 className="mt-4 text-xl font-black"><ContentPlaceholder value={person.name} fallback="Team member coming soon." /></h3>
         <p className="font-bold text-[var(--aima-deep-blue)]">{person.role}</p>
         <p className="mt-3 rounded-xl border border-[var(--aima-soft-blue)] bg-[var(--surface-muted)] px-3 py-2 text-sm font-bold leading-5 text-[var(--aima-deep-blue)]">{person.affiliation}</p>

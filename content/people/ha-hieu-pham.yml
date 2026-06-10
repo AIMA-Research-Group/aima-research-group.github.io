@@ -2,10 +2,10 @@ name: Ha-Hieu Pham
 slug: ha-hieu-pham
 order: 18
 featured: false
-group: collaborator
-role: Collaborator
+group: core-member
+role: Core Member
 affiliation: Research Member - Ho Chi Minh University of Science, Vietnam
-short_bio: AIMA collaborator affiliated with Ho Chi Minh University of Science.
+short_bio: AIMA Core Member affiliated with Ho Chi Minh University of Science.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI

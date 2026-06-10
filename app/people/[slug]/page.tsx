@@ -9,6 +9,18 @@ import { ProjectCard, SocialIconLinks, TagList } from "@/components/content/Card
 import { getAllContent } from "@/lib/content/loaders";
 import { withBasePath } from "@/lib/utils/paths";
 
+function personGroupLabel(group: string) {
+  const labels: Record<string, string> = {
+    founder: "Founder",
+    leader: "Leader",
+    mentor: "Mentor",
+    "core-member": "Core Member",
+    collaborator: "Collaborator",
+    "affiliated-faculty": "Affiliated Faculty",
+  };
+  return labels[group] || group;
+}
+
 export async function generateStaticParams() {
   const content = await getAllContent();
   return content.people.map((person) => ({ slug: person.slug }));
@@ -88,7 +100,7 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
 
               <div className="grid content-start gap-7">
                 <div className="flex flex-wrap gap-2">
-                  <Badge>{person.group}</Badge>
+                  <Badge>{personGroupLabel(person.group)}</Badge>
                   {person.active ? <Badge tone="teal">Active</Badge> : <Badge tone="muted">Inactive</Badge>}
                 </div>
                 <div>
