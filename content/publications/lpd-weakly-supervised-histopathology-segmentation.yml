@@ -14,8 +14,7 @@ authors:
   - Hien Van Nguyen
 venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2026"
 publication_type: conference
-badges:
-  - Best Paper Award
+badges: []
 thumbnail: "/uploads/publications/lpd-weakly-supervised-histopathology-segmentation.png"
 figure: ""
 media_type: none

@@ -12,7 +12,8 @@ authors:
   - Ulas Bagci
 venue: "IEEE International Symposium on Biomedical Imaging (ISBI), 2026"
 publication_type: conference
-badges: []
+badges:
+  - Oral
 thumbnail: "/uploads/publications/sdt-net-scribble-supervised-medical-segmentation.png"
 figure: ""
 media_type: none
