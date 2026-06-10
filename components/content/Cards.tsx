@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { SVGProps } from "react";
-import { ArrowRight, CalendarDays, CheckCircle2, Clock3, ExternalLink, Globe, GraduationCap, Mail, Target } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock3, ExternalLink, Globe, GraduationCap, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ContentPlaceholder } from "@/components/ui/ContentPlaceholder";
 import {
@@ -454,34 +454,23 @@ export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
 
       {bodyLines.length ? (
         <div className="mt-6 grid gap-3">
-          {bodyLines.map((line) => <p key={line} className="leading-7 text-[var(--text-primary)]">{line.replace(/\*\*/g, "")}</p>)}
+          {bodyLines.map((line) => {
+            const cleanLine = line.replace(/\*\*/g, "");
+            if (/project information|project/i.test(cleanLine)) {
+              return (
+                <p key={line} className="leading-7 text-[var(--text-primary)]">
+                  For project information, please see the{" "}
+                  <Link href="/projects" className="font-black text-[var(--aima-deep-blue)] underline decoration-[var(--aima-soft-blue)] decoration-2 underline-offset-4 transition hover:text-[var(--aima-blue)]">
+                    Projects page
+                  </Link>
+                  .
+                </p>
+              );
+            }
+            return <p key={line} className="leading-7 text-[var(--text-primary)]">{cleanLine}</p>;
+          })}
         </div>
       ) : null}
-
-      <div className="mt-7 grid gap-5 lg:grid-cols-2">
-        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] p-5">
-          <h4 className="flex items-center gap-2 text-sm font-black uppercase text-[var(--aima-deep-blue)]"><Target className="h-4 w-4" /> Expectations</h4>
-          <div className="mt-4 grid gap-3">
-            {opportunity.expectations.map((item) => (
-              <p key={item} className="flex gap-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--scientific-teal)]" />
-                {item}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] p-5">
-          <h4 className="flex items-center gap-2 text-sm font-black uppercase text-[var(--aima-deep-blue)]"><GraduationCap className="h-4 w-4" /> Learning outcomes</h4>
-          <div className="mt-4 grid gap-3">
-            {opportunity.learning_outcomes.map((item) => (
-              <p key={item} className="flex gap-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--scientific-teal)]" />
-                {item}
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
     </article>
   );
 }
