@@ -1,0 +1,14 @@
+title: Test Publication
+slug: test-pub
+year: 2026
+authors: Am,Em,Bm,C,D
+venue: Pattern Regconigtion
+publication_type: journal
+thumbnail: /uploads/lbt.jpg
+figure: /uploads/huy.jpg
+media_type: image
+research_theme_slugs: []
+links: []
+featured: false
+status: accepted
+placeholder: false
