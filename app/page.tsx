@@ -112,7 +112,11 @@ export default async function HomePage() {
               title="Affiliations across the research community."
               description="Institutions represented across AIMA's leaders, mentors, collaborators, and affiliated faculty."
             />
-            <AffiliationLogoGrid affiliations={content.affiliations.filter((affiliation) => affiliation.featured)} />
+            <AffiliationLogoGrid
+              affiliations={content.officialAffiliations
+                .map((item) => content.affiliations.find((affiliation) => affiliation.slug === item.slug))
+                .filter((affiliation): affiliation is NonNullable<typeof affiliation> => Boolean(affiliation?.logo))}
+            />
           </PageContainer>
         </Section>
 

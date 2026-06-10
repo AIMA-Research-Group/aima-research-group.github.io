@@ -13,3 +13,5 @@ photo: /uploads/members/hienkha.png
 links: []
 active: true
 placeholder: false
+affiliation_slugs:
+  - taipei-medical-university

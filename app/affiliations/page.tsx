@@ -8,7 +8,9 @@ export const metadata = { title: "Affiliations" };
 
 export default async function AffiliationsPage() {
   const content = await getAllContent();
-  const affiliations = content.affiliations.filter((affiliation) => affiliation.featured);
+  const affiliations = content.officialAffiliations
+    .map((item) => content.affiliations.find((affiliation) => affiliation.slug === item.slug))
+    .filter((affiliation): affiliation is NonNullable<typeof affiliation> => Boolean(affiliation?.logo));
 
   return (
     <>

@@ -12,6 +12,8 @@ research_interests:
 photo: /uploads/members/thien.jpg
 links:
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?user=-gdFSLUAAAAJ&hl=vi"
+    url: https://scholar.google.com/citations?user=-gdFSLUAAAAJ&hl=vi
 active: true
 placeholder: false
+affiliation_slugs:
+  - carnegie-mellon-university

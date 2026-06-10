@@ -13,12 +13,14 @@ research_interests:
 photo: /uploads/members/ha-hieu-pham.jpg
 links:
   - label: Website
-    url: "https://hieuphamha19.github.io/"
+    url: https://hieuphamha19.github.io/
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?hl=en&user=llj5SLIAAAAJ"
+    url: https://scholar.google.com/citations?hl=en&user=llj5SLIAAAAJ
   - label: LinkedIn
-    url: "https://www.linkedin.com/in/hieuphamha19/"
+    url: https://www.linkedin.com/in/hieuphamha19/
   - label: Email
-    url: "mailto:hieuphamha19@gmail.com"
+    url: mailto:hieuphamha19@gmail.com
 active: true
 placeholder: false
+affiliation_slugs:
+  - ho-chi-minh-university-of-science

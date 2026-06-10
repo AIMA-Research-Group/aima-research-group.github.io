@@ -13,3 +13,5 @@ photo: /uploads/members/maianh.jpg
 links: []
 active: true
 placeholder: false
+affiliation_slugs:
+  - university-of-houston

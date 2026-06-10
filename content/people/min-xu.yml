@@ -13,3 +13,5 @@ photo: /uploads/members/minxu.jpg
 links: []
 active: true
 placeholder: false
+affiliation_slugs:
+  - carnegie-mellon-university

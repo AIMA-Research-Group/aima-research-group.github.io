@@ -13,6 +13,8 @@ research_interests:
 photo: /uploads/members/thinh.jpg
 links:
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?user=CGkPkWgAAAAJ&hl=en"
+    url: https://scholar.google.com/citations?user=CGkPkWgAAAAJ&hl=en
 active: true
 placeholder: false
+affiliation_slugs:
+  - unc-charlotte

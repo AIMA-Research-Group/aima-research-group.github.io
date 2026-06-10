@@ -144,6 +144,7 @@ export const personSchema = z.object({
   group: z.enum(["founder", "leader", "mentor", "core-member", "collaborator", "affiliated-faculty"]),
   role: z.string().min(1),
   affiliation: z.string().min(1),
+  affiliation_slugs: z.array(z.string()).optional().default([]),
   short_bio: z.string().min(1),
   full_bio: z.string().min(1),
   research_interests: z.array(z.string()),
@@ -156,13 +157,14 @@ export const personSchema = z.object({
 export const affiliationSchema = z.object({
   name: z.string().min(1),
   slug: z.string().min(1),
-  order: z.number(),
-  featured: z.boolean(),
   logo: z.string().optional().default(""),
   url: z.string().optional().default(""),
   location: z.string().min(1),
-  relationship: z.string().min(1),
-  placeholder: z.boolean(),
+});
+
+export const officialAffiliationSchema = z.object({
+  slug: z.string().min(1),
+  order: z.number(),
 });
 
 export const communityNarrativeSchema = z.object({
@@ -216,6 +218,7 @@ export type Project = z.infer<typeof projectSchema>;
 export type NewsItem = z.infer<typeof newsItemSchema>;
 export type Person = z.infer<typeof personSchema>;
 export type Affiliation = z.infer<typeof affiliationSchema>;
+export type OfficialAffiliation = z.infer<typeof officialAffiliationSchema>;
 export type CommunityNarrative = z.infer<typeof communityNarrativeSchema>;
 export type GalleryImage = z.infer<typeof galleryImageSchema>;
 export type Opportunity = z.infer<typeof opportunitySchema>;

@@ -5,6 +5,7 @@ import YAML from "yaml";
 import {
   communityNarrativeSchema,
   affiliationSchema,
+  officialAffiliationSchema,
   galleryImageSchema,
   homepageSchema,
   navigationItemSchema,
@@ -18,6 +19,7 @@ import {
   siteSettingsSchema,
   type CommunityNarrative,
   type Affiliation,
+  type OfficialAffiliation,
   type GalleryImage,
   type HomepageSettings,
   type NavigationItem,
@@ -68,11 +70,12 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
   news: NewsItem[];
   people: Person[];
   affiliations: Affiliation[];
+  officialAffiliations: OfficialAffiliation[];
   community: CommunityNarrative[];
   gallery: GalleryImage[];
   opportunities: Opportunity[];
 }> {
-  const [site, seo, navigation, homepage, researchThemes, publications, projects, news, people, affiliations, community, gallery, opportunities] =
+  const [site, seo, navigation, homepage, researchThemes, publications, projects, news, people, affiliations, officialAffiliations, community, gallery, opportunities] =
     await Promise.all([
       readYaml("settings/site.yml", siteSettingsSchema),
       readYaml("settings/seo.yml", seoSettingsSchema),
@@ -85,7 +88,12 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
       readCollection("projects", projectSchema),
       readCollection("news", newsItemSchema),
       readCollection("people", personSchema),
-      readCollection("affiliations", affiliationSchema),
+      readYaml("settings/affiliations.yml", {
+        parse: (value) => (value as unknown[]).map((item) => affiliationSchema.parse(item)),
+      }),
+      readYaml("settings/official-affiliations.yml", {
+        parse: (value) => (value as unknown[]).map((item) => officialAffiliationSchema.parse(item)).sort((a, b) => a.order - b.order),
+      }),
       readCollection("community", communityNarrativeSchema),
       readCollection("gallery", galleryImageSchema),
       readCollection("opportunities", opportunitySchema),
@@ -104,6 +112,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
     news: maybePublic(news),
     people: maybePublic(people),
     affiliations,
+    officialAffiliations,
     community,
     gallery,
     opportunities,

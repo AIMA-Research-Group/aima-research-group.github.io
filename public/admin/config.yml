@@ -35,6 +35,29 @@ collections:
           - { label: Default Title, name: default_title, widget: string }
           - { label: Default Description, name: default_description, widget: text }
           - { label: Canonical Domain, name: canonical_domain, widget: string }
+      - label: Affiliation Registry
+        name: affiliation_registry
+        file: content/settings/affiliations.yml
+        fields:
+          - label: Affiliations
+            name: affiliations
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Slug, name: slug, widget: string }
+              - { label: Logo, name: logo, widget: image, required: false }
+              - { label: URL, name: url, widget: string, required: false }
+              - { label: Location, name: location, widget: string }
+      - label: Official Affiliations
+        name: official_affiliations
+        file: content/settings/official-affiliations.yml
+        fields:
+          - label: Official Affiliations
+            name: official_affiliations
+            widget: list
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: Order, name: order, widget: number }
   - name: navigation
     label: Navigation
     files:
@@ -135,7 +158,6 @@ collections:
       - { label: Placeholder, name: placeholder, widget: boolean, default: false }
   - { name: projects, label: Projects, folder: content/projects, extension: yml, create: true, fields: *standard }
   - { name: people, label: People, folder: content/people, extension: yml, create: true, fields: *standard }
-  - { name: affiliations, label: Affiliations, folder: content/affiliations, extension: yml, create: true, fields: *standard }
   - { name: community, label: Community Narratives, folder: content/community, extension: yml, create: true, fields: *standard }
   - { name: gallery, label: Gallery Images, folder: content/gallery, extension: yml, create: true, fields: *standard }
   - { name: opportunities, label: Opportunities, folder: content/opportunities, extension: yml, create: true, fields: *standard }

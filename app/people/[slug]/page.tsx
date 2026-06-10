@@ -8,28 +8,6 @@ import { PageContainer, Section, SectionHeading } from "@/components/ui/Section"
 import { ProjectCard, SocialIconLinks, TagList } from "@/components/content/Cards";
 import { getAllContent } from "@/lib/content/loaders";
 import { withBasePath } from "@/lib/utils/paths";
-import type { Affiliation } from "@/lib/validation/schemas";
-
-function normalizeAffiliation(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-}
-
-function findAffiliationLogo(personAffiliation: string, affiliations: Affiliation[]) {
-  const normalizedPersonAffiliation = normalizeAffiliation(personAffiliation);
-  const aliases: Record<string, string[]> = {
-    hcmut: ["ho chi minh university of science"],
-    ptit: ["posts and telecommunications institute of technology"],
-    "unc-charlotte": ["university of north carolina at charlotte"],
-    "university-of-wisconsin-madison": ["university of wisconsin madison"],
-  };
-
-  return affiliations.find((affiliation) => {
-    if (!affiliation.logo) return false;
-    const normalizedName = normalizeAffiliation(affiliation.name);
-    const normalizedAliases = (aliases[affiliation.slug] || []).map(normalizeAffiliation);
-    return [normalizedName, ...normalizedAliases].some((name) => normalizedPersonAffiliation.includes(name));
-  });
-}
 
 export async function generateStaticParams() {
   const content = await getAllContent();
@@ -55,7 +33,9 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
   if (!person) notFound();
 
   const projects = content.projects.filter((project) => project.member_slugs.includes(person.slug));
-  const affiliationLogo = findAffiliationLogo(person.affiliation, content.affiliations);
+  const affiliationLogos = person.affiliation_slugs
+    .map((affiliationSlug) => content.affiliations.find((affiliation) => affiliation.slug === affiliationSlug))
+    .filter((affiliation): affiliation is NonNullable<typeof affiliation> => Boolean(affiliation?.logo));
 
   return (
     <>
@@ -63,22 +43,25 @@ export default async function PersonDetailPage({ params }: { params: Promise<{ s
       <main id="main-content">
         <Section className="pb-12 pt-28">
           <PageContainer>
-            <div className={`grid gap-8 ${affiliationLogo ? "lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center" : ""}`}>
+            <div className={`grid gap-8 ${affiliationLogos.length ? "lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center" : ""}`}>
               <div className="max-w-4xl">
                 <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--aima-deep-blue)]">Member profile</p>
                 <h1 className="font-[var(--font-serif)] text-5xl font-bold leading-tight text-[var(--text-primary)] md:text-6xl">{person.name}</h1>
                 <p className="mt-5 max-w-3xl text-lg font-medium leading-8 text-[var(--text-primary)]">{person.short_bio}</p>
               </div>
-              {affiliationLogo ? (
-                <div className="pointer-events-none flex justify-start opacity-90 lg:justify-end">
-                  <Image
-                    src={withBasePath(affiliationLogo.logo)}
-                    alt={`${affiliationLogo.name} logo`}
-                    width={460}
-                    height={230}
-                    className="max-h-36 w-full max-w-[320px] object-contain md:max-h-44 lg:max-w-[340px]"
-                    priority
-                  />
+              {affiliationLogos.length ? (
+                <div className="pointer-events-none flex flex-wrap items-center justify-start gap-6 opacity-90 lg:justify-end">
+                  {affiliationLogos.map((affiliation) => (
+                    <Image
+                      key={affiliation.slug}
+                      src={withBasePath(affiliation.logo)}
+                      alt={`${affiliation.name} logo`}
+                      width={460}
+                      height={230}
+                      className="max-h-32 w-full max-w-[280px] object-contain md:max-h-40 lg:max-w-[320px]"
+                      priority
+                    />
+                  ))}
                 </div>
               ) : null}
             </div>

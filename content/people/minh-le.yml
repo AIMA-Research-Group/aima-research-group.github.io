@@ -13,3 +13,5 @@ photo: /uploads/members/minhle.png
 links: []
 active: true
 placeholder: false
+affiliation_slugs:
+  - yale-school-of-medicine

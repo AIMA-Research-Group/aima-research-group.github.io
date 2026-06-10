@@ -1,0 +1,110 @@
+- name: Northwestern University
+  slug: northwestern-university
+  logo: /uploads/affiliations/nu.png
+  url: ""
+  location: USA
+- name: UNC Charlotte
+  slug: unc-charlotte
+  logo: /uploads/affiliations/uncc.png
+  url: ""
+  location: USA
+- name: PTIT-HCM
+  slug: ptit-hcm
+  logo: /uploads/affiliations/ptit.png
+  url: ""
+  location: Vietnam
+- name: HCMUT
+  slug: hcmut
+  logo: ""
+  url: ""
+  location: Vietnam
+- name: HCMUTE
+  slug: hcmute
+  logo: ""
+  url: ""
+  location: Vietnam
+- name: University of Houston
+  slug: university-of-houston
+  logo: /uploads/affiliations/University-of-Houston-Logo.png
+  url: ""
+  location: USA
+- name: Yale School of Medicine
+  slug: yale-school-of-medicine
+  logo: /uploads/affiliations/yale.png
+  url: ""
+  location: USA
+- name: Taipei Medical University
+  slug: taipei-medical-university
+  logo: /uploads/affiliations/tmu.jpg
+  url: ""
+  location: Taiwan
+- name: University of Wisconsin Madison
+  slug: university-of-wisconsin-madison
+  logo: /uploads/affiliations/w.png
+  url: ""
+  location: USA
+- name: Mayo Clinic
+  slug: mayo-clinic
+  logo: ""
+  url: ""
+  location: USA
+- name: Carnegie Mellon University
+  slug: carnegie-mellon-university
+  logo: /uploads/affiliations/CMU.png
+  url: ""
+  location: USA
+- name: North Carolina A&T University
+  slug: north-carolina-at-university
+  logo: /uploads/affiliations/north_carolina_at.png
+  url: ""
+  location: USA
+- name: University Alabama Birmingham
+  slug: university-alabama-birmingham
+  logo: /uploads/affiliations/UAB.png
+  url: ""
+  location: USA
+- name: Duke University
+  slug: duke-university
+  logo: /uploads/affiliations/duke.png
+  url: ""
+  location: USA
+- name: Universite Bourgogne Europe
+  slug: universite-bourgogne-europe
+  logo: /uploads/affiliations/france.jpg
+  url: ""
+  location: France
+- name: Harvard University
+  slug: harvard-university
+  logo: /uploads/affiliations/harvard.png
+  url: ""
+  location: USA
+- name: National Cheng Kung University
+  slug: national-cheng-kung-university
+  logo: /uploads/affiliations/ncku.png
+  url: ""
+  location: Taiwan
+- name: National Taiwan University
+  slug: national-taiwan-university
+  logo: /uploads/affiliations/ntu.png
+  url: ""
+  location: Taiwan
+- name: Purdue University
+  slug: purdue-university
+  logo: /uploads/affiliations/pu.png
+  url: ""
+  location: USA
+- name: Florida International University
+  slug: florida-international-university
+  logo: /uploads/affiliations/FIU.png
+  url: ""
+  location: USA
+- name: Ho Chi Minh University of Science
+  slug: ho-chi-minh-university-of-science
+  logo: ""
+  url: ""
+  location: Vietnam
+- name: University of North Carolina at Chapel Hill
+  slug: university-of-north-carolina-at-chapel-hill
+  logo: /uploads/affiliations/unc_chapelhill.png
+  url: ""
+  location: USA

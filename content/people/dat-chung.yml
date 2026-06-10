@@ -12,8 +12,10 @@ research_interests:
 photo: /uploads/members/dat.jpg
 links:
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?user=99gXcvsAAAAJ&hl=en"
+    url: https://scholar.google.com/citations?user=99gXcvsAAAAJ&hl=en
   - label: Email
-    url: "mailto:dchun015@fiu.edu"
+    url: mailto:dchun015@fiu.edu
 active: true
 placeholder: false
+affiliation_slugs:
+  - florida-international-university

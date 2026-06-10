@@ -6,12 +6,8 @@ group: collaborator
 role: Collaborator
 affiliation: PhD Student - Duke University, USA
 short_bio: Researcher focused on reliable, trustworthy, and clinically deployable AI systems for healthcare.
-full_bio: >
-  Bui Tran Quang Khai's research focuses on AI in healthcare, with the goal of
-  developing reliable, trustworthy, and clinically deployable AI systems. His
-  work leverages large-scale foundation models, world models, and data-centric
-  machine learning approaches. He enjoys collaborating with others to discuss
-  and develop new research ideas.
+full_bio: |
+  Bui Tran Quang Khai's research focuses on AI in healthcare, with the goal of developing reliable, trustworthy, and clinically deployable AI systems. His work leverages large-scale foundation models, world models, and data-centric machine learning approaches. He enjoys collaborating with others to discuss and develop new research ideas.
 research_interests:
   - AI for healthcare
   - Foundation models
@@ -21,12 +17,14 @@ research_interests:
 photo: /uploads/members/khai-bui.jpg
 links:
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?user=ZTBdJ3MAAAAJ&hl=vi"
+    url: https://scholar.google.com/citations?user=ZTBdJ3MAAAAJ&hl=vi
   - label: LinkedIn
-    url: "https://www.linkedin.com/in/btqkhai"
+    url: https://www.linkedin.com/in/btqkhai
   - label: GitHub
-    url: "https://github.com/QuangKhai-code"
+    url: https://github.com/QuangKhai-code
   - label: Email
-    url: "mailto:khai.bui@duke.edu"
+    url: mailto:khai.bui@duke.edu
 active: true
 placeholder: false
+affiliation_slugs:
+  - duke-university

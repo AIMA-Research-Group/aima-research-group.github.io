@@ -12,6 +12,8 @@ research_interests:
 photo: /uploads/members/vi.jpg
 links:
   - label: Google Scholar
-    url: "https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en"
+    url: https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en
 active: true
 placeholder: false
+affiliation_slugs:
+  - duke-university

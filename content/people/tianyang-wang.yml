@@ -13,3 +13,5 @@ photo: /uploads/members/tiyanwang.jpg
 links: []
 active: true
 placeholder: false
+affiliation_slugs:
+  - university-alabama-birmingham

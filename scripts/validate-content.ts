@@ -40,6 +40,7 @@ async function main() {
   duplicateSlugs("projects", content.projects);
   duplicateSlugs("people", content.people);
   duplicateSlugs("affiliations", content.affiliations);
+  duplicateSlugs("official affiliations", content.officialAffiliations);
   duplicateSlugs("community", content.community);
   duplicateSlugs("gallery", content.gallery);
   duplicateSlugs("opportunities", content.opportunities);
@@ -63,6 +64,7 @@ async function main() {
   const projectSlugs = new Set(content.projects.map((item) => item.slug));
   const publicationSlugs = new Set(content.publications.map((item) => item.slug));
   const personSlugs = new Set(content.people.map((item) => item.slug));
+  const affiliationSlugs = new Set(content.affiliations.map((item) => item.slug));
   const gallerySlugs = new Set(content.gallery.map((item) => item.slug));
 
   for (const theme of content.researchThemes) {
@@ -86,11 +88,15 @@ async function main() {
   }
   for (const person of content.people) {
     validAsset(`person.${person.slug}.photo`, person.photo);
+    person.affiliation_slugs.forEach((slug) => !affiliationSlugs.has(slug) && fail(`person.${person.slug}: missing affiliation ${slug}`));
     person.links.forEach((link) => validUrl(`person.${person.slug}.${link.label}`, link.url));
   }
   for (const affiliation of content.affiliations) {
     validAsset(`affiliation.${affiliation.slug}.logo`, affiliation.logo);
     if (affiliation.url) validUrl(`affiliation.${affiliation.slug}.url`, affiliation.url);
+  }
+  for (const officialAffiliation of content.officialAffiliations) {
+    if (!affiliationSlugs.has(officialAffiliation.slug)) fail(`official affiliations: missing affiliation ${officialAffiliation.slug}`);
   }
   for (const narrative of content.community) {
     validAsset(`community.${narrative.slug}.cover_image`, narrative.cover_image);
