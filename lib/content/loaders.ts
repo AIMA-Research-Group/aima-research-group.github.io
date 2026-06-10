@@ -91,7 +91,7 @@ export async function getAllContent(options: { includePlaceholders?: boolean } =
       readYaml("settings/affiliations.yml", {
         parse: (value) => (value as unknown[]).map((item) => affiliationSchema.parse(item)),
       }),
-      readYaml("settings/official-affiliations.yml", {
+      readYaml("affiliation/official-affiliations.yml", {
         parse: (value) => (value as unknown[]).map((item) => officialAffiliationSchema.parse(item)).sort((a, b) => a.order - b.order),
       }),
       readCollection("community", communityNarrativeSchema),
