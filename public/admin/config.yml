@@ -4,7 +4,7 @@ backend:
   repo: aima-research-group/aima-research-group.github.io
   branch: main
   base_url: https://aima-decap-auth.chungtiendat8102000.workers.dev
-  auth_endpoint: /auth?provider=github
+  auth_endpoint: /auth
 media_folder: public/uploads
 public_folder: /uploads
 collections:
