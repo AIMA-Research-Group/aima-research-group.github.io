@@ -1,0 +1,24 @@
+name: Ha-Hieu Pham
+slug: ha-hieu-pham
+order: 18
+featured: false
+group: collaborator
+role: Collaborator
+affiliation: Research Member - Ho Chi Minh University of Science, Vietnam
+short_bio: AIMA collaborator affiliated with Ho Chi Minh University of Science.
+full_bio: Full biography will be added soon.
+research_interests:
+  - Medical AI
+  - Biomedical image analysis
+photo: /uploads/members/ha-hieu-pham.jpg
+links:
+  - label: Website
+    url: "https://hieuphamha19.github.io/"
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?hl=en&user=llj5SLIAAAAJ"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/hieuphamha19/"
+  - label: Email
+    url: "mailto:hieuphamha19@gmail.com"
+active: true
+placeholder: false

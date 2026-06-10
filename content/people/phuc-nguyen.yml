@@ -1,15 +1,30 @@
-name: Phuc Nguyen
+name: Le Thien Phuc Nguyen
 slug: phuc-nguyen
 order: 9
 featured: false
 group: collaborator
 role: Collaborator
-affiliation: BS at University of Wisconsin Madison
-short_bio: AIMA Collaborator and BS student at University of Wisconsin Madison (2025-Now).
-full_bio: Full biography will be added soon.
+affiliation: PhD Student - University of North Carolina at Chapel Hill, USA
+short_bio: CS PhD student at UNC Chapel Hill working with Prof. Zhongzheng Ren and co-advised by Prof. Yong Jae Lee at the University of Wisconsin-Madison.
+full_bio: >
+  Le Thien Phuc Nguyen is a Computer Science PhD student at the University of
+  North Carolina at Chapel Hill, advised by Prof. Zhongzheng (Jason) Ren. He is
+  also co-advised by Prof. Yong Jae Lee at the University of Wisconsin-Madison.
 research_interests:
   - Medical AI
-photo: /uploads/members/phuc.jpg
-links: []
+  - Computer vision
+  - AI for healthcare
+photo: /uploads/members/phuc-nguyen.jpg
+links:
+  - label: Website
+    url: "https://plnguyen2908.github.io/"
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=ywYZkw8AAAAJ&hl=en"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/plnguyen2908/"
+  - label: GitHub
+    url: "https://github.com/plnguyen2908"
+  - label: Email
+    url: "mailto:tphuc@cs.unc.edu"
 active: true
 placeholder: false
