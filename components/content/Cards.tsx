@@ -424,6 +424,7 @@ export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
       <div className="flex flex-wrap gap-2"><Badge>{opportunity.status}</Badge><Badge tone="muted">{opportunity.audience}</Badge></div>
       <h3 className="mt-4 text-2xl font-black"><ContentPlaceholder value={opportunity.title} fallback="Opportunity details coming soon." /></h3>
       <p className="mt-3 leading-7 text-[var(--text-secondary)]">{opportunity.summary}</p>
+      <div className="mt-4 text-sm text-[var(--text-secondary)] whitespace-pre-line">{opportunity.description}</div>
       <div className="mt-5 grid gap-3 text-sm text-[var(--text-secondary)]">
         {opportunity.expectations.map((item) => <p key={item}>• {item}</p>)}
       </div>

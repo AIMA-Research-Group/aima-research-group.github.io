@@ -25,7 +25,7 @@ export default async function JoinUsPage() {
         <Section>
           <PageContainer>
             <div className="surface-card p-8 md:p-10">
-              <SectionHeading title="Application process" description={content.opportunities[0]?.application_process || "Application process will be added soon."} />
+              <SectionHeading title="Contact Information" description={content.opportunities[0]?.application_process || "Contact information will be added soon."} />
               {hasForm ? <Button href={formUrl}>Open Google Form</Button> : preview ? <p className="font-bold text-[var(--aima-deep-blue)]"><ContentPlaceholder value={formUrl} /></p> : <Button href="/contact">Contact AIMA</Button>}
               <div className="mt-6 grid gap-2 text-[var(--text-secondary)]">
                 {contactEmails.map((email) => <a key={email} className="font-bold text-[var(--aima-deep-blue)]" href={`mailto:${email}`}>{email}</a>)}
