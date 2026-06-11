@@ -19,7 +19,7 @@ export default async function JoinUsPage() {
   const hasForm = !formUrl.includes("[TODO:");
   const contactCards = [
     { label: "AIMA Research", email: "aima.research.aivn@gmail.com" },
-    { label: "Thanh-Huy Nguyen", email: "thanhhun@andrew.cmu.edu" },
+    { label: "Thanh-Huy Nguyen", email: "thanhnguyen2031@u.northwestern.edu" },
   ];
   return (
     <>
