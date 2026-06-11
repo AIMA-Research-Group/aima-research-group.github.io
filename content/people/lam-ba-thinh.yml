@@ -1,4 +1,4 @@
-name: Thinh B. Lam
+name: Thinh Ba Lam
 slug: lam-ba-thinh
 order: 2
 featured: true
@@ -10,10 +10,10 @@ full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
   - Biomedical image analysis
-photo: /uploads/members/thinh.jpg
+photo: /uploads/members/thinh.png
 links:
   - label: Google Scholar
-    url: https://scholar.google.com/citations?user=CGkPkWgAAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=CGkPkWgAAAAJ&hl=vi
 active: true
 placeholder: false
 affiliation_slugs:

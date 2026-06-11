@@ -9,12 +9,18 @@ short_bio: AIMA Leader and PhD student at Duke University.
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
-photo: /uploads/members/vi.jpg
+photo: /uploads/members/vi.png
 links:
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en
   - label: website
     url: https://vnlvi2k3.github.io/
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/vivu-cse
+  - label: GitHub
+    url: https://github.com/vnlvi2k3
+  - label: Email
+    url: mailto:vulanvi22@gmail.com
 active: true
 placeholder: false
 affiliation_slugs:

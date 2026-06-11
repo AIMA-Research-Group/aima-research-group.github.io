@@ -1,4 +1,4 @@
-name: Anh Mai Vu
+name: Mai Anh Vu
 slug: anh-mai-vu
 order: 6
 featured: false
@@ -9,8 +9,12 @@ short_bio: AIMA Mentor and PhD Candidate at University of Houston (2025-Now).
 full_bio: Full biography will be added soon.
 research_interests:
   - Medical AI
-photo: /uploads/members/maianh.jpg
-links: []
+photo: /uploads/members/maianh.png
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=vB0p8bYAAAAJ&hl=en
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/vu-mai-anh/
 active: true
 placeholder: false
 affiliation_slugs:

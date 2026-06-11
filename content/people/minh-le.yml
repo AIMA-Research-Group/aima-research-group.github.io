@@ -4,13 +4,31 @@ order: 7
 featured: false
 group: mentor
 role: Mentor
-affiliation: Postdoc at Yale School of Medicine
-short_bio: AIMA Mentor, MD, PhD, and Postdoc at Yale School of Medicine (2025-Now).
-full_bio: Full biography will be added soon.
+affiliation: Postdoctoral Associate - Yale School of Medicine, USA
+short_bio: Physician-scientist and Postdoctoral Associate at Yale School of Medicine working on clinically deployable AI for cardiovascular medicine and multimodal imaging.
+full_bio: >
+  Minh Le, MD, PhD, is a physician-scientist in cardiovascular medicine and a Postdoctoral Associate at Yale School of Medicine in the Department of Internal Medicine, Section of Cardiovascular Medicine. He graduated from the School of Medicine, University of Medicine and Pharmacy at Ho Chi Minh City, Vietnam, in 2018 and completed his PhD in Medicine at Taipei Medical University, Taiwan, in 2026. His research focuses on large language models, computer vision, machine learning, and deep learning, with applications in cardiology and multimodal imaging, including ECG, ultrasound, CT, MRI, and DSA. He is particularly interested in developing clinically deployable AI systems that improve diagnosis, risk stratification, and clinical decision support. Minh is a Harvard Medical School alumnus, having completed the Global Clinical Scholars Research Training Program in 2022. Before joining Yale, he spearheaded collaborative AI projects with institutions including Harvard Medical School, Johns Hopkins, and Carnegie Mellon University. His work has been published in leading journals and conferences including JAMA, EClinicalMedicine, IEEE JBHI, IEEE EMBS, ISBI, ICCV, and MICCAI. Outside of research, Minh enjoys photography, watching movies, and traveling.
 research_interests:
   - Medical AI
+  - Cardiovascular medicine
+  - Multimodal imaging
+  - Large language models
+  - Computer vision
+  - Machine learning
 photo: /uploads/members/minhle.png
-links: []
+links:
+  - label: Website
+    url: https://john-minhle.github.io/MinhLe-Yale/
+  - label: Google Scholar
+    url: https://scholar.google.com.vn/citations?user=-GUkzTUAAAAJ&hl=en
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/lehuunhatminh/
+  - label: GitHub
+    url: https://github.com/john-minhle
+  - label: ORCID
+    url: https://orcid.org/0000-0002-7728-1539
+  - label: Email
+    url: mailto:minh.h.le@yale.edu
 active: true
 placeholder: false
 affiliation_slugs:

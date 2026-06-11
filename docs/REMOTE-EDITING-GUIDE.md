@@ -78,7 +78,7 @@ affiliation_slugs:
   - nu
 short_bio: Short description shown on cards.
 full_bio: Full biography shown on the personal page.
-photo: /uploads/members/huy.jpg
+photo: /uploads/members/huy.png
 links:
   - label: Website
     url: https://example.com/

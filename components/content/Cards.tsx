@@ -35,10 +35,19 @@ function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+function OrcidIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" {...props}>
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM7.8 16.88H6.2V8.1h1.6v8.78Zm-.8-9.93a1.02 1.02 0 1 1 0-2.04 1.02 1.02 0 0 1 0 2.04Zm4.36 9.93H9.75V8.1h4.22c3.24 0 4.66 2.3 4.66 4.4 0 2.26-1.76 4.38-4.65 4.38h-2.62Zm0-1.44h2.49c2.08 0 3.12-1.44 3.12-2.94 0-1.64-1.15-2.96-3.14-2.96h-2.47v5.9Z" />
+    </svg>
+  );
+}
+
 function getSocialIcon(label: string) {
   const normalized = label.toLowerCase();
   if (normalized.includes("github")) return GitHubIcon;
   if (normalized.includes("linkedin")) return LinkedInIcon;
+  if (normalized.includes("orcid")) return OrcidIcon;
   if (normalized.includes("scholar")) return GraduationCap;
   if (normalized.includes("email")) return Mail;
   if (normalized.includes("website")) return Globe;
