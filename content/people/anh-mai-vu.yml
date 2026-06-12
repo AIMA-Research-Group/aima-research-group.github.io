@@ -1,20 +1,27 @@
-name: Mai Anh Vu
+name: Mai Anh
 slug: anh-mai-vu
 order: 6
 featured: false
 group: mentor
 role: Mentor
-affiliation: PhD Candidate at University of Houston
-short_bio: AIMA Mentor and PhD Candidate at University of Houston (2025-Now).
-full_bio: Full biography will be added soon.
+affiliation: PhD Candidate - University of Houston, USA
+short_bio: AIMA Mentor working on computational pathology and trustworthy medical AI, with interests in interpretable evidence-based models and world models for medical imaging.
+full_bio: >
+  Mai Anh's research focuses on computational pathology and trustworthy medical AI. She develops evidence-based models that connect predictions with interpretable visual evidence in pathology images, using weak supervision, prototype-based localization, and multimodal reasoning. Moving forward, she aims to explore world models for medical imaging to support more grounded reasoning about tissue structure, disease progression, and clinical evidence.
 research_interests:
   - Medical AI
-photo: /uploads/members/maianh.png
+  - Computational pathology
+  - Trustworthy medical AI
+  - Weak supervision
+  - Multimodal reasoning
+photo: /uploads/members/maianh.jpg
 links:
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=vB0p8bYAAAAJ&hl=en
   - label: LinkedIn
     url: https://www.linkedin.com/in/vu-mai-anh/
+  - label: Email
+    url: mailto:maianhuel@gmail.com
 active: true
 placeholder: false
 affiliation_slugs:
